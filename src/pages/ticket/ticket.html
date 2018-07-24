@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title>Ticket</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
@@ -18,6 +18,68 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="content">
+    <ion-item no-lines class="itemContent">
+      <ion-row>
+        <ion-col col-4>
+          Game A
+        </ion-col>
+        <ion-col col-4 offset-4>
+          (Ticket 10)
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="goToPrePlay()">
+            <div class="card-title">GAME A IMG</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item no-lines class="itemContent">
+      <ion-row>
+        <ion-col col-4>
+          Game B
+        </ion-col>
+        <ion-col col-4 offset-4>
+          (Ticket 10)
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="goToPrePlay()">
+            <div class="card-title">GAME B IMG</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item no-lines class="itemContent">
+      <ion-row>
+        <ion-col col-4>
+          Game C
+        </ion-col>
+        <ion-col col-4 offset-4>
+          (Ticket 10)
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="goToPrePlay()">
+            <div class="card-title">GAME C IMG</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+  </div>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar style="text-align:center" color="pink">
+    <ion-title (click)="gotoConvertPage()">Convert ticket</ion-title>
+  </ion-toolbar>
+</ion-footer>

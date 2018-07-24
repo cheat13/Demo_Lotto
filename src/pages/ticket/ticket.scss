@@ -1,3 +1,28 @@
 page-ticket {
+    
+    .item[no-lines].itemContent { 
+        border-bottom: 1px solid grey; 
+        text-align:center;
 
+        ion-card {
+            height:120px;
+            text-align:center;
+            position: relative;
+            
+          }
+
+          .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color:black;
+          }
+        
+       
+        
+          
+        
+    }
 }

@@ -26,4 +26,12 @@ export class TicketPage {
   Membership(){
     this.navCtrl.push(MembershipPage);
   }
+
+  goToConvertPage(){
+    //NavPush
+  }
+
+  goToPrePlay(){
+    console.log("pre");
+  }
 }
