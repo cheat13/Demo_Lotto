@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Trading Detail</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-grid no-padding style="background-color: lightgray;height: 250px">
+    <ion-row style="text-align: center;padding-top: 50px">
+      <ion-col col-12 style="font-size: 25px;padding-bottom: 15px">
+        Buy coin amount
+      </ion-col>
+      <ion-col col-12 style="font-size: 30px;padding-bottom: 15px">
+        <b>100 coin</b>
+      </ion-col>
+      <ion-col col-12 style="font-size: 25px;padding-bottom: 15px">
+        10,000 THB
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid no-padding style="background-color: white;height: 280px">
+    <ion-row style="text-align: center;padding-top: 50px">
+      <ion-col col-12 style="font-size: 25px;padding-bottom: 15px">
+        <b>Successful !</b>
+      </ion-col>
+      <ion-col col-12 style="font-size: 18px;padding-bottom: 15px">
+        Ref. id
+      </ion-col>
+      <ion-col col-12 style="font-size: 18px">
+        452487
+      </ion-col>
+      <ion-col col-12 style="font-size: 18px">
+        10/07/2018
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="page-footer" no-padding>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;font-size: 16px;padding-top: 15px" (click)="Trade()">
+        <b>Done</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

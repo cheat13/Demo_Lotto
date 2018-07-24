@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MembershipPage } from '../membership/membership';
+import { SellPage } from '../sell/sell';
 
 /**
- * Generated class for the TicketPage page.
+ * Generated class for the ConfirmSellPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,19 +11,19 @@ import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
-  selector: 'page-ticket',
-  templateUrl: 'ticket.html',
+  selector: 'page-confirm-sell',
+  templateUrl: 'confirm-sell.html',
 })
-export class TicketPage {
+export class ConfirmSellPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TicketPage');
+    console.log('ionViewDidLoad ConfirmSellPage');
   }
 
-  Membership(){
-    this.navCtrl.push(MembershipPage);
+  Sell(){
+    this.navCtrl.push(SellPage);
   }
 }

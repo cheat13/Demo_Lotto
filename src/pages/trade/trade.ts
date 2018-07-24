@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SellPage } from '../sell/sell';
+import { ConfirmPage } from '../confirm/confirm';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the TradePage page.
@@ -22,4 +25,15 @@ export class TradePage {
     console.log('ionViewDidLoad TradePage');
   }
 
+  Sell(){
+    this.navCtrl.push(SellPage);
+  }
+
+  Confirm(){
+    this.navCtrl.push(ConfirmPage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
+  }
 }

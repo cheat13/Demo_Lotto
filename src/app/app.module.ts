@@ -10,6 +10,10 @@ import { MembershipPage } from '../pages/membership/membership';
 import { TradePage } from '../pages/trade/trade';
 import { CollectionPage } from '../pages/collection/collection';
 import { TicketPage } from '../pages/ticket/ticket';
+import { ConfirmPage } from '../pages/confirm/confirm';
+import { SuccessPage } from '../pages/success/success';
+import { SellPage } from '../pages/sell/sell';
+import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { TicketPage } from '../pages/ticket/ticket';
     MembershipPage,
     TradePage,
     CollectionPage,
-    TicketPage
+    TicketPage,
+    ConfirmPage,
+    SuccessPage,
+    SellPage,
+    ConfirmSellPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,11 @@ import { TicketPage } from '../pages/ticket/ticket';
     MembershipPage,
     TradePage,
     CollectionPage,
-    TicketPage
+    TicketPage,
+    ConfirmPage,
+    SuccessPage,
+    SellPage,
+    ConfirmSellPage
   ],
   providers: [
     StatusBar,

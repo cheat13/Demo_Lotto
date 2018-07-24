@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the CollectionPage page.
@@ -22,4 +23,7 @@ export class CollectionPage {
     console.log('ionViewDidLoad CollectionPage');
   }
 
+  Membership(){
+    this.navCtrl.push(MembershipPage);
+  }
 }
