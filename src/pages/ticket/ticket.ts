@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
+import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
 /**
  * Generated class for the TicketPage page.
@@ -32,6 +33,6 @@ export class TicketPage {
   }
 
   goToPrePlay(){
-    console.log("pre");
+    this.navCtrl.push(PrePlaygamePage);
   }
 }
