@@ -35,6 +35,7 @@ import { DetailcollectionPage } from '../pages/detailcollection/detailcollection
 import { TradedetailPage } from '../pages/tradedetail/tradedetail';
 import { TradesellPage } from '../pages/tradesell/tradesell';
 import { ConfsPage } from '../pages/confs/confs';
+import {TradehistoryPage} from '../pages/tradehistory/tradehistory';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { ConfsPage } from '../pages/confs/confs';
     TradesellPage,
     ConfsPage,
     BuyCollectionPage,
+    TradehistoryPage
   ],
   imports: [
     BrowserModule,
@@ -115,6 +117,7 @@ import { ConfsPage } from '../pages/confs/confs';
     TradesellPage,
     ConfsPage,
     BuyCollectionPage,
+    TradehistoryPage
   ],
   providers: [
     StatusBar,
