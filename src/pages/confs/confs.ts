@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {ConfPage} from '../conf/conf';
-import { DetailcollectionPage } from '../detailcollection/detailcollection';
+import {TradesellPage} from '../tradesell/tradesell';
 /**
- * Generated class for the MycollectPage page.
+ * Generated class for the ConfsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,18 @@ import { DetailcollectionPage } from '../detailcollection/detailcollection';
 
 @IonicPage()
 @Component({
-  selector: 'page-mycollect',
-  templateUrl: 'mycollect.html',
+  selector: 'page-confs',
+  templateUrl: 'confs.html',
 })
-export class MycollectPage {
+export class ConfsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MycollectPage');
-
+    console.log('ionViewDidLoad ConfsPage');
   }
-
-  detail(){
-    this.navCtrl.push(DetailcollectionPage);
+  back(){
+    this.navCtrl.push(TradesellPage);
   }
 }

@@ -25,15 +25,21 @@ import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
-<<<<<<< HEAD
+
 import { Web3Page } from '../pages/web3/web3';
-=======
+
 import { MycollectPage } from '../pages/mycollect/mycollect';
+
 import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
 import { MarketplacePage } from '../pages/marketplace/marketplace';
 import { CollectionDetailPage } from '../pages/collection-detail/collection-detail';
 import { BuyCollectionPage } from '../pages/buy-collection/buy-collection';
->>>>>>> 62ab9f0e61a3575be3f83e51aa118a5b9977ab3d
+
+import { ConfPage } from '../pages/conf/conf';
+import { DetailcollectionPage } from '../pages/detailcollection/detailcollection';
+import { TradedetailPage } from '../pages/tradedetail/tradedetail';
+import { TradesellPage } from '../pages/tradesell/tradesell';
+import { ConfsPage } from '../pages/confs/confs';
 
 @NgModule({
   declarations: [
@@ -58,15 +64,23 @@ import { BuyCollectionPage } from '../pages/buy-collection/buy-collection';
     GameresultPage,
     BlankPage,
     LosegamePage,
-<<<<<<< HEAD
+
     Web3Page,
-=======
+
     MycollectPage,
     HowToPlayPage,
     MarketplacePage,
+
     CollectionDetailPage,
-    BuyCollectionPage
->>>>>>> 62ab9f0e61a3575be3f83e51aa118a5b9977ab3d
+    BuyCollectionPage,
+
+    MycollectPage,
+    ConfPage,
+    DetailcollectionPage,
+    TradedetailPage,
+    TradesellPage,
+    ConfsPage
+
   ],
   imports: [
     BrowserModule,
@@ -95,17 +109,25 @@ import { BuyCollectionPage } from '../pages/buy-collection/buy-collection';
     GameresultPage,
     BlankPage,
     LosegamePage,
-<<<<<<< HEAD
+
     Web3Page,
-=======
+
     ConfirmSellPage,
     MycollectPage,
     HowToPlayPage,
     ConfirmSellPage,
     MarketplacePage,
+
     CollectionDetailPage,
-    BuyCollectionPage
->>>>>>> 62ab9f0e61a3575be3f83e51aa118a5b9977ab3d
+    BuyCollectionPage,
+
+    MycollectPage,
+    ConfPage,
+    DetailcollectionPage,
+    TradedetailPage,
+    TradesellPage,
+    ConfsPage
+
   ],
   providers: [
     StatusBar,
