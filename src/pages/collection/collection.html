@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Collection</ion-title>
+    <ion-title center text-center>Collection</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
@@ -19,5 +19,74 @@
 
 
 <ion-content padding>
+
+  <ion-grid>
+    <ion-row center text-center>
+      <ion-col col-6>
+        <button ion-button block margin-bottom style="background-color: lightcoral;color:black">My Collection</button>
+      </ion-col>
+
+      <ion-col col-6>
+        <button ion-button block margin-bottom style="background-color: lightcoral;color:black" (click)="Marketplace()">Marketplace</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <h5>Collection Rewards</h5>
+  <ion-card>
+    <ion-card-header>
+      Coll.A
+      <br>50,000 THB
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="football" item-start large></ion-icon>
+        <ion-icon name="bug" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+      </ion-item>
+      <div text-right>
+        <b (click)="DetailCollectionA()">Detail ></b>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Coll.B
+      <br>30,000 THB
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="leaf" item-start large></ion-icon>
+      </ion-item>
+      <div text-right>
+        <b>Detail ></b>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Coll.C
+      <br>50,000 THB
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+        <ion-icon name="alert" item-start large></ion-icon>
+      </ion-item>
+      <div text-right>
+        <b>Detail ></b>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>

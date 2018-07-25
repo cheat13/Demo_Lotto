@@ -37,3 +37,4 @@ export class TicketPage {
     this.navCtrl.push(PrePlaygamePage);
   }
 }
+  

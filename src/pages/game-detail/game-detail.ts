@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
-import { MarketplacePage } from '../marketplace/marketplace';
-import { CollectionDetailPage } from '../collection-detail/collection-detail';
-
+import { HowToPlayPage } from '../how-to-play/how-to-play';
+import { ConvertclickPage } from '../convertclick/convertclick';
 /**
- * Generated class for the CollectionPage page.
+ * Generated class for the GameDetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,27 +12,27 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 @IonicPage()
 @Component({
-  selector: 'page-collection',
-  templateUrl: 'collection.html',
+  selector: 'page-game-detail',
+  templateUrl: 'game-detail.html',
 })
-export class CollectionPage {
+export class GameDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CollectionPage');
+    console.log('ionViewDidLoad GameDetailPage');
   }
 
   Membership(){
     this.navCtrl.push(MembershipPage);
   }
 
-  Marketplace(){
-    this.navCtrl.push(MarketplacePage);
+  goToHowToPlay(){
+    this.navCtrl.push(HowToPlayPage);
   }
 
-  DetailCollectionA(){
-    this.navCtrl.push(CollectionDetailPage);
+  goToConvertClick(){
+    this.navCtrl.push(ConvertclickPage);
   }
 }
