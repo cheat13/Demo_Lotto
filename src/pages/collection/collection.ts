@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
+import { MarketplacePage} from '../marketplace/marketplace';
+import {MycollectPage} from '../mycollect/mycollect';
 
 /**
  * Generated class for the CollectionPage page.
@@ -25,5 +27,11 @@ export class CollectionPage {
 
   Membership(){
     this.navCtrl.push(MembershipPage);
+  }
+  Marketplace() {
+    this.navCtrl.push(MarketplacePage);
+  }
+  Mycollection(){
+    this.navCtrl.push(MycollectPage);
   }
 }

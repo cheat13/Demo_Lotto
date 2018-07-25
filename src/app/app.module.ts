@@ -24,6 +24,9 @@ import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
+import { MarketplacePage } from '../pages/marketplace/marketplace';
+import { MycollectPage } from '../pages/mycollect/mycollect';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { LosegamePage } from '../pages/losegame/losegame';
     WingamePage,
     GameresultPage,
     BlankPage,
-    LosegamePage
+    LosegamePage,
+    MarketplacePage,
+    MycollectPage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +78,11 @@ import { LosegamePage } from '../pages/losegame/losegame';
     WingamePage,
     GameresultPage,
     BlankPage,
-    LosegamePage
+    LosegamePage,
+    ConfirmSellPage,
+    MarketplacePage,
+    MycollectPage
+
   ],
   providers: [
     StatusBar,
