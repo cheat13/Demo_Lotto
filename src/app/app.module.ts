@@ -12,13 +12,14 @@ import { CollectionPage } from '../pages/collection/collection';
 import { TicketPage } from '../pages/ticket/ticket';
 import { Web1Page } from '../pages/web1/web1';
 import { Web2Page } from '../pages/web2/web2';
+import {  PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
+import { GameDetailPage } from '../pages/game-detail/game-detail'
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { SuccessPage } from '../pages/success/success';
 import { SellPage } from '../pages/sell/sell';
 import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
 import { ConvertPage } from '../pages/convert/convert';
 import { ConvertclickPage } from '../pages/convertclick/convertclick';
-import { PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
 import { LottogamePage } from '../pages/lottogame/lottogame';
 import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
@@ -26,7 +27,7 @@ import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
 import { MarketplacePage } from '../pages/marketplace/marketplace';
 import { MycollectPage } from '../pages/mycollect/mycollect';
-
+import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MycollectPage } from '../pages/mycollect/mycollect';
     Web1Page,
     Web2Page,
     PrePlaygamePage,
+    GameDetailPage,
     ConfirmPage,
     SuccessPage,
     SellPage,
@@ -51,7 +53,8 @@ import { MycollectPage } from '../pages/mycollect/mycollect';
     BlankPage,
     LosegamePage,
     MarketplacePage,
-    MycollectPage
+    MycollectPage,
+    HowToPlayPage,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { MycollectPage } from '../pages/mycollect/mycollect';
     Web1Page,
     Web2Page,
     PrePlaygamePage,
+    GameDetailPage,
     ConfirmPage,
     SuccessPage,
     SellPage,
@@ -81,8 +85,8 @@ import { MycollectPage } from '../pages/mycollect/mycollect';
     LosegamePage,
     ConfirmSellPage,
     MarketplacePage,
-    MycollectPage
-
+    MycollectPage,
+    HowToPlayPage,
   ],
   providers: [
     StatusBar,
