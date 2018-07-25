@@ -25,16 +25,12 @@ import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
-
 import { Web3Page } from '../pages/web3/web3';
-
 import { MycollectPage } from '../pages/mycollect/mycollect';
-
 import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
 import { MarketplacePage } from '../pages/marketplace/marketplace';
 import { CollectionDetailPage } from '../pages/collection-detail/collection-detail';
 import { BuyCollectionPage } from '../pages/buy-collection/buy-collection';
-
 import { ConfPage } from '../pages/conf/conf';
 import { DetailcollectionPage } from '../pages/detailcollection/detailcollection';
 import { TradedetailPage } from '../pages/tradedetail/tradedetail';
@@ -64,23 +60,19 @@ import { ConfsPage } from '../pages/confs/confs';
     GameresultPage,
     BlankPage,
     LosegamePage,
-
     Web3Page,
-
     MycollectPage,
     HowToPlayPage,
     MarketplacePage,
-
     CollectionDetailPage,
     BuyCollectionPage,
-
     MycollectPage,
     ConfPage,
     DetailcollectionPage,
     TradedetailPage,
     TradesellPage,
-    ConfsPage
-
+    ConfsPage,
+    BuyCollectionPage,
   ],
   imports: [
     BrowserModule,
@@ -109,25 +101,21 @@ import { ConfsPage } from '../pages/confs/confs';
     GameresultPage,
     BlankPage,
     LosegamePage,
-
     Web3Page,
-
     ConfirmSellPage,
     MycollectPage,
     HowToPlayPage,
     ConfirmSellPage,
     MarketplacePage,
-
     CollectionDetailPage,
     BuyCollectionPage,
-
     MycollectPage,
     ConfPage,
     DetailcollectionPage,
     TradedetailPage,
     TradesellPage,
-    ConfsPage
-
+    ConfsPage,
+    BuyCollectionPage,
   ],
   providers: [
     StatusBar,
