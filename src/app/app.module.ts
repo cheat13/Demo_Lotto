@@ -25,9 +25,11 @@ import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
-import { MarketplacePage } from '../pages/marketplace/marketplace';
 import { MycollectPage } from '../pages/mycollect/mycollect';
 import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
+import { MarketplacePage } from '../pages/marketplace/marketplace';
+import { CollectionDetailPage } from '../pages/collection-detail/collection-detail';
+import { BuyCollectionPage } from '../pages/buy-collection/buy-collection';
 
 @NgModule({
   declarations: [
@@ -52,9 +54,11 @@ import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
     GameresultPage,
     BlankPage,
     LosegamePage,
-    MarketplacePage,
     MycollectPage,
     HowToPlayPage,
+    MarketplacePage,
+    CollectionDetailPage,
+    BuyCollectionPage
   ],
   imports: [
     BrowserModule,
@@ -84,9 +88,12 @@ import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
     BlankPage,
     LosegamePage,
     ConfirmSellPage,
-    MarketplacePage,
     MycollectPage,
     HowToPlayPage,
+    ConfirmSellPage,
+    MarketplacePage,
+    CollectionDetailPage,
+    BuyCollectionPage
   ],
   providers: [
     StatusBar,
