@@ -10,13 +10,15 @@ import { MembershipPage } from '../pages/membership/membership';
 import { TradePage } from '../pages/trade/trade';
 import { CollectionPage } from '../pages/collection/collection';
 import { TicketPage } from '../pages/ticket/ticket';
-import {  PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
+import { Web1Page } from '../pages/web1/web1';
+import { Web2Page } from '../pages/web2/web2';
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { SuccessPage } from '../pages/success/success';
 import { SellPage } from '../pages/sell/sell';
 import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
 import { ConvertPage } from '../pages/convert/convert';
 import { ConvertclickPage } from '../pages/convertclick/convertclick';
+import { PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ConvertclickPage } from '../pages/convertclick/convertclick';
     TradePage,
     CollectionPage,
     TicketPage,
+    Web1Page,
+    Web2Page,
     PrePlaygamePage,
     ConfirmPage,
     SuccessPage,
@@ -46,6 +50,8 @@ import { ConvertclickPage } from '../pages/convertclick/convertclick';
     TradePage,
     CollectionPage,
     TicketPage,
+    Web1Page,
+    Web2Page,
     PrePlaygamePage,
     ConfirmPage,
     SuccessPage,
