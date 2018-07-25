@@ -4,12 +4,6 @@ import { MembershipPage } from '../membership/membership';
 import { MarketplacePage } from '../marketplace/marketplace';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
 import { MycollectPage } from '../mycollect/mycollect';
-/**
- * Generated class for the CollectionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -36,8 +30,7 @@ export class CollectionPage {
   DetailCollectionA(){
     this.navCtrl.push(CollectionDetailPage);
   }
-  mycol(){
+  mycollection(){
     this.navCtrl.push(MycollectPage);
   }
-
 }

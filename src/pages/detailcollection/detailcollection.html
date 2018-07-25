@@ -6,19 +6,32 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title>detailcollection</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <img src="../../assets/imgs/sq.png" />  
-  <button ion-button icon-start (click)="tr()">
-    <ion-icon ></ion-icon>
-    trade
-  </button>
-  <h2>Title text</h2>
-  <h3>Decritption xxxxxxxxxxxxxxxxxxxxxxxxx</h3>
+<ion-content padding center>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-6 text-center style="background-color: gray">
+        <img src="../../assets/imgs/sq.png" />    x1
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center center>
+        <button ion-button icon-start (click)="tr()">
+          <ion-icon></ion-icon>
+          trade
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h2 style="font:bold">Title text</h2>
+  <h3>Decritption</h3>
+  <div>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
 </ion-content>
