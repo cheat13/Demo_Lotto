@@ -10,6 +10,8 @@ import { MembershipPage } from '../pages/membership/membership';
 import { TradePage } from '../pages/trade/trade';
 import { CollectionPage } from '../pages/collection/collection';
 import { TicketPage } from '../pages/ticket/ticket';
+import { Web1Page } from '../pages/web1/web1';
+import { Web2Page } from '../pages/web2/web2';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TicketPage } from '../pages/ticket/ticket';
     MembershipPage,
     TradePage,
     CollectionPage,
-    TicketPage
+    TicketPage,
+    Web1Page,
+    Web2Page
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { TicketPage } from '../pages/ticket/ticket';
     MembershipPage,
     TradePage,
     CollectionPage,
-    TicketPage
+    TicketPage,
+    Web1Page,
+    Web2Page
   ],
   providers: [
     StatusBar,
