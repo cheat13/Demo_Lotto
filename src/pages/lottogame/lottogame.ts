@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LottogamePage } from '../lottogame/lottogame';
+import { GameresultPage } from '../gameresult/gameresult';
 
 /**
- * Generated class for the PrePlaygamePage page.
+ * Generated class for the LottogamePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +11,18 @@ import { LottogamePage } from '../lottogame/lottogame';
 
 @IonicPage()
 @Component({
-  selector: 'page-pre-playgame',
-  templateUrl: 'pre-playgame.html',
+  selector: 'page-lottogame',
+  templateUrl: 'lottogame.html',
 })
-export class PrePlaygamePage {
+export class LottogamePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PrePlaygamePage');
+    console.log('ionViewDidLoad LottogamePage');
   }
-
-  goPlay(){
-    this.navCtrl.push(LottogamePage);
+  Gameresult(){
+    this.navCtrl.push(GameresultPage);
   }
-
 }

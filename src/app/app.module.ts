@@ -19,6 +19,11 @@ import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
 import { ConvertPage } from '../pages/convert/convert';
 import { ConvertclickPage } from '../pages/convertclick/convertclick';
 import { PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
+import { LottogamePage } from '../pages/lottogame/lottogame';
+import { WingamePage } from '../pages/wingame/wingame';
+import { GameresultPage } from '../pages/gameresult/gameresult';
+import { BlankPage } from '../pages/blank/blank';
+import { LosegamePage } from '../pages/losegame/losegame';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
     SellPage,
     ConfirmSellPage,
     ConvertPage,
-    ConvertclickPage
+    ConvertclickPage,
+    LottogamePage,
+    WingamePage,
+    GameresultPage,
+    BlankPage,
+    LosegamePage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +68,12 @@ import { PrePlaygamePage } from '../pages/pre-playgame/pre-playgame';
     SellPage,
     ConvertPage,
     ConvertclickPage,
-    ConfirmSellPage
+    ConfirmSellPage,
+    LottogamePage,
+    WingamePage,
+    GameresultPage,
+    BlankPage,
+    LosegamePage
   ],
   providers: [
     StatusBar,
