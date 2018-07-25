@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Web2Page } from '../web2/web2';
 import { Web3Page } from '../web3/web3';
+import { HomePage } from '../../pages/home/home';
 
 /**
  * Generated class for the Web1Page page.
@@ -30,5 +31,8 @@ export class Web1Page {
 
   goweb3(){
     this.navCtrl.push(Web3Page)
+  }
+  home(){
+    this.navCtrl.push(HomePage)
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the Web2Page page.
@@ -22,7 +23,17 @@ export class Web2Page {
     let alert = this.alerCtrl.create({
       title: 'mana',
       message: 'Accept agreement',
-      buttons: ['Ok']
+      buttons: [
+        {
+          text:'OK',
+          role: 'OK',
+          handler: () => {
+            console.log('Destructive clicked');
+            this.navCtrl.push(HomePage);
+          }
+        }
+      ],
+      
     });
     alert.present()
   }

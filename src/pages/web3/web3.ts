@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the Web3Page page.
@@ -26,7 +27,16 @@ export class Web3Page {
     let alert = this.alerCtrl.create({
       title: 'scan mana!',
       message: 'Accept agreement, go to app lotto',
-      buttons: ['Go']
+      buttons: [
+        {
+          text:'OK',
+          role: 'OK',
+          handler: () => {
+            console.log('Destructive clicked');
+            this.navCtrl.push(HomePage);
+          }
+        }
+      ],
     });
     alert.present()
   }
