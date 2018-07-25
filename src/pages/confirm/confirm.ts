@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SellPage } from '../sell/sell';
-import { ConfirmPage } from '../confirm/confirm';
+import { TradePage } from '../trade/trade';
+import { SuccessPage } from '../success/success';
 import { MembershipPage } from '../membership/membership';
 
 /**
- * Generated class for the TradePage page.
+ * Generated class for the ConfirmPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,27 +13,23 @@ import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
-  selector: 'page-trade',
-  templateUrl: 'trade.html',
+  selector: 'page-confirm',
+  templateUrl: 'confirm.html',
 })
-export class TradePage {
+export class ConfirmPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TradePage');
+    console.log('ionViewDidLoad ConfirmPage');
   }
 
-  Sell(){
-    this.navCtrl.push(SellPage);
+  Trade(){
+    this.navCtrl.push(TradePage);
   }
 
-  Confirm(){
-    this.navCtrl.push(ConfirmPage);
-  }
-
-  Membership(){
-    this.navCtrl.push(MembershipPage);
+  Success(){
+    this.navCtrl.push(SuccessPage);
   }
 }

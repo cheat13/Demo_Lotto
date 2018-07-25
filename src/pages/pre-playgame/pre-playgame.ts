@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MembershipPage } from '../membership/membership';
 
 /**
- * Generated class for the CollectionPage page.
+ * Generated class for the PrePlaygamePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,19 +10,20 @@ import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
-  selector: 'page-collection',
-  templateUrl: 'collection.html',
+  selector: 'page-pre-playgame',
+  templateUrl: 'pre-playgame.html',
 })
-export class CollectionPage {
+export class PrePlaygamePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CollectionPage');
+    console.log('ionViewDidLoad PrePlaygamePage');
   }
 
-  Membership(){
-    this.navCtrl.push(MembershipPage);
+  goPlay(){
+    console.log("goPlay");
   }
+
 }
