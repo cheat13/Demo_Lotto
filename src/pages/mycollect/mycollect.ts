@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ConfPage} from '../conf/conf';
 import { DetailcollectionPage } from '../detailcollection/detailcollection';
+import { TradehistoryPage } from '../tradehistory/tradehistory';
 /**
  * Generated class for the MycollectPage page.
  *
@@ -26,5 +27,8 @@ export class MycollectPage {
 
   detail(){
     this.navCtrl.push(DetailcollectionPage);
+  }
+  his(){
+    this.navCtrl.push(TradehistoryPage);
   }
 }

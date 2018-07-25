@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { MarketplacePage } from '../marketplace/marketplace';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
-
+import { MycollectPage } from '../mycollect/mycollect';
 /**
  * Generated class for the CollectionPage page.
  *
@@ -36,4 +36,8 @@ export class CollectionPage {
   DetailCollectionA(){
     this.navCtrl.push(CollectionDetailPage);
   }
+  mycol(){
+    this.navCtrl.push(MycollectPage);
+  }
+
 }
