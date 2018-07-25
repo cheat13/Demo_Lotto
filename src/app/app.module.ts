@@ -23,6 +23,7 @@ import { LottogamePage } from '../pages/lottogame/lottogame';
 import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { BlankPage } from '../pages/blank/blank';
+import { LosegamePage } from '../pages/losegame/losegame';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BlankPage } from '../pages/blank/blank';
     LottogamePage,
     WingamePage,
     GameresultPage,
-    BlankPage
+    BlankPage,
+    LosegamePage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import { BlankPage } from '../pages/blank/blank';
     LottogamePage,
     WingamePage,
     GameresultPage,
-    BlankPage
+    BlankPage,
+    LosegamePage
   ],
   providers: [
     StatusBar,
