@@ -15,6 +15,8 @@ import { ConfirmPage } from '../pages/confirm/confirm';
 import { SuccessPage } from '../pages/success/success';
 import { SellPage } from '../pages/sell/sell';
 import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
+import { ConvertPage } from '../pages/convert/convert';
+import { ConvertclickPage } from '../pages/convertclick/convertclick';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
     ConfirmPage,
     SuccessPage,
     SellPage,
-    ConfirmSellPage
+    ConfirmSellPage,
+    ConvertPage,
+    ConvertclickPage
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,8 @@ import { ConfirmSellPage } from '../pages/confirm-sell/confirm-sell';
     ConfirmPage,
     SuccessPage,
     SellPage,
+    ConvertPage,
+    ConvertclickPage,
     ConfirmSellPage
   ],
   providers: [

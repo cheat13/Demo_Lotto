@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
+import { ConvertPage } from '../convert/convert';
 
 /**
  * Generated class for the TicketPage page.
@@ -28,8 +29,8 @@ export class TicketPage {
     this.navCtrl.push(MembershipPage);
   }
 
-  goToConvertPage(){
-    //NavPush
+  goToConvert(){
+    this.navCtrl.push(ConvertPage);
   }
 
   goToPrePlay(){

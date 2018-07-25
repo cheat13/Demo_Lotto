@@ -1,5 +1,5 @@
 <!--
-  Generated template for the TicketPage page.
+  Generated template for the ConvertPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="pink">
-    <ion-title>Ticket</ion-title>
+    <ion-title>Convert Ticket</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
@@ -23,15 +23,15 @@
     <ion-item no-lines class="itemContent">
       <ion-row>
         <ion-col col-4>
-          Game A
+          Game xxx
         </ion-col>
-        <ion-col col-4 offset-4>
+        <!-- <ion-col col-4 offset-4>
           (Ticket 10)
-        </ion-col>
+        </ion-col> -->
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
+          <ion-card style="background-color: gray;" (click)="goToConvertClick()">
             <div class="card-title">GAME A IMG</div>
           </ion-card>
         </ion-col>
@@ -41,15 +41,15 @@
     <ion-item no-lines class="itemContent">
       <ion-row>
         <ion-col col-4>
-          Game B
+          Game xxx
         </ion-col>
-        <ion-col col-4 offset-4>
+        <!-- <ion-col col-4 offset-4>
           (Ticket 10)
-        </ion-col>
+        </ion-col> -->
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
+          <ion-card style="background-color: gray;" (click)="goToConvertClick()">
             <div class="card-title">GAME B IMG</div>
           </ion-card>
         </ion-col>
@@ -59,16 +59,34 @@
     <ion-item no-lines class="itemContent">
       <ion-row>
         <ion-col col-4>
-          Game C
+          Game xxx
         </ion-col>
-        <ion-col col-4 offset-4>
+        <!-- <ion-col col-4 offset-4>
           (Ticket 10)
-        </ion-col>
+        </ion-col> -->
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME C IMG</div>
+          <ion-card style="background-color: gray;" (click)="goToConvertClick()">
+            <div class="card-title" >GAME C IMG</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item no-lines class="itemContent">
+      <ion-row>
+        <ion-col col-4>
+          Game xxx
+        </ion-col>
+        <!-- <ion-col col-4 offset-4>
+          (Ticket 10)
+        </ion-col> -->
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card style="background-color: gray;" (click)="goToConvertClick()">
+            <div class="card-title">GAME D IMG</div>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -77,9 +95,3 @@
   </div>
 
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar style="text-align:center" color="pink">
-    <ion-title (click)="goToConvert()">Convert ticket</ion-title>
-  </ion-toolbar>
-</ion-footer>
