@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BuyCollectionPage } from '../buy-collection/buy-collection';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the CollectionDetailPage page.
@@ -25,6 +26,10 @@ export class CollectionDetailPage {
 
   BuyItem(){
     this.navCtrl.push(BuyCollectionPage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
   }
 
 }

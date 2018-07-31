@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ConfPage } from '../conf/conf';
+import { MembershipPage } from '../membership/membership';
 /**
  * Generated class for the BuyCollectionPage page.
  *
@@ -42,6 +43,10 @@ export class BuyCollectionPage {
   }
   conf(){
     this.navCtrl.push(ConfPage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
   }
 
 }

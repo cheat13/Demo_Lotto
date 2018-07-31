@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="pink">
-    <ion-title>detailcollection</ion-title>
+    <ion-title center text-center>Detail Collection</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,18 +15,20 @@
 
 <ion-content padding center>
   <ion-grid>
-    <ion-row>
+    <ion-row wrap>
       <ion-col col-3></ion-col>
-      <ion-col col-6 text-center style="background-color: gray">
-        <img src="../../assets/imgs/sq.png" />    x1
+      <ion-col col-6 style="border: solid 1px">
+        <img src="../../assets/imgs/k.jpg" >
+        <div text-right>
+          <span>x1</span>
+        </div>
       </ion-col>
       <ion-col col-3></ion-col>
     </ion-row>
     <ion-row>
       <ion-col text-center center>
         <button ion-button icon-start (click)="tr()">
-          <ion-icon></ion-icon>
-          trade
+          Trade
         </button>
       </ion-col>
     </ion-row>
