@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TradePage } from '../trade/trade';
-import { ConfirmSellPage } from '../confirm-sell/confirm-sell';
 import { MembershipPage } from '../membership/membership';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the SellPage page.
@@ -18,7 +18,7 @@ import { MembershipPage } from '../membership/membership';
 })
 export class SellPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -29,11 +29,29 @@ export class SellPage {
     this.navCtrl.push(TradePage);
   }
 
-  ConfirmSell(){
-    this.navCtrl.push(ConfirmSellPage);
-  }
-
   Membership(){
     this.navCtrl.push(MembershipPage);
+  }
+
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Sell',
+      subTitle: "Amount 100 coin <br> Prise/Unit 100 THB <br> Total 10,000 THB",
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 }

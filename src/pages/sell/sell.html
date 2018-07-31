@@ -14,10 +14,10 @@
   <ion-grid class="page-header" no-padding>
     <ion-row style="text-align: center">
       <ion-col col-6 style="background-color: lightgray;" (click)="Trade()">
-        <h5>Buy</h5>
+        <button ion-button color="dark" clear block><b>Buy</b></button>
       </ion-col>
       <ion-col col-6 style="background-color: lightcoral">
-        <h5>Sell</h5>
+        <button ion-button color="dark" clear block><B>Sell</B></button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -137,8 +137,8 @@
 
   <ion-grid class="page-footer" no-padding>
     <ion-row>
-      <ion-col col-12 style="text-align: center;font-size: 16px;padding-top: 15px" (click)="ConfirmSell()">
-        <b>Confirm</b>
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirm()">
+        <button ion-button color="dark" clear block><B>Confirm</B></button>
       </ion-col>
     </ion-row>
   </ion-grid>
