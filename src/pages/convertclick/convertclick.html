@@ -42,23 +42,22 @@
 
   <ion-grid padding>
     <ion-row>
-      <ion-col col-4>
-        <ion-label style="font-size: 1.5em">Ticket amount</ion-label>
-      </ion-col>
+
+        <ion-label style="font-size: 1.2em">Ticket amount</ion-label>
+
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-        <ion-label fixed>Your Number</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input class="played" type="number" placeholder="Your Number" [(ngModel)]="num" (ionChange)="calculate()" style=""></ion-input>
       </ion-item>
       </ion-col>
     
     </ion-row>
     <ion-row>
-      <ion-col col-4>
-        <ion-label style="font-size: 1.5em">1 Ticket / 1 Coin</ion-label>
-      </ion-col>
+ 
+        <ion-label style="font-size: 1.2em">1 Ticket / 1 Coin</ion-label>
+
     </ion-row>
   </ion-grid>
 
