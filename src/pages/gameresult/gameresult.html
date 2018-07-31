@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="pink">
+    <ion-title>Play Game xxx</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-center>
+  <h2>Game Result</h2>
+  <textarea style="height: 50%;width: 100%;background-color: black;margin-top: 20px;margin-bottom: 20px;"></textarea>
+</ion-content>
+
+<ion-footer id="site-footer" text-center>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title (click)="winpage()">Win</ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-title (click)="losepage()">Lose</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
