@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameresultPage } from '../gameresult/gameresult';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LottogamePage page.
@@ -24,5 +25,8 @@ export class LottogamePage {
   }
   Gameresult(){
     this.navCtrl.push(GameresultPage);
+  }
+  gotoHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 }

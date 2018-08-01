@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WingamePage } from '../wingame/wingame';
 import { LosegamePage } from '../losegame/losegame';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the GameresultPage page.
@@ -33,5 +34,8 @@ export class GameresultPage {
 
   Done(){
     this.navCtrl.push(PrePlaygamePage);
+  }
+  gotoHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 }
