@@ -22,17 +22,17 @@
   <div class="content">
     <ion-item no-lines class="itemContent">
       <ion-row>
-        <ion-col col-4>
-          Game A
+        <ion-col col-4 class="game-title">
+          Game AAA
         </ion-col>
         <ion-col col-4 offset-4>
-          (Ticket 10)
+        <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME A IMG</div>
+            <div class="card-title">GAME AAA IMG</div>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -40,17 +40,17 @@
 
     <ion-item no-lines class="itemContent">
       <ion-row>
-        <ion-col col-4>
-          Game B
+        <ion-col col-4 class="game-title">
+          Game BBB
         </ion-col>
         <ion-col col-4 offset-4>
-          (Ticket 10)
+            <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME B IMG</div>
+            <div class="card-title">GAME BBB IMG</div>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -58,17 +58,17 @@
 
     <ion-item no-lines class="itemContent">
       <ion-row>
-        <ion-col col-4>
-          Game C
+        <ion-col col-4 class="game-title">
+          Game CCC
         </ion-col>
         <ion-col col-4 offset-4>
-          (Ticket 10)
+            <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME C IMG</div>
+            <div class="card-title">GAME CCC IMG</div>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -79,7 +79,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar style="text-align:center" color="pink">
-    <ion-title (click)="goToConvert()">Convert ticket</ion-title>
+  <ion-toolbar style="text-align:center" color="pink" (click)="goToConvert()">
+    <ion-title >Convert ticket</ion-title>
   </ion-toolbar>
 </ion-footer>

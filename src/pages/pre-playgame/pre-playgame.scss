@@ -5,12 +5,31 @@ page-pre-playgame {
         border: 1px solid black;
         background-color:gainsboro; 
         margin-bottom:5px;
+        border-radius: 10px;
+        
     }
     .neverPlayed{
         border: 1px solid black; 
-        background-color: #FDD5D7; 
+        background-color: skyblue; 
         margin-bottom:5px;
-
+        border-radius: 10px;
+        
     }
+
+    .game-title{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    
+    .ticket-title{
+        font-style:italic;
+    }
+
+    .play-title{
+        font-weight: bold;
+        font-size: 1.3em;
+        font-style:italic;
+    }
+    
 
 }

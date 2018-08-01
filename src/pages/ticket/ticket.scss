@@ -3,7 +3,7 @@ page-ticket {
     .content{
     
     .item[no-lines].itemContent { 
-        border-bottom: 1px solid grey; 
+        border-bottom: 1px solid rgb(206, 206, 206); 
         text-align:center;
 
         ion-card {
@@ -22,7 +22,10 @@ page-ticket {
             color:black;
           }
         
-       
+          .game-title {
+              font-size:1.7em;
+              font-weight: bold;
+          }
         
           
         

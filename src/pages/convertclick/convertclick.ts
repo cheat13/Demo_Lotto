@@ -16,6 +16,8 @@ import { MembershipPage } from '../membership/membership';
 })
 export class ConvertclickPage {
 
+  num:any;
+  sum:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
   }
 
@@ -25,8 +27,9 @@ export class ConvertclickPage {
   presentConfirm() {
     let alert = this.alertCtrl.create({
       title: 'Buy ticket amount',
-      subTitle: '5',
-      message: '500 THB',
+      subTitle: this.num + " Coin",
+      message: this.sum + " Bath.",
+
       buttons: [
         {
           text: 'Cancel',
@@ -46,7 +49,13 @@ export class ConvertclickPage {
     alert.present();
   }
 
-  Membership(){
+calculate(){
+  this.sum = this.num*50;
+}
+
+Membership(){
     this.navCtrl.push(MembershipPage);
   }
+
+
 }

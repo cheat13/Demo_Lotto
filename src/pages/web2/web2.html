@@ -6,28 +6,30 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title>WEB LOTTO</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content >
-  <ion-card >
-      <ion-list>
-          <ion-item text-center>
-              <h2 style="font-size: 22px; color: #000000">Lotto ico Round 3</h2>
-              <p>1/07/2018-30/07/2018</p>
-            </ion-item>
-          </ion-list>
-          <ion-grid offset-5>
-              <ion-row>
-                <ion-col col-4 >
-                    <button id="br"color="light" style="height: 320px" ion-button (click)="doAlert()">
-                      <img src="../assets/imgs/QR3.png" ><br>
-                    </button><br><br>
-                   <p  style="font-size: 18px">ico amount : 5,000,000 THB</p>
-                  </ion-col>
-                </ion-row>
-                </ion-grid>
-          </ion-card>
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item text-center>
+        <h2 style="font-size: 22px; color: #000000">Lotto ico Round 3</h2>
+        <p>1/07/2018-30/07/2018</p>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 text-center>
+          <button center id="br" color="light" style="height: 220px" ion-button (click)="doAlert()">
+            <img src="../assets/imgs/QR3.png">
+          </button>
+          <br>
+          <br>
+          <p text-center style="font-size: 18px">ico amount : 5,000,000 THB</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>
