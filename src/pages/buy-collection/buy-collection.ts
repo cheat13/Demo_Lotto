@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { ConfPage } from '../conf/conf';
+import { ConfbPage } from '../confb/confb';
 /**
  * Generated class for the BuyCollectionPage page.
  *
@@ -18,7 +18,7 @@ export class BuyCollectionPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
-  presentConfirm() {
+  /** presentConfirm() {
     let alert = this.alertCtrl.create({
       title: 'Confirm purchase',
       message: 'Do you want to buy this item ?',
@@ -39,9 +39,10 @@ export class BuyCollectionPage {
       ]
     });
     alert.present();
-  }
-  conf(){
-    this.navCtrl.push(ConfPage);
+    
+  } */
+  con(){
+    this.navCtrl.push(ConfbPage);
   }
 
 }
