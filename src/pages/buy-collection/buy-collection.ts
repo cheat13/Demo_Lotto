@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-<<<<<<< HEAD
 import { ConfPage } from '../conf/conf';
 import { MembershipPage } from '../membership/membership';
-=======
 import { ConfbPage } from '../confb/confb';
->>>>>>> 6435b286757aeb51f6fe119920fa68fd12c6a1db
 /**
  * Generated class for the BuyCollectionPage page.
  *
