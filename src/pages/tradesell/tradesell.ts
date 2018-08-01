@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import {ConfsPage } from '../confs/confs';
 import {TradedetailPage} from '../tradedetail/tradedetail';
 /**
@@ -16,7 +16,7 @@ import {TradedetailPage} from '../tradedetail/tradedetail';
 })
 export class TradesellPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +24,26 @@ export class TradesellPage {
   }
   
   confs(){
-    this.navCtrl.push(ConfsPage);
+    const confirm = this.alertCtrl.create({
+      title: 'Sell item A amount',
+      subTitle: "<h5><center>5 </h5><center> 500 THB",
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Agree clicked');
+            
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
   back(){
     this.navCtrl.push(TradedetailPage);
