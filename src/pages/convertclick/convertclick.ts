@@ -26,9 +26,8 @@ export class ConvertclickPage {
   }
   presentConfirm() {
     let alert = this.alertCtrl.create({
-      title: 'Buy ticket amount',
-      subTitle: this.num + " Ticket",
-      message: this.num + " Coin",
+      title: 'Convert Success!',
+      subTitle: this.num + " coin => "+ this.num + " Ticket",
 
       buttons: [
         {

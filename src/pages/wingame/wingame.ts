@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BlankPage } from '../blank/blank';
 import { HomePage } from '../home/home';
+import { MembershipPage } from '../membership/membership';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the WingamePage page.
@@ -17,7 +19,7 @@ import { HomePage } from '../home/home';
 })
 export class WingamePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -26,7 +28,23 @@ export class WingamePage {
   blankpage(){
     this.navCtrl.push(BlankPage);
   }
-  gotoHome(){
-    this.navCtrl.setRoot(HomePage);
+
+  Membership() {
+    this.navCtrl.push(MembershipPage);
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'คุณชนะ Lotto',
+      message: 'Earn Reward 350,000 THB!',
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          console.log('Disagree clicked');
+          this.navCtrl.push(HomePage);
+        }
+      }]
+    });
+    alert.present();
   }
 }

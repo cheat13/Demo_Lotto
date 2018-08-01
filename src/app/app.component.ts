@@ -7,6 +7,7 @@ import { TradePage } from '../pages/trade/trade';
 import { MembershipPage } from '../pages/membership/membership';
 import { GameresultPage } from '../pages/gameresult/gameresult';
 import { ConvertclickPage } from '../pages/convertclick/convertclick';
+import { WingamePage } from '../pages/wingame/wingame';
 @Component({
   templateUrl: 'app.html'
 })
