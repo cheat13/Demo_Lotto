@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="pink">
+  <ion-navbar>
     <ion-title>Convert Ticket</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
@@ -23,17 +23,14 @@
     <ion-item no-lines class="itemContent">
       <ion-row>
         <ion-col col-4>
-          Game xxx
+          Game AAA
         </ion-col>
-        <!-- <ion-col col-4 offset-4>
-          (Ticket 10)
-        </ion-col> -->
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card style="background-color: gray;">
-            <div class="card-title">GAME A IMG</div>
-          </ion-card>
+          <div (click)="goToConvertClick()">
+            <img src="../../assets/imgs/GameA.jpg" style="height: 120px;width: 300px" />
+          </div>
         </ion-col>
       </ion-row>
     </ion-item>
@@ -43,30 +40,32 @@
   <ion-grid padding>
     <ion-row>
 
-        <ion-label style="font-size: 1.2em">Ticket amount</ion-label>
+      <ion-label style="font-size: 1.2em">Ticket amount</ion-label>
 
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-        <ion-input class="played" type="number" placeholder="Your Number" [(ngModel)]="num" (ionChange)="calculate()" style=""></ion-input>
-      </ion-item>
+          <ion-input class="played" type="number" placeholder="Your Number" [(ngModel)]="num" (ionChange)="calculate()" style=""></ion-input>
+        </ion-item>
       </ion-col>
-    
+
     </ion-row>
     <ion-row>
- 
-        <ion-label style="font-size: 1.2em">1 Ticket / 1 Coin</ion-label>
+
+      <ion-label style="font-size: 1.2em">1 Ticket / 1 Coin</ion-label>
 
     </ion-row>
   </ion-grid>
 
+  <ion-grid class="page-footer" no-padding>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="presentConfirm()">
+        <button ion-button color="dark" clear block>
+          <b>Confirm</b>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
-
-
-<ion-footer>
-  <ion-toolbar style="text-align:center" color="pink">
-    <ion-title (click)="presentConfirm()">Confirm</ion-title>
-  </ion-toolbar>
-</ion-footer>

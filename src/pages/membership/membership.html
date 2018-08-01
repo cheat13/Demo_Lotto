@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar >
+  <ion-navbar>
     <ion-title>Membership</ion-title>
   </ion-navbar>
 </ion-header>
@@ -46,22 +46,46 @@
     </ion-grid>
 
     <ion-row padding>
-      <b>Game AAA</b>
-      <div (click)="goToGameDetailPage()">
-       <img src="../../assets/imgs/game.PNG" style="height: 120px;" />
-      </div>
+      <ion-col col-12>
+        <b>Game AAA</b>
+      </ion-col>
+      <ion-col col-12>
+        <div (click)="goToGameDetailPage()">
+          <img src="../../assets/imgs/GameA.jpg" style="height: 120px;width: 300px" />
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding>
+      <ion-col col-12>
+        <b>Game BBB</b>
+      </ion-col>
+      <ion-col col-12>
+        <div (click)="goToGameDetailPage()">
+          <img src="../../assets/imgs/GameB.jpg" style="height: 120px;width: 300px" />
+        </div>
+      </ion-col>
     </ion-row>
     <ion-row padding>
-      <b>Game BBB</b>
-      <div (click)="goToGameDetailPage()">
-        <img src="../../assets/imgs/game.PNG" style="height: 120px;" />
-      </div>
+      <ion-col col-12>
+        <b>Game CCC</b>
+      </ion-col>
+      <ion-col col-12>
+        <div (click)="goToGameDetailPage()">
+          <img src="../../assets/imgs/GameC.png" style="height: 120px;width: 300px" />
+        </div>
+      </ion-col>
     </ion-row>
+
     <ion-row padding>
-      <b>Game CCC</b>
-      <div (click)="goToGameDetailPage()">
-       <img src="../../assets/imgs/game.PNG" style="height: 120px;" />
-      </div>
+      <ion-col col-12>
+        <b>Game DDD</b>
+      </ion-col>
+      <ion-col col-12>
+        <div (click)="goToGameDetailPage()">
+          <img src="../../assets/imgs/GameD.jpg" style="height: 120px;width: 300px" />
+        </div>
+      </ion-col>
     </ion-row>
 
   </ion-grid>

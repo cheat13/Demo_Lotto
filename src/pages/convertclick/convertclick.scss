@@ -20,11 +20,6 @@ page-convertclick {
                 font-weight: bold;
                 color:black;
               }
-
-           
-            
-              
-            
         }
     }
     .played{
@@ -32,4 +27,12 @@ page-convertclick {
         padding-left: 20px;
     }
 
+    .page-footer {
+        height: 50px;
+        background-color: lightcoral;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }
 }
