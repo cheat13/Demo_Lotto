@@ -28,7 +28,8 @@ export class ConvertclickPage {
     let alert = this.alertCtrl.create({
       title: 'Buy ticket amount',
       subTitle: this.num + " Coin",
-      message: this.sum + " Bath.",
+      message: this.sum + ' Bath',
+      cssClass: 'alertCustomCss',
 
       buttons: [
         {
