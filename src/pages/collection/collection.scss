@@ -7,4 +7,9 @@ page-collection {
         float:left;
 
     }
+    .alpha{
+        opacity: 0.1;
+        filter: alpha(opacity=50);
+    }
+
 }
