@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BlankPage } from '../blank/blank';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LosegamePage page.
@@ -24,5 +25,8 @@ export class LosegamePage {
   }
   blankpage(){
     this.navCtrl.push(BlankPage);
+  }
+  gotoHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 }
