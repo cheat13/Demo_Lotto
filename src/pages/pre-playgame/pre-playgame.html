@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar color="pink">
+  <ion-navbar>
     <ion-title>Ticket Game</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -15,38 +20,38 @@
 
 <ion-content padding>
   <ion-grid style="text-align:center">
-    <ion-row >
+    <ion-row>
       <ion-col col-3>
-        Play 5
+        <b>Play 5</b>
       </ion-col>
       <ion-col col-3>
-        Play 10
+        <b>Play 10</b>
       </ion-col>
       <ion-col col-3>
-        Play 20
+        <b>Play 20</b>
       </ion-col>
       <ion-col col-3>
-        Play All
+        <b>Play All</b>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-3 offset-9>
-        10 Ticket
+        <i>4 Ticket</i>
       </ion-col>
     </ion-row>
 
     <ion-row class="neverPlayed" (click)="goPlay()">
       <ion-grid>
         <ion-row>
-          <ion-col col-3 class="ticket-title">
+          <ion-col col-12 class="ticket-title">
             Ticket
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-3 class="game-title">
+          <ion-col col-9 class="game-title">
             Game AAA
           </ion-col>
-          <ion-col col-3 offset-6 class="play-title" >
+          <ion-col col-3 class="play-title">
             Play >
           </ion-col>
         </ion-row>
@@ -56,15 +61,15 @@
     <ion-row class="neverPlayed" (click)="goPlay()">
       <ion-grid>
         <ion-row>
-          <ion-col col-3 class="ticket-title">
+          <ion-col col-12 class="ticket-title">
             Ticket
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-3 class="game-title">
+          <ion-col col-9 class="game-title">
             Game AAA
           </ion-col>
-          <ion-col col-3 offset-6 class="play-title" >
+          <ion-col col-3 class="play-title">
             Play >
           </ion-col>
         </ion-row>
@@ -74,15 +79,15 @@
     <ion-row class="neverPlayed" (click)="goPlay()">
       <ion-grid>
         <ion-row>
-          <ion-col col-3 class="ticket-title">
+          <ion-col col-12 class="ticket-title">
             Ticket
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-3 class="game-title">
+          <ion-col col-9 class="game-title">
             Game AAA
           </ion-col>
-          <ion-col col-3 offset-6 class="play-title" >
+          <ion-col col-3 class="play-title">
             Play >
           </ion-col>
         </ion-row>
@@ -92,56 +97,56 @@
     <ion-row class="neverPlayed" (click)="goPlay()">
       <ion-grid>
         <ion-row>
-          <ion-col col-3 class="ticket-title">
+          <ion-col col-12 class="ticket-title">
             Ticket
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-3 class="game-title">
-            Game CCC
+          <ion-col col-9 class="game-title">
+            Game AAA
           </ion-col>
-          <ion-col col-3 offset-6 class="play-title" >
+          <ion-col col-3 class="play-title">
             Play >
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-row>
 
-    <ion-row class="played" (click)="goPlay()">
-        <ion-grid>
-          <ion-row>
-            <ion-col col-3 class="ticket-title">
-              Ticket
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-3 class="game-title">
-              Game EEE
-            </ion-col>
-            <ion-col col-3 offset-6 class="play-title" (click)="goPlay()">
-              Play >
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-row>
-
-      <ion-row class="played" (click)="goPlay()">
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3 class="ticket-title">
-                Ticket
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col col-3 class="game-title">
-                Game FFF
-              </ion-col>
-              <ion-col col-3 offset-6 class="play-title" (click)="goPlay()">
-                Play >
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+    <ion-row class="played" (click)="goResult()">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 class="ticket-title">
+            Ticket
+          </ion-col>
         </ion-row>
+        <ion-row>
+          <ion-col col-9 class="game-title">
+            Game AAA
+          </ion-col>
+          <ion-col col-3 class="play-title">
+            Result >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-row>
+
+    <ion-row class="played" (click)="goResult()">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 class="ticket-title">
+            Ticket
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-9 class="game-title">
+            Game AAA
+          </ion-col>
+          <ion-col col-3 class="play-title">
+            Result >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-row>
 
 
   </ion-grid>

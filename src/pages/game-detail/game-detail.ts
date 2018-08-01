@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickPage } from '../convertclick/convertclick';
+import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 /**
  * Generated class for the GameDetailPage page.
  *
@@ -34,5 +35,9 @@ export class GameDetailPage {
 
   goToConvertClick(){
     this.navCtrl.push(ConvertclickPage);
+  }
+
+  goToPrePlay(){
+    this.navCtrl.push(PrePlaygamePage);
   }
 }

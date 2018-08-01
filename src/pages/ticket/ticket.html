@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="pink">
+  <ion-navbar>
     <ion-title>Ticket</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
@@ -26,14 +26,14 @@
           Game AAA
         </ion-col>
         <ion-col col-4 offset-4>
-        <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
+          <ion-badge color="secondary"> (Ticket 4)</ion-badge>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME AAA IMG</div>
-          </ion-card>
+          <div (click)="goToPrePlay()">
+            <img src="../../assets/imgs/GameA.jpg" style="height: 120px;width: 300px" />
+          </div>
         </ion-col>
       </ion-row>
     </ion-item>
@@ -44,14 +44,14 @@
           Game BBB
         </ion-col>
         <ion-col col-4 offset-4>
-            <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
+          <ion-badge color="secondary"> (Ticket 4)</ion-badge>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME BBB IMG</div>
-          </ion-card>
+          <div (click)="goToPrePlay()">
+            <img src="../../assets/imgs/GameB.jpg" style="height: 120px;width: 300px" />
+          </div>
         </ion-col>
       </ion-row>
     </ion-item>
@@ -62,24 +62,28 @@
           Game CCC
         </ion-col>
         <ion-col col-4 offset-4>
-            <ion-badge color="secondary"> (Ticket 10)</ion-badge> 
+          <ion-badge color="secondary"> (Ticket 10)</ion-badge>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card (click)="goToPrePlay()">
-            <div class="card-title">GAME CCC IMG</div>
-          </ion-card>
+          <div (click)="goToPrePlay()">
+            <img src="../../assets/imgs/GameC.png" style="height: 120px;width: 300px" />
+          </div>
         </ion-col>
       </ion-row>
     </ion-item>
 
   </div>
 
-</ion-content>
+  <ion-grid class="page-footer" no-padding>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="goToConvert()">
+        <button ion-button color="dark" clear block>
+          <b>Convert ticket</b>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-<ion-footer>
-  <ion-toolbar style="text-align:center" color="pink" (click)="goToConvert()">
-    <ion-title >Convert ticket</ion-title>
-  </ion-toolbar>
-</ion-footer>
+</ion-content>

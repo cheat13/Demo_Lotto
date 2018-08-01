@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-buttons left>
       <button ion-button>
         <ion-icon name="menu"></ion-icon>
@@ -13,6 +13,11 @@
         <ion-icon name="cart"></ion-icon>
       </button>
     </ion-buttons>
+    <ion-buttons right>
+      <button ion-button (click)="gotoHome()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -20,7 +25,7 @@
 
   <ion-list>
     <ion-item no-padding>
-      <ion-grid (click)="blankpage()">
+      <ion-grid>
         <ion-row>
           <ion-col col-2>
             <div style="padding-top: 30px">
@@ -34,7 +39,7 @@
                   <b>คุณชนะ lotto</b>
                 </ion-col>
                 <ion-col col-12>
-                  <h6>Title text 350000 BTH</h6>
+                  <h6>Earn Reward 350,000 THB</h6>
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -48,7 +53,7 @@
   </ion-list>
   <ion-grid class="page-footer" no-padding>
     <ion-row style="align-self: center">
-      <img src="../../assets/imgs/foot.PNG"/>
+      <img src="../../assets/imgs/foot.PNG" />
     </ion-row>
   </ion-grid>
 

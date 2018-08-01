@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the ConvertclickPage page.
@@ -26,8 +27,8 @@ export class ConvertclickPage {
   presentConfirm() {
     let alert = this.alertCtrl.create({
       title: 'Buy ticket amount',
-      subTitle: this.num + " Coin",
-      message: this.sum + " Bath.",
+      subTitle: this.num + " Ticket",
+      message: this.num + " Coin",
 
       buttons: [
         {
@@ -51,5 +52,10 @@ export class ConvertclickPage {
 calculate(){
   this.sum = this.num*50;
 }
+
+Membership(){
+    this.navCtrl.push(MembershipPage);
+  }
+
 
 }

@@ -27,8 +27,4 @@ export class SuccessPage {
   Trade(){
     this.navCtrl.push(TradePage);
   }
-
-  Membership(){
-    this.navCtrl.push(MembershipPage);
-  }
 }

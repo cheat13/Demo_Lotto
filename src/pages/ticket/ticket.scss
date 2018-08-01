@@ -23,12 +23,21 @@ page-ticket {
           }
         
           .game-title {
-              font-size:1.7em;
+              font-size:1em;
               font-weight: bold;
           }
         
           
         
+        }
     }
-}
+
+    .page-footer {
+        height: 50px;
+        background-color: lightcoral;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }
 }

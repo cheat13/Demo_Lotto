@@ -4,6 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Web1Page } from '../pages/web1/web1';
 import { TradePage } from '../pages/trade/trade';
+import { MembershipPage } from '../pages/membership/membership';
+import { GameresultPage } from '../pages/gameresult/gameresult';
+import { ConvertclickPage } from '../pages/convertclick/convertclick';
 @Component({
   templateUrl: 'app.html'
 })

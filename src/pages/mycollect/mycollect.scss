@@ -1,3 +1,16 @@
 page-mycollect {
-
+    .b {
+        border: 1px solid black;
+        margin: 1px;
+        font-size: 10px;
+        font: bold;
+    }
+    .alpha{
+        opacity: 0.1;
+        filter: alpha(opacity=50);
+    }
+    img{
+        height: 10px;
+        width: 50px;
+    }
 }

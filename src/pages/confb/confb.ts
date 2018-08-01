@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BlankPage } from '../blank/blank';
-import { HomePage } from '../home/home';
-
+import {BuyCollectionPage} from '../buy-collection/buy-collection';
 /**
- * Generated class for the WingamePage page.
+ * Generated class for the ConfbPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,21 +10,18 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-wingame',
-  templateUrl: 'wingame.html',
+  selector: 'page-confb',
+  templateUrl: 'confb.html',
 })
-export class WingamePage {
+export class ConfbPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WingamePage');
+    console.log('ionViewDidLoad ConfbPage');
   }
-  blankpage(){
-    this.navCtrl.push(BlankPage);
-  }
-  gotoHome(){
-    this.navCtrl.setRoot(HomePage);
+  back(){
+    this.navCtrl.push(BuyCollectionPage);
   }
 }
