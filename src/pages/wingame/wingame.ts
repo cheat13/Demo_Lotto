@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BlankPage } from '../blank/blank';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the WingamePage page.
@@ -24,5 +25,8 @@ export class WingamePage {
   }
   blankpage(){
     this.navCtrl.push(BlankPage);
+  }
+  gotoHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 }
