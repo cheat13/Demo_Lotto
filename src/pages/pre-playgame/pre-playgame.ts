@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LottogamePage } from '../lottogame/lottogame';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the PrePlaygamePage page.
@@ -25,6 +26,10 @@ export class PrePlaygamePage {
 
   goPlay(){
     this.navCtrl.push(LottogamePage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
   }
 
 }

@@ -10,17 +10,17 @@
 <ion-content padding text-center>
   <h2>Game Result</h2>
   <textarea style="height: 50%;width: 100%;background-color: black;margin-top: 20px;margin-bottom: 20px;"></textarea>
+
+
+  <ion-grid class="page-footer" no-padding>
+      <ion-row>
+        <ion-col col-12 style="text-align: center;font-size: 16px" (click)="Done()">
+          <button ion-button color="dark" clear block>
+            <b>Done</b>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
 </ion-content>
 
-<ion-footer id="site-footer" text-center>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-title (click)="winpage()">Win</ion-title>
-      </ion-col>
-      <ion-col>
-        <ion-title (click)="losepage()">Lose</ion-title>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-footer>

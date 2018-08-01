@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the ConvertclickPage page.
@@ -45,4 +46,7 @@ export class ConvertclickPage {
     alert.present();
   }
 
+  Membership(){
+    this.navCtrl.push(MembershipPage);
+  }
 }

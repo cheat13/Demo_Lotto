@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WingamePage } from '../wingame/wingame';
 import { LosegamePage } from '../losegame/losegame';
+import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
 /**
  * Generated class for the GameresultPage page.
@@ -28,5 +29,9 @@ export class GameresultPage {
   }
   losepage(){
     this.navCtrl.push(LosegamePage);
+  }
+
+  Done(){
+    this.navCtrl.push(PrePlaygamePage);
   }
 }
