@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LottogamePage } from '../lottogame/lottogame';
 import { MembershipPage } from '../membership/membership';
+import { GameresultPage } from '../gameresult/gameresult';
 
 /**
  * Generated class for the PrePlaygamePage page.
@@ -32,4 +33,7 @@ export class PrePlaygamePage {
     this.navCtrl.push(MembershipPage);
   }
 
+  goResult(){
+    this.navCtrl.push(GameresultPage);
+  }
 }
