@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title center text-center>By Collection</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -39,6 +44,6 @@
 </ion-content>
 <ion-footer no-shadow>
   <ion-toolbar position="bottom">
-    <button style="background-color: lightcoral;color:black" ion-button full (click)="con()">Confirm</button>
+    <button style="background-color: lightcoral;color:black" ion-button full (click)="presentConfirm()">Confirm</button>
   </ion-toolbar>
 </ion-footer>

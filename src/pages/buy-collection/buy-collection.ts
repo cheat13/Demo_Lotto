@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { ConfPage } from '../conf/conf';
+import { MembershipPage } from '../membership/membership';
 import { ConfbPage } from '../confb/confb';
 /**
  * Generated class for the BuyCollectionPage page.
@@ -18,31 +20,34 @@ export class BuyCollectionPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
-  /** presentConfirm() {
-    let alert = this.alertCtrl.create({
-      title: 'Confirm purchase',
-      message: 'Do you want to buy this item ?',
+  presentConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Buy item A   amount',
+      subTitle: "<h5><center>5 </h5><center> 500 THB",
       buttons: [
         {
           text: 'Cancel',
-          role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Disagree clicked');
           }
         },
         {
-          text: 'Buy',
+          text: 'Confirm',
           handler: () => {
-            console.log('Buy clicked');
+            console.log('Agree clicked');
+            
           }
         }
       ]
     });
-    alert.present();
-    
-  } */
+    confirm.present();
+  }
   con(){
     this.navCtrl.push(ConfbPage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
   }
 
 }

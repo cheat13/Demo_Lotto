@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="pink">
     <ion-title center text-center>Collection A</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -21,13 +26,22 @@
       <ion-col style="background-color: lightgray">
         <h5>Coll.A</h5>
         <b>50,000 THB</b>
+        <div class="col">
+          <div>
+            <img src="../../assets/imgs/poe.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+          </div>
 
-        <div class="item">
-          <br>
-          <ion-icon name="football" item-start large></ion-icon>
-          <ion-icon name="bug" item-start large></ion-icon>
-          <ion-icon name="alert" item-start large></ion-icon>
-          <ion-icon name="alert" item-start large></ion-icon>
+          <div>
+            <img src="../../assets/imgs/card05.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+          </div>
+
+          <div>
+            <img src="../../assets/imgs/k.jpg" style="float:left; margin-right: 5px; height: 30x; width: 30px;">
+          </div>
+
+          <div>
+            <img src="../../assets/imgs/heart.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+          </div>
         </div>
       </ion-col>
     </ion-row>
@@ -50,7 +64,9 @@
 
     <ion-list>
       <ion-item style="background-color: lightgrey">
-        <ion-icon name="football" item-start></ion-icon>
+        <div>
+          <img src="../../assets/imgs/poe.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+        </div>
         Name xxx
         <button style="color: lightgrey" color="light" ion-button default item-end>Buy</button>
       </ion-item>
@@ -58,25 +74,30 @@
 
     <ion-list>
       <ion-item style="background-color: lightgrey">
-        <ion-icon name="bug" item-start></ion-icon>
-        Name xxx
+        <div>
+          <img src="../../assets/imgs/card05.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+        </div> Name xxx
         <button style="color: lightgrey" color="light" ion-button default item-end>Buy</button>
       </ion-item>
     </ion-list>
 
     <ion-list>
       <ion-item style="background-color: lightgrey">
-        <ion-icon name="alert" item-start></ion-icon>
+        <div>
+          <img src="../../assets/imgs/k.jpg" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+        </div>
         Name xxx
-        <button style="background-color: lightcoral;color: black" ion-button default item-end (click)="BuyItem()">Buy</button>
+        <button color="secondary" ion-button default item-end (click)="BuyItem()">Buy</button>
       </ion-item>
     </ion-list>
 
     <ion-list>
       <ion-item style="background-color: lightgrey">
-        <ion-icon name="alert" item-start></ion-icon>
+        <div>
+          <img src="../../assets/imgs/heart.png" style="float:left; margin-right: 5px; height: 30px; width: 30px;">
+        </div>
         Name xxx
-        <button style="background-color: lightcoral;color: black" ion-button default item-end>Buy</button>
+        <button color="secondary" ion-button default item-end>Buy</button>
       </ion-item>
     </ion-list>
 

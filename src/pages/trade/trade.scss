@@ -2,16 +2,25 @@ page-trade {
     .page-header {
         position: fixed;
         left: 0px;
-        top: 60px;
+        top: 56px;
         right: 0px;
+        z-index:10;
+
+
     }
     
     .page-footer {
         height: 50px;
-        background-color: lightcoral;
+        background-color:lightcoral;
         position: fixed;
         left: 0px;
         bottom: 0px;
         right: 0px;
+    }
+    .page-button{
+        background-color: #990000;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
 }
