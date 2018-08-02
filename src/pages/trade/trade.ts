@@ -56,4 +56,26 @@ export class TradePage {
     });
     confirm.present();
   }
+  
+  showConfirmSell() {
+    const confirm = this.alertCtrl.create({
+      title: 'Sell',
+      subTitle: "Amount 100 coin <br> Prise/Unit 100 THB <br> Total 10,000 THB",
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 }
