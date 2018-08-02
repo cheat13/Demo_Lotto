@@ -4,6 +4,9 @@ import { ConvertclickPage } from '../convertclick/convertclick';
 import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
 import { ConvertclickCPage } from '../convertclick-c/convertclick-c';
 import { ConvertclickDPage } from '../convertclick-d/convertclick-d';
+import { TicketPage } from '../ticket/ticket';
+import { HomePage } from '../home/home';
+
 /**
  * Generated class for the ConvertPage page.
  *
@@ -36,5 +39,11 @@ export class ConvertPage {
   }
   goD(){
     this.navCtrl.push(ConvertclickDPage);
+  }
+  backpage(){
+    this.navCtrl.push(TicketPage);
+  }
+  gotoHomepage(){
+    this.navCtrl.setRoot(HomePage);
   }
 }

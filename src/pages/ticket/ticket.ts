@@ -36,5 +36,8 @@ export class TicketPage {
   goToPrePlay(){
     this.navCtrl.push(PrePlaygamePage);
   }
+  backpage(){
+    this.navCtrl.push(MembershipPage);
+  }
 }
   

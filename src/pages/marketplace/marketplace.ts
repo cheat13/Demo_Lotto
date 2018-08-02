@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
+import { CollectionPage } from '../collection/collection';
 
 /**
  * Generated class for the MarketplacePage page.
@@ -25,5 +26,8 @@ export class MarketplacePage {
 
   Membership(){
     this.navCtrl.push(MembershipPage);
+  }
+  backpage(){
+    this.navCtrl.push(CollectionPage);
   }
 }

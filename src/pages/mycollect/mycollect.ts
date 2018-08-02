@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ConfPage} from '../conf/conf';
 import { DetailcollectionPage } from '../detailcollection/detailcollection';
 import { TradehistoryPage } from '../tradehistory/tradehistory';
+import { CollectionPage } from '../collection/collection';
 /**
  * Generated class for the MycollectPage page.
  *
@@ -30,5 +31,8 @@ export class MycollectPage {
   }
   his(){
     this.navCtrl.push(TradehistoryPage);
+  }
+  backpage(){
+    this.navCtrl.push(CollectionPage);
   }
 }

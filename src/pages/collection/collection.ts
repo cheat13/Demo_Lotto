@@ -33,4 +33,7 @@ export class CollectionPage {
   mycollection(){
     this.navCtrl.push(MycollectPage);
   }
+  backpage(){
+    this.navCtrl.push(MembershipPage);
+  }
 }

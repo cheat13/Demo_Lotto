@@ -7,6 +7,7 @@ import { GameDetailPage } from '../game-detail/game-detail';
 import { GameDetailBPage } from '../game-detail-b/game-detail-b';
 import { GameDetailCPage } from '../game-detail-c/game-detail-c';
 import { GameDetailDPage } from '../game-detail-d/game-detail-d';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the MembershipPage page.
@@ -52,5 +53,8 @@ export class MembershipPage {
   }
   goD(){
     this.navCtrl.push(GameDetailDPage);
+  }
+  backpage(){
+    this.navCtrl.setRoot(HomePage);
   }
 }

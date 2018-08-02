@@ -4,12 +4,6 @@ import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickPage } from '../convertclick/convertclick';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
-/**
- * Generated class for the GameDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -39,5 +33,9 @@ export class GameDetailPage {
 
   goToPrePlay(){
     this.navCtrl.push(PrePlaygamePage);
+  }
+
+  gotoPrePlaygamePage(){
+    this.navCtrl.push(MembershipPage);
   }
 }

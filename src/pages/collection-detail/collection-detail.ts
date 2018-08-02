@@ -2,13 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BuyCollectionPage } from '../buy-collection/buy-collection';
 import { MembershipPage } from '../membership/membership';
-
-/**
- * Generated class for the CollectionDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MycollectPage } from '../mycollect/mycollect';
+import { CollectionPage } from '../collection/collection';
 
 @IonicPage()
 @Component({
@@ -31,5 +26,7 @@ export class CollectionDetailPage {
   Membership(){
     this.navCtrl.push(MembershipPage);
   }
-
+  backpage(){
+    this.navCtrl.push(CollectionPage);
+  }
 }
