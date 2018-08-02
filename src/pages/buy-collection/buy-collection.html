@@ -1,10 +1,12 @@
 <ion-header>
-
   <ion-toolbar color="pink">
     <button ion-button clear small (click)="backpage()">
       <ion-icon name="arrow-back"></ion-icon>
     </button>
-    <ion-title center text-center>By Collection</ion-title>
+    
+
+    <ion-title center text-center>Buy Collection</ion-title>
+
     <ion-buttons right>
       <button ion-button (click)="Membership()">
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
@@ -17,7 +19,7 @@
 
 <ion-content padding>
 
-  <ion-grid style="border: solid 1px;background-color: rgb(240, 240, 240)">
+  <ion-grid style="border: solid 0px;background-color: rgb(226, 226, 226)">
     <ion-row>
       <ion-col>
         <ion-title>Collection Items</ion-title>
@@ -26,15 +28,23 @@
             <ion-item>
               <ion-label>Select Item</ion-label>
               <ion-select [(ngModel)]="colitem" multiple="true" cancelText="Cancel" okText="OK">
-                <ion-option value="Item A">Item A</ion-option>
+                <ion-option value="Item A" selected="true">Item A</ion-option>
                 <ion-option value="Item B">Item B</ion-option>
-                <ion-option value="Item C" selected="true">Item C</ion-option>
+                <ion-option value="Item C">Item C</ion-option>
                 <ion-option value="Item D">Item D</ion-option>
                 <ion-option value="Item X">Item X</ion-option>
               </ion-select>
             </ion-item>
           </ion-list>
         </ion-col>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Amount</ion-label>
+            <ion-input placeholder="number input" type="number"></ion-input>
+          </ion-item>
+        </ion-list>
+
       </ion-col>
     </ion-row>
   </ion-grid>

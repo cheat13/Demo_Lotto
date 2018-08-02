@@ -4,6 +4,7 @@ import {ConfPage} from '../conf/conf';
 import { DetailcollectionPage } from '../detailcollection/detailcollection';
 import { TradehistoryPage } from '../tradehistory/tradehistory';
 import { CollectionPage } from '../collection/collection';
+import { MembershipPage } from '../membership/membership';
 /**
  * Generated class for the MycollectPage page.
  *
@@ -34,5 +35,9 @@ export class MycollectPage {
   }
   backpage(){
     this.navCtrl.push(CollectionPage);
+  }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
   }
 }

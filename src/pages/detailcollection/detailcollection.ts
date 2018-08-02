@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TradedetailPage } from '../tradedetail/tradedetail';
 import { MycollectPage } from '../mycollect/mycollect';
+import { MembershipPage } from '../membership/membership';
 /**
  * Generated class for the DetailcollectionPage page.
  *
@@ -22,10 +23,15 @@ export class DetailcollectionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailcollectionPage');
   }
+  
   tr(){
     this.navCtrl.push(TradedetailPage);
   }
   backpage(){
     this.navCtrl.push(MycollectPage);
   }
+
+  Membership(){
+    this.navCtrl.push(MembershipPage);
+ }
 }
