@@ -1,0 +1,29 @@
+page-game-detail-d {
+    .gameBanner{
+        text-align:center;
+        background-color: lightgray;
+        height:25vh;
+
+    }
+    .bannerButton{
+        text-align:center;
+        position: absolute;
+        width: 100%;
+        top: 25%;
+        
+        .overButton{
+            margin:0px;
+            padding:0px
+            
+        }
+    }
+    
+    .page-footer {
+        height: 50px;
+        background-color: lightcoral;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }    
+}

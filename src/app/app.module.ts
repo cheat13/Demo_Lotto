@@ -39,6 +39,9 @@ import { GameDetailBPage } from '../pages/game-detail-b/game-detail-b';
 import { ConvertclickBPage } from '../pages/convertclick-b/convertclick-b';
 import { GameDetailCPage } from '../pages/game-detail-c/game-detail-c';
 import { ConvertclickCPage} from '../pages/convertclick-c/convertclick-c';
+import { GameDetailDPage } from '../pages/game-detail-d/game-detail-d';
+import { ConvertclickDPage} from '../pages/convertclick-d/convertclick-d';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +56,7 @@ import { ConvertclickCPage} from '../pages/convertclick-c/convertclick-c';
     PrePlaygamePage,
     GameDetailPage,
     SuccessPage,
-    SellPage,
+    SellPage, 
     ConvertPage,
     ConvertclickPage,
     LottogamePage,
@@ -79,7 +82,9 @@ import { ConvertclickCPage} from '../pages/convertclick-c/convertclick-c';
     GameDetailBPage,
     ConvertclickBPage,
     GameDetailCPage,
-    ConvertclickCPage
+    ConvertclickCPage,
+    GameDetailDPage,
+    ConvertclickDPage
   ],
   imports: [
     BrowserModule,
@@ -124,7 +129,9 @@ import { ConvertclickCPage} from '../pages/convertclick-c/convertclick-c';
     GameDetailBPage,
     ConvertclickBPage,
     GameDetailCPage,
-    ConvertclickCPage
+    ConvertclickCPage,
+    GameDetailDPage,
+    ConvertclickDPage
 
   ],
   providers: [
