@@ -15,7 +15,7 @@ import { TicketPage } from '../pages/ticket/ticket';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TicketPage;
+  rootPage:any = Web1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
