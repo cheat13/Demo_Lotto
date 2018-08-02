@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TradePage } from '../trade/trade';
 import { CollectionPage } from '../collection/collection';
 import { TicketPage } from '../ticket/ticket';
-import { GameDetailPage } from '../game-detail/game-detail'
+import { GameDetailPage } from '../game-detail/game-detail';
+import {GameDetailBPage} from '../game-detail-b/game-detail-b';
 
 /**
  * Generated class for the MembershipPage page.
@@ -40,5 +41,8 @@ export class MembershipPage {
 
   goToGameDetailPage(){
     this.navCtrl.push(GameDetailPage);
+  }
+  goB(){
+    this.navCtrl.push(GameDetailBPage);
   }
 }

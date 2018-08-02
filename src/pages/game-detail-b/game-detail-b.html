@@ -1,0 +1,83 @@
+<!--
+  Generated template for the TicketPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="pink">
+    <ion-title>Ticket</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row padding class="gameBanner">
+      <ion-col col-12>
+        <b>Prize pool : 1,000,000 THB</b>
+      </ion-col>
+      <ion-col col-12>
+        Round : 1 (01/07/2018-30/07/2018)
+      </ion-col>
+      <ion-col col-12>
+        <h2>Game BBB</h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row class="bannerButton">
+    <ion-col col-1></ion-col>
+    <ion-col col-5 class="overButton">
+      <button ion-button full color="pink" (click)="goToPrePlay()">
+        <b>Play Game</b>
+      </button>
+    </ion-col>
+    <ion-col col-5 class="overButton">
+      <button ion-button full color="light" (click)="goToHowToPlay()">
+        <b>How to Play</b>
+      </button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+  <ion-grid style="margin-top:60px">
+    <ion-row>
+      <ion-col col-12 style="font-weight: bold">
+        Title text
+      </ion-col>
+      <ion-col col-12>
+        Description
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="page-footer" no-padding>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="goToConvertClick()">
+        <button ion-button color="dark" clear block>
+          <b>Convert ticket</b>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

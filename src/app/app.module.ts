@@ -35,7 +35,8 @@ import { TradesellPage } from '../pages/tradesell/tradesell';
 import { ConfsPage } from '../pages/confs/confs';
 import {TradehistoryPage} from '../pages/tradehistory/tradehistory';
 import { ConfbPage } from '../pages/confb/confb';
-
+import { GameDetailBPage } from '../pages/game-detail-b/game-detail-b';
+import { ConvertclickBPage } from '../pages/convertclick-b/convertclick-b';
 @NgModule({
   declarations: [
     MyApp,
@@ -71,7 +72,9 @@ import { ConfbPage } from '../pages/confb/confb';
     ConfsPage,
     BuyCollectionPage,
     TradehistoryPage,
-    ConfbPage
+    ConfbPage,
+    GameDetailBPage,
+    ConvertclickBPage
   ],
   imports: [
     BrowserModule,
@@ -112,7 +115,9 @@ import { ConfbPage } from '../pages/confb/confb';
     ConfsPage,
     BuyCollectionPage,
     TradehistoryPage,
-    ConfbPage
+    ConfbPage,
+    GameDetailBPage,
+    ConvertclickBPage
   ],
   providers: [
     StatusBar,
