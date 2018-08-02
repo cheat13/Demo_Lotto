@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConvertclickPage } from '../convertclick/convertclick';
-
+import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
+import { ConvertclickCPage } from '../convertclick-c/convertclick-c';
+import { ConvertclickDPage } from '../convertclick-d/convertclick-d';
 /**
  * Generated class for the ConvertPage page.
  *
@@ -26,5 +28,13 @@ export class ConvertPage {
   goToConvertClick(){
     this.navCtrl.push(ConvertclickPage);
   }
-
+  goB(){
+    this.navCtrl.push(ConvertclickBPage);
+  }
+  goC(){
+    this.navCtrl.push(ConvertclickCPage);
+  }
+  goD(){
+    this.navCtrl.push(ConvertclickDPage);
+  }
 }

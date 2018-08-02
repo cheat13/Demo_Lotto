@@ -1,0 +1,39 @@
+page-convertclick-c {
+    .content{
+    
+        .item[no-lines].itemContent { 
+            border-bottom: 1px solid grey; 
+            text-align:center;
+    
+            ion-card {
+                height:120px;
+                text-align:center;
+                position: relative;
+                
+              }
+    
+              .card-title {
+                position: absolute;
+                top: 36%;
+                font-size: 2.0em;
+                width: 100%;
+                font-weight: bold;
+                color:black;
+              }
+        }
+    }
+    .played{
+        border: 1px solid #BEBEBE;
+        padding-left: 20px;
+    }
+
+    .page-footer {
+        height: 50px;
+        background-color: lightcoral;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
