@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { MembershipPage } from '../membership/membership';
 /**
  * Generated class for the ConvertclickBPage page.
  *
@@ -15,11 +15,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ConvertclickBPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  num:any;
+  sum:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ConvertclickBPage');
+    console.log('ionViewDidLoad ConvertclickPage');
+  }
+  presentConfirm() {
+    let alert = this.alertCtrl.create({
+      title: 'Convert Success!',
+      subTitle: this.num + " coin => "+ this.num + " Ticket",
+
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
+calculate(){
+  this.sum = this.num*50;
+}
+
+Membership(){
+    this.navCtrl.push(MembershipPage);
+  }
 }
