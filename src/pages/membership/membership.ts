@@ -6,6 +6,7 @@ import { TicketPage } from '../ticket/ticket';
 import { GameDetailPage } from '../game-detail/game-detail';
 import { GameDetailBPage } from '../game-detail-b/game-detail-b';
 import { GameDetailCPage } from '../game-detail-c/game-detail-c';
+import { GameDetailDPage } from '../game-detail-d/game-detail-d';
 
 /**
  * Generated class for the MembershipPage page.
@@ -48,5 +49,8 @@ export class MembershipPage {
   }
   goC(){
     this.navCtrl.push(GameDetailCPage);
+  }
+  goD(){
+    this.navCtrl.push(GameDetailDPage);
   }
 }
