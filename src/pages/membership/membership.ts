@@ -4,7 +4,8 @@ import { TradePage } from '../trade/trade';
 import { CollectionPage } from '../collection/collection';
 import { TicketPage } from '../ticket/ticket';
 import { GameDetailPage } from '../game-detail/game-detail';
-import {GameDetailBPage} from '../game-detail-b/game-detail-b';
+import { GameDetailBPage } from '../game-detail-b/game-detail-b';
+import { GameDetailCPage } from '../game-detail-c/game-detail-c';
 
 /**
  * Generated class for the MembershipPage page.
@@ -44,5 +45,8 @@ export class MembershipPage {
   }
   goB(){
     this.navCtrl.push(GameDetailBPage);
+  }
+  goC(){
+    this.navCtrl.push(GameDetailCPage);
   }
 }
