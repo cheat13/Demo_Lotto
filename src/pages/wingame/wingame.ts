@@ -4,6 +4,7 @@ import { BlankPage } from '../blank/blank';
 import { HomePage } from '../home/home';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
+import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
 /**
  * Generated class for the WingamePage page.
@@ -46,5 +47,8 @@ export class WingamePage {
       }]
     });
     alert.present();
+  }
+  gotoPrePlaygamePage(){
+    this.navCtrl.push(PrePlaygamePage);
   }
 }

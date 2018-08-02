@@ -11,11 +11,12 @@ import { WingamePage } from '../pages/wingame/wingame';
 import { GameDetailPage } from '../pages/game-detail/game-detail';
 import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
 import { TicketPage } from '../pages/ticket/ticket';
+import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Web1Page;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

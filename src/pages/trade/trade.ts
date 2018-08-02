@@ -78,4 +78,7 @@ export class TradePage {
     });
     confirm.present();
   }
+  backpage(){
+    this.navCtrl.push(MembershipPage);
+  }
 }

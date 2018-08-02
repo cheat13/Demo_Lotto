@@ -54,4 +54,7 @@ export class SellPage {
     });
     confirm.present();
   }
+  backpage(){
+    this.navCtrl.push(MembershipPage);
+  }
 }

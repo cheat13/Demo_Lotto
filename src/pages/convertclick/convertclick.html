@@ -1,22 +1,13 @@
-<!--
-  Generated template for the ConvertclickPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar color="pink">
     <ion-title>Convert Ticket</ion-title>
     <ion-buttons right>
-      <button ion-button (click)="Membership()">
+      <button ion-button (click)="gotoHomepage()">
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content>
   <div class="content">
@@ -36,25 +27,19 @@
     </ion-item>
   </div>
 
-
   <ion-grid padding>
     <ion-row>
-
       <ion-label style="font-size: 1.2em">Ticket amount</ion-label>
-
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-        <ion-input class="played" type="number" placeholder="Your Number" [(ngModel)]="num" (ionChange)="calculate()"></ion-input>
-      </ion-item>
+          <ion-input class="played" type="number" placeholder="Your Number" [(ngModel)]="num" (ionChange)="calculate()"></ion-input>
+        </ion-item>
       </ion-col>
-
     </ion-row>
     <ion-row>
-
       <ion-label style="font-size: 1.2em">1 Ticket / 1 Coin</ion-label>
-
     </ion-row>
   </ion-grid>
 
@@ -67,5 +52,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>

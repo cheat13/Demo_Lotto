@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameresultPage } from '../gameresult/gameresult';
 import { HomePage } from '../home/home';
+import { TicketPage } from '../ticket/ticket';
+import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
 /**
  * Generated class for the LottogamePage page.
@@ -28,5 +30,8 @@ export class LottogamePage {
   }
   gotoHome(){
     this.navCtrl.setRoot(HomePage);
+  }
+  backpage(){
+    this.navCtrl.push(PrePlaygamePage);
   }
 }

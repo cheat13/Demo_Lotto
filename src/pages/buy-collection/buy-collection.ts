@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { ConfPage } from '../conf/conf';
 import { MembershipPage } from '../membership/membership';
 import { ConfbPage } from '../confb/confb';
+import { CollectionDetailPage } from '../collection-detail/collection-detail';
 /**
  * Generated class for the BuyCollectionPage page.
  *
@@ -50,4 +51,7 @@ export class BuyCollectionPage {
     this.navCtrl.push(MembershipPage);
   }
 
+  backpage(){
+    this.navCtrl.push(CollectionDetailPage);
+  }
 }

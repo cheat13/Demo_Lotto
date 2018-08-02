@@ -3,13 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LottogamePage } from '../lottogame/lottogame';
 import { MembershipPage } from '../membership/membership';
 import { GameresultPage } from '../gameresult/gameresult';
-
-/**
- * Generated class for the PrePlaygamePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ConvertclickPage } from '../convertclick/convertclick';
+import { TicketPage } from '../ticket/ticket';
+import { GameDetailPage } from '../game-detail/game-detail';
 
 @IonicPage()
 @Component({
@@ -35,5 +31,11 @@ export class PrePlaygamePage {
 
   goResult(){
     this.navCtrl.push(GameresultPage);
+  }
+  backpage(){
+    this.navCtrl.push(TicketPage);
+  }
+  howtoplay(){
+    this.navCtrl.push(GameDetailPage);
   }
 }

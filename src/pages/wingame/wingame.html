@@ -1,5 +1,8 @@
 <ion-header>
-  <ion-navbar color="pink">
+  <ion-toolbar color="pink">
+    <button ion-button clear small (click)="gotoPrePlaygamePage()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
     <ion-buttons right>
       <button ion-button>
         <ion-icon name="bookmark"></ion-icon>
@@ -8,11 +11,10 @@
         <ion-icon name="cart"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <ion-list>
     <ion-item no-padding>
       <ion-grid (click)="showAlert()">
@@ -30,35 +32,6 @@
                 </ion-col>
                 <ion-col col-12>
                   <h6>Earn Reward 350,000 THB</h6>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-col>
-          <ion-col col-3 style="padding-top: 15px;text-align: right">
-            <ion-icon name="time"> 00.00</ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-    <ion-item no-padding>
-      <ion-grid (click)="Membership()">
-        <ion-row>
-          <ion-col col-2>
-            <div style="padding-top: 30px">
-              <img src="../../assets/imgs/logo1.PNG" />
-            </div>
-          </ion-col>
-          <ion-col col-7>
-            <ion-grid>
-              <ion-row>
-                <ion-col col-12>
-                  <b>คุณได้เป็นสมาชิก</b>
-                </ion-col>
-                <ion-col col-12>
-                  <h6>Title text xxxxxxxxxxxx</h6>
-                </ion-col>
-                <ion-col col-12>
-                  <h6>xxxxxxxxxxxxxxxxxxxxx</h6>
                 </ion-col>
               </ion-row>
             </ion-grid>

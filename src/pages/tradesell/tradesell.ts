@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import {ConfsPage } from '../confs/confs';
 import {TradedetailPage} from '../tradedetail/tradedetail';
-/**
- * Generated class for the TradesellPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 @IonicPage()
 @Component({
@@ -47,5 +42,8 @@ export class TradesellPage {
   }
   back(){
     this.navCtrl.push(TradedetailPage);
+  }
+  backpage(){
+    this.navCtrl.push(CollectionDetailPage);
   }
 }

@@ -38,4 +38,7 @@ export class GameresultPage {
   gotoHome(){
     this.navCtrl.setRoot(HomePage);
   }
+  gotoPrePlaygamePage(){
+    this.navCtrl.push(PrePlaygamePage);
+  }
 }

@@ -1,10 +1,8 @@
 <ion-header>
-  <ion-navbar color="pink">
-    <ion-buttons left>
-      <button ion-button>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-toolbar color="pink">
+    <button ion-button clear small (click)="gotoPrePlaygamePage()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
     <ion-buttons right>
       <button ion-button>
         <ion-icon name="bookmark"></ion-icon>
@@ -18,7 +16,7 @@
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
