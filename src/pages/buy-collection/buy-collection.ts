@@ -15,11 +15,13 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
 @Component({
   selector: 'page-buy-collection',
   templateUrl: 'buy-collection.html',
+  
 })
 export class BuyCollectionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
+
 
   presentConfirm() {
     const confirm = this.alertCtrl.create({
@@ -36,6 +38,7 @@ export class BuyCollectionPage {
           text: 'Confirm',
           handler: () => {
             console.log('Agree clicked');
+            this.navCtrl.push(CollectionDetailPage);
             
           }
         }
@@ -49,7 +52,7 @@ export class BuyCollectionPage {
 
   Membership(){
     this.navCtrl.push(MembershipPage);
-  }
+  }  
 
   backpage(){
     this.navCtrl.push(CollectionDetailPage);
