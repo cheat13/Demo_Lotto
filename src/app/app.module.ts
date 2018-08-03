@@ -43,6 +43,7 @@ import { GameDetailDPage } from '../pages/game-detail-d/game-detail-d';
 import { ConvertclickDPage} from '../pages/convertclick-d/convertclick-d';
 import { PrePlaySlotPage } from '../pages/pre-play-slot/pre-play-slot'; 
 import { SlotgamePage } from '../pages/slotgame/slotgame';
+import { StartPage } from '../pages/start/start'
 
 
 
@@ -91,6 +92,7 @@ import { SlotgamePage } from '../pages/slotgame/slotgame';
     ConvertclickDPage,
     PrePlaySlotPage,
     SlotgamePage,
+    StartPage,
 
   ],
   imports: [
@@ -141,6 +143,7 @@ import { SlotgamePage } from '../pages/slotgame/slotgame';
     ConvertclickDPage,
     PrePlaySlotPage,
     SlotgamePage,
+    StartPage,
 
 
   ],
