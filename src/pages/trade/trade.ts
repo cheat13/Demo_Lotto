@@ -18,8 +18,12 @@ import { SuccessPage } from '../success/success';
   templateUrl: 'trade.html',
 })
 export class TradePage {
+  Trade:string = "buy";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  }
+  stpSelect() {
+    console.log('STP selected');
   }
 
   ionViewDidLoad() {
