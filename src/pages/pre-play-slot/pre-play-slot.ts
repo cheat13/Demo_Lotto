@@ -5,24 +5,24 @@ import { MembershipPage } from '../membership/membership';
 import { GameresultPage } from '../gameresult/gameresult';
 import { TicketPage } from '../ticket/ticket';
 import { GameDetailPage } from '../game-detail/game-detail';
+import { GameDetailBPage } from '../game-detail-b/game-detail-b';
+import { SlotgamePage } from '../slotgame/slotgame';
 
 @IonicPage()
 @Component({
-  selector: 'page-pre-playgame',
-  templateUrl: 'pre-playgame.html',
+  selector: 'page-pre-play-slot',
+  templateUrl: 'pre-play-slot.html',
 })
-export class PrePlaygamePage {
-  page:number
+export class PrePlaySlotPage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.page = this.navParams.get("page");
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PrePlaygamePage');
+    console.log('ionViewDidLoad PrePlaySlotPage');
   }
-
   goPlay(){
-    this.navCtrl.push(LottogamePage);
+    this.navCtrl.push(SlotgamePage);
   }
 
   Membership(){
@@ -33,9 +33,10 @@ export class PrePlaygamePage {
     this.navCtrl.push(GameresultPage);
   }
   backpage(){
-    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage);
+    this.navCtrl.push(TicketPage);
   }
   howtoplay(){
-    this.navCtrl.push(GameDetailPage);
+    this.navCtrl.push(GameDetailBPage);
   }
+
 }

@@ -4,6 +4,7 @@ import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
+import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 /**
  * Generated class for the GameDetailBPage page.
  *
@@ -38,6 +39,9 @@ export class GameDetailBPage {
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaygamePage);
+    this.navCtrl.push(PrePlaySlotPage);
+  }
+  backpage(){
+    this.navCtrl.push(MembershipPage);
   }
 }

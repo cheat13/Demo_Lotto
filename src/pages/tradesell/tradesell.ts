@@ -44,6 +44,6 @@ export class TradesellPage {
     this.navCtrl.push(TradedetailPage);
   }
   backpage(){
-    this.navCtrl.push(CollectionDetailPage);
+    this.navCtrl.push(CollectionDetailPage); 
   }
 }

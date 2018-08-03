@@ -1,0 +1,32 @@
+page-pre-play-slot {
+    .played{
+        border: 1px solid black;
+        background-color:gainsboro; 
+        margin-bottom:5px;
+        border-radius: 10px;
+        
+    }
+    .neverPlayed{
+        border: 1px solid black; 
+        background-color: #c7ea46; 
+        margin-bottom:5px;
+        border-radius: 10px;
+        
+    }
+
+    .game-title{
+        font-weight: bold;
+        font-size: 1.3em;
+        text-align: left
+    }
+    
+    .ticket-title{
+        font-style:italic;
+        text-align: left
+    }
+
+    .play-title{
+        font-weight: bold;
+        font-size: 1em;
+    }
+}
