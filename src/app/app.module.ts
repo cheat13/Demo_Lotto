@@ -45,6 +45,8 @@ import { PrePlaySlotPage } from '../pages/pre-play-slot/pre-play-slot';
 import { SlotgamePage } from '../pages/slotgame/slotgame';
 
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -139,6 +141,7 @@ import { SlotgamePage } from '../pages/slotgame/slotgame';
     ConvertclickDPage,
     PrePlaySlotPage,
     SlotgamePage,
+
 
   ],
   providers: [
