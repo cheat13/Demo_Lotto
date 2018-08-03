@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angul
 import {ConfsPage } from '../confs/confs';
 import {TradedetailPage} from '../tradedetail/tradedetail';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
+import { DetailcollectionPage } from '../detailcollection/detailcollection';
 
 @IonicPage()
 @Component({

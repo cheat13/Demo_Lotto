@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angul
 import { ConfPage } from '../conf/conf';
 import { TradesellPage } from '../tradesell/tradesell';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
+import { DetailcollectionPage } from '../detailcollection/detailcollection';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,7 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
   templateUrl: 'tradedetail.html',
 })
 export class TradedetailPage {
-
+  Trade = "buy";
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
@@ -43,6 +44,6 @@ export class TradedetailPage {
     this.navCtrl.push(TradesellPage);
   }
   backpage(){
-    this.navCtrl.push(CollectionDetailPage);
+    this.navCtrl.push(DetailcollectionPage);
   }
 }
