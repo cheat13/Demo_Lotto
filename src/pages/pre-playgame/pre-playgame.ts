@@ -12,9 +12,11 @@ import { GameDetailPage } from '../game-detail/game-detail';
   templateUrl: 'pre-playgame.html',
 })
 export class PrePlaygamePage {
+  user:any
   page:number
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.page = this.navParams.get("page");
+    this.user = this.navParams.get('user');
+    this.page = this.navParams.get('page');
   }
 
   ionViewDidLoad() {
