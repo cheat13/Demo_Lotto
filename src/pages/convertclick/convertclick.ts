@@ -21,6 +21,7 @@ export class ConvertclickPage {
   user: any
   num: any;
   sum: any;
+  storage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.user = this.navParams.get('user');
   }
