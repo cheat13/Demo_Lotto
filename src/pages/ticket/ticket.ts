@@ -18,8 +18,9 @@ import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
   templateUrl: 'ticket.html',
 })
 export class TicketPage {
-
+user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -27,15 +28,15 @@ export class TicketPage {
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   goToConvert(){
-    this.navCtrl.push(ConvertPage);
+    this.navCtrl.push(ConvertPage,{'user':this.user});
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaygamePage,{"page":1});
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user,'page':1});
   }
 
   goToPrePlaySlot(){
@@ -43,7 +44,7 @@ export class TicketPage {
   }
 
   backpage(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }
   

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { Web1Page } from '../web1/web1';
 
@@ -9,12 +9,12 @@ import { Web1Page } from '../web1/web1';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private navParams: NavParams) {
 
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.navParams.get('user')});
   }
 
 gopage1(){

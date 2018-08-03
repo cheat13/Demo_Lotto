@@ -9,6 +9,8 @@ import { GameDetailCPage } from '../game-detail-c/game-detail-c';
 import { GameDetailDPage } from '../game-detail-d/game-detail-d';
 import { HomePage } from '../home/home';
 
+import { User } from '../../models/user';
+ 
 /**
  * Generated class for the MembershipPage page.
  *
@@ -22,8 +24,10 @@ import { HomePage } from '../home/home';
   templateUrl: 'membership.html',
 })
 export class MembershipPage {
-
+  user:User
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
+    
   }
 
   ionViewDidLoad() {
@@ -39,7 +43,7 @@ export class MembershipPage {
   }
 
   Ticket(){
-    this.navCtrl.push(TicketPage);
+    this.navCtrl.push(TicketPage,{'user':this.user});
   }
 
   goToGameDetailPage(){
