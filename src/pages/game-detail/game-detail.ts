@@ -36,6 +36,6 @@ export class GameDetailPage {
   }
 
   gotoPrePlaygamePage(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{"page":2});
   }
 }

@@ -41,6 +41,8 @@ import { GameDetailCPage } from '../pages/game-detail-c/game-detail-c';
 import { ConvertclickCPage} from '../pages/convertclick-c/convertclick-c';
 import { GameDetailDPage } from '../pages/game-detail-d/game-detail-d';
 import { ConvertclickDPage} from '../pages/convertclick-d/convertclick-d';
+import { PrePlaySlotPage } from '../pages/pre-play-slot/pre-play-slot'; 
+import { SlotgamePage } from '../pages/slotgame/slotgame';
 
 
 @NgModule({
@@ -84,7 +86,10 @@ import { ConvertclickDPage} from '../pages/convertclick-d/convertclick-d';
     GameDetailCPage,
     ConvertclickCPage,
     GameDetailDPage,
-    ConvertclickDPage
+    ConvertclickDPage,
+    PrePlaySlotPage,
+    SlotgamePage,
+
   ],
   imports: [
     BrowserModule,
@@ -131,7 +136,9 @@ import { ConvertclickDPage} from '../pages/convertclick-d/convertclick-d';
     GameDetailCPage,
     ConvertclickCPage,
     GameDetailDPage,
-    ConvertclickDPage
+    ConvertclickDPage,
+    PrePlaySlotPage,
+    SlotgamePage,
 
   ],
   providers: [

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 import { ConvertPage } from '../convert/convert';
+import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 
 /**
  * Generated class for the TicketPage page.
@@ -34,8 +35,13 @@ export class TicketPage {
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaygamePage);
+    this.navCtrl.push(PrePlaygamePage,{"page":1});
   }
+
+  goToPrePlaySlot(){
+    this.navCtrl.push(PrePlaySlotPage);
+  }
+
   backpage(){
     this.navCtrl.push(MembershipPage);
   }
