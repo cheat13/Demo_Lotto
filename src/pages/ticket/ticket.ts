@@ -40,7 +40,7 @@ user:any
   }
 
   goToPrePlaySlot(){
-    this.navCtrl.push(PrePlaySlotPage);
+    this.navCtrl.push(PrePlaySlotPage,{'user':this.user,'page':1});
   }
 
   backpage(){

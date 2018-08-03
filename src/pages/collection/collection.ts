@@ -13,8 +13,9 @@ import { CollectionDetailCPage } from '../collection-detail-c/collection-detail-
   templateUrl: 'collection.html',
 })
 export class CollectionPage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -42,6 +43,6 @@ export class CollectionPage {
     this.navCtrl.push(MycollectPage);
   }
   backpage(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

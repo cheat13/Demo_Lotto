@@ -18,8 +18,9 @@ import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
   templateUrl: 'game-detail-b.html',
 })
 export class GameDetailBPage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user')
   }
 
   ionViewDidLoad() {
@@ -35,13 +36,13 @@ export class GameDetailBPage {
   }
 
   goToConvertClick(){
-    this.navCtrl.push(ConvertclickBPage);
+    this.navCtrl.push(ConvertclickBPage,{'user':this.user});
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaySlotPage);
+    this.navCtrl.push(PrePlaySlotPage,{'user':this.user,'page':2});
   }
   backpage(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

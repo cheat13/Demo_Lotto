@@ -25,7 +25,7 @@ import { User } from '../../models/user';
   templateUrl: 'membership.html',
 })
 export class MembershipPage {
-  user:User
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = this.navParams.get('user');
     
@@ -40,7 +40,7 @@ export class MembershipPage {
   }
 
   Collection(){
-    this.navCtrl.push(CollectionPage);
+    this.navCtrl.push(CollectionPage,{'user':this.user});
   }
 
   Ticket(){
@@ -48,10 +48,10 @@ export class MembershipPage {
   }
 
   goToGameDetailPage(){
-    this.navCtrl.push(GameDetailPage);
+    this.navCtrl.push(GameDetailPage,{'user':this.user});
   }
   goB(){
-    this.navCtrl.push(GameDetailBPage);
+    this.navCtrl.push(GameDetailBPage,{'user':this.user});
   }
   goC(){
     this.navCtrl.push(GameDetailCPage);
@@ -60,6 +60,6 @@ export class MembershipPage {
     this.navCtrl.push(GameDetailDPage);
   }
   backpage(){
-    this.navCtrl.setRoot(Home2Page);
+    this.navCtrl.setRoot(Home2Page,{'user':this.user});
   }
 }

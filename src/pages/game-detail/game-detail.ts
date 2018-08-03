@@ -11,8 +11,9 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
   templateUrl: 'game-detail.html',
 })
 export class GameDetailPage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user')
   }
 
   ionViewDidLoad() {
@@ -28,14 +29,14 @@ export class GameDetailPage {
   }
 
   goToConvertClick(){
-    this.navCtrl.push(ConvertclickPage);
+    this.navCtrl.push(ConvertclickPage,{'user':this.user});
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaygamePage);
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user,'page':2});
   }
 
   gotoPrePlaygamePage(){
-    this.navCtrl.push(MembershipPage,{"page":2});
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

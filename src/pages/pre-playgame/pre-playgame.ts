@@ -35,7 +35,7 @@ export class PrePlaygamePage {
     this.navCtrl.push(GameresultPage);
   }
   backpage(){
-    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage);
+    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage,{'user':this.user});
   }
   howtoplay(){
     this.navCtrl.push(GameDetailPage);

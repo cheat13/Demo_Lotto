@@ -14,8 +14,11 @@ import { SlotgamePage } from '../slotgame/slotgame';
   templateUrl: 'pre-play-slot.html',
 })
 export class PrePlaySlotPage {
-
+user:any
+page:number
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user')
+    this.page = this.navParams.get('page');
   }
 
   ionViewDidLoad() {
@@ -33,7 +36,7 @@ export class PrePlaySlotPage {
     this.navCtrl.push(GameresultPage);
   }
   backpage(){
-    this.navCtrl.push(TicketPage);
+    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage,{'user':this.user});
   }
   howtoplay(){
     this.navCtrl.push(GameDetailBPage);

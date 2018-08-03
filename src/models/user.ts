@@ -7,6 +7,7 @@ export class User{
         money:number;
         scratchGame :ScratchLotto;
         slotGame:SlotMachine;
+        buyHistory:any[]
 
         constructor() {
             this.coins = 0;
@@ -14,6 +15,6 @@ export class User{
             this.money = 50000;
             this.scratchGame = new ScratchLotto();
             this.slotGame = new SlotMachine();
-            
+            this.buyHistory = [] ;
         }
     }

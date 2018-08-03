@@ -31,11 +31,11 @@
     </ion-row>
     <ion-row>
       <ion-col col-3 offset-9>
-        <i>4 Ticket</i>
+        <i>{{user.scratchGame.tickets}} Ticket</i>
       </ion-col>
     </ion-row>
 
-    <ion-row class="neverPlayed" (click)="goPlay()">
+    <ion-row *ngFor="let ticket of user.scratchGame.ticket" [ngClass]="{neverPlayed:ticket.status=='neverPlayed'}" (click)="goPlay()">
       <ion-grid>
         <ion-row>
           <ion-col col-12 class="ticket-title">
@@ -53,95 +53,7 @@
       </ion-grid>
     </ion-row>
 
-    <ion-row class="neverPlayed" (click)="goPlay()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Scratch Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Play >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
 
-    <ion-row class="neverPlayed" (click)="goPlay()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Scratch Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Play >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
-
-    <ion-row class="neverPlayed" (click)="goPlay()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Scratch Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Play >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
-
-    <ion-row class="played" (click)="goResult()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Scratch Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Result >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
-
-    <ion-row class="played" (click)="goResult()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Scratch Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Result >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
     <ion-row>
       <ion-col col-4></ion-col>
       <ion-col col-4>

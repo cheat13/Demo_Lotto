@@ -16,8 +16,9 @@ import { MembershipPage } from '../membership/membership';
   templateUrl: 'success.html',
 })
 export class SuccessPage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -25,6 +26,6 @@ export class SuccessPage {
   }
 
   Trade(){
-    this.navCtrl.push(TradePage);
+    this.navCtrl.push(TradePage,{'user':this.user});
   }
 }
