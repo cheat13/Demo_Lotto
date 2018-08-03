@@ -20,8 +20,9 @@ import { HomePage } from '../home/home';
   templateUrl: 'convert.html',
 })
 export class ConvertPage {
-
+user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -29,10 +30,10 @@ export class ConvertPage {
   }
 
   goToConvertClick(){
-    this.navCtrl.push(ConvertclickPage);
+    this.navCtrl.push(ConvertclickPage,{'user':this.user});
   }
   goB(){
-    this.navCtrl.push(ConvertclickBPage);
+    this.navCtrl.push(ConvertclickBPage,{'user':this.user});
   }
   goC(){
     this.navCtrl.push(ConvertclickCPage);

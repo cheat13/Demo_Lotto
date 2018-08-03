@@ -18,10 +18,11 @@ import { TicketPage } from '../ticket/ticket';
   templateUrl: 'convertclick.html',
 })
 export class ConvertclickPage {
-
+  user: any
   num: any;
   sum: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -43,7 +44,7 @@ export class ConvertclickPage {
         {
           text: 'Confirm',
           handler: () => {
-            this.navCtrl.push(TicketPage);
+            this.buyTicket();
             console.log('Confirm clicked');
           }
         }
@@ -51,6 +52,22 @@ export class ConvertclickPage {
     });
     alert.present();
   }
+
+  buyTicket() {
+    this.user.scratchGame.tickets = Number(this.user.scratchGame.tickets) + Number(this.num);
+    this.user.coins -= Number(this.num);
+
+    this.addTicket();
+    this.navCtrl.push(TicketPage, { 'user': this.user });
+  }
+
+  addTicket(){
+    let round = Number(this.user.scratchGame.ticket.length) + Number(this.num);
+    for(let i=this.user.scratchGame.ticket.length;i<round;i++){
+      this.user.scratchGame.ticket.push({'no':i+1,'status':'neverPlayed','isWin':null})
+    }
+    console.log(this.user.scratchGame.ticket);
+}
 
   calculate() {
     this.sum = this.num * 50;
@@ -63,7 +80,7 @@ export class ConvertclickPage {
   backpage() {
     this.navCtrl.push(ConvertPage);
   }
-  gotoHomepage(){
+  gotoHomepage() {
     this.navCtrl.setRoot(HomePage);
   }
 }
