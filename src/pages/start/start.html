@@ -1,0 +1,25 @@
+<!--
+  Generated template for the StartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>start</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="text-align:center">
+  <ion-item>
+    <ion-label fixed>Ethereum</ion-label>
+    <ion-input type="number" [(ngModel)]="user.ethereum" (ionChange)="coinsCal()"></ion-input>
+  </ion-item>
+  <h2>คุณจะได้รับจำนวน {{user.coins}} Coins</h2>
+  <h3>ใช้เงิน {{amount}}</h3>
+  <button ion-button color="pink" (click)="goToHome()">Next</button>
+
+</ion-content>
