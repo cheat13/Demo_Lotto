@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController,ModalController } from 'ionic-angular';
 import { WingamePage } from '../wingame/wingame';
 import { LosegamePage } from '../losegame/losegame';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
@@ -19,7 +19,7 @@ import { HomePage } from '../home/home';
 })
 export class GameresultPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,private modal: ModalController ) {
   }
 
   ionViewDidLoad() {
@@ -64,4 +64,9 @@ export class GameresultPage {
     });
     alert.present();
 }
+openModal(){
+  const myModal = this.modal.create('ConfmodalPage');
+
+  myModal.present();
+  }
 }

@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ConfmodalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>คุณได้รับรางวัล!!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>รับรางวัล
+<ion-item>
+  <ion-label>ต้องการจะแลกรางวัลเป็นสกุลเงิน</ion-label>
+  <ion-select [(ngModel)]="gender">
+    <ion-option value="bth">BTH</ion-option>
+    <ion-option value="bt">BTC</ion-option>
+    <ion-option value="e">Eteraum</ion-option>
+  </ion-select>
+
+</ion-item>
+<ion-item>
+  <button ion-button color="secondary" (click)="go()">ยืนยัน</button>
+
+<button ion-button color="danger"(click)="closeModal()">ยกเลิก</button>
+</ion-item>
+</ion-content>
