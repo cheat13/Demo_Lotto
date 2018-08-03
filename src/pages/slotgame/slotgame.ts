@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 /**
  * Generated class for the SlotgamePage page.
  *
@@ -15,11 +15,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SlotgamePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlotgamePage');
+  } 
+  Done(){
+    this.navCtrl.push(PrePlaySlotPage);
   }
-
+  al() {
+    let alert = this.alertCtrl.create({
+      title: 'Convert Success!',
+      subTitle: "test",
+       buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+}
 }

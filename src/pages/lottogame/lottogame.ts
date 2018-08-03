@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { GameresultPage } from '../gameresult/gameresult';
 import { HomePage } from '../home/home';
 import { TicketPage } from '../ticket/ticket';
@@ -19,7 +19,7 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 })
 export class LottogamePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -34,4 +34,26 @@ export class LottogamePage {
   backpage(){
     this.navCtrl.push(PrePlaygamePage);
   }
+  al() {
+    let alert = this.alertCtrl.create({
+      title: 'Convert Success!',
+      subTitle: "test",
+       buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+}
 }
