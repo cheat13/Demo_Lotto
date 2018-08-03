@@ -14,7 +14,7 @@
 
 <ion-content>
     <div>
-      <ion-segment [(ngModel)]="Trade">
+      <ion-segment [(ngModel)]="Trade" >
         <ion-segment-button value="buy">
           <h6>Buy</h6>
         </ion-segment-button>
@@ -25,7 +25,7 @@
     </div>
   
     <div [ngSwitch]="Trade">
-      <ion-list *ngSwitchCase="'buy'">
+      <ion-list *ngSwitchCase="'buy'" ngSelected="selected">
         <ion-grid>
           <ion-row style="padding-top: 10px"></ion-row>
           <ion-row padding style="background-color: lightgrey;height: 120px">
@@ -141,7 +141,7 @@
   
       </ion-list>
   
-  
+      
       <ion-list *ngSwitchCase="'sell'">
         <ion-grid>
           <ion-row style="padding-top: 10px"></ion-row>
