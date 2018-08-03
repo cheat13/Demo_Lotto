@@ -46,6 +46,7 @@ import { SlotgamePage } from '../pages/slotgame/slotgame';
 import { StartPage } from '../pages/start/start'
 
 
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -97,7 +98,11 @@ import { StartPage } from '../pages/start/start'
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

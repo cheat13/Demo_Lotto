@@ -3,8 +3,8 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { MembershipPage } from '../membership/membership';
 import { ConvertPage } from '../convert/convert';
 import { HomePage } from '../home/home';
-import { TicketPage } from '../ticket/ticket';
-
+import { TicketPage } from '../ticket/ticket'
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the ConvertclickPage page.
  *
@@ -25,9 +25,11 @@ export class ConvertclickPage {
     this.user = this.navParams.get('user');
   }
 
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConvertclickPage');
   }
+
   presentConfirm() {
     let alert = this.alertCtrl.create({
       title: 'Convert Success!',
@@ -46,6 +48,8 @@ export class ConvertclickPage {
           handler: () => {
             this.buyTicket();
             console.log('Confirm clicked');
+            this.storage.set('a',this.num)
+            
           }
         }
       ]
@@ -72,6 +76,9 @@ export class ConvertclickPage {
   calculate() {
     this.sum = this.num * 50;
   }
+// calculate(){
+//   this.sum = this.num*50;
+// }
 
   Membership() {
     this.navCtrl.push(MembershipPage);
