@@ -1,3 +1,18 @@
 page-slotgame {
+    .page-footer {
+        height: 50px;
+        background-color: lightcoral;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+    }
+    .b {
+        border: 1px solid black;
+        margin: 5px;
+        font-size: 10px;
+        font: bold;
+        background-color: black;
 
+    }
 }

@@ -5,13 +5,6 @@ import { HomePage } from '../home/home';
 import { TicketPage } from '../ticket/ticket';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
-/**
- * Generated class for the LottogamePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-lottogame',
