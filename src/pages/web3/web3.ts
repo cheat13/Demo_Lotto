@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the Web3Page page.
@@ -33,7 +34,7 @@ export class Web3Page {
           role: 'OK',
           handler: () => {
             console.log('Destructive clicked');
-            this.navCtrl.push(HomePage);
+            this.navCtrl.push(MembershipPage);
           }
         }
       ],

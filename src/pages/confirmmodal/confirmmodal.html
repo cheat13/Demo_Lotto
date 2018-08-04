@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ICO PHASE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-title>
+      1,000 C = 5 ETH 
+  </ion-title>
+  <ion-item>
+    <ion-label>5 ETH</ion-label>
+    <ion-select [(ngModel)]="money">
+      <ion-option value="thb">67,500 THB</ion-option>
+      <ion-option value="usd">USD</ion-option>
+      <ion-option value="etc">ETC</ion-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <ion-grid >
+    <ion-row>
+      <ion-col col-6>
+        <button full ion-button color="danger" (click)="closeModal()">Cancle</button>
+      </ion-col>
+      <ion-col col-6>
+        <button full ion-button color="secondary" (click)="go()">Confirm</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

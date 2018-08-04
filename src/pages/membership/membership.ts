@@ -8,6 +8,7 @@ import { GameDetailBPage } from '../game-detail-b/game-detail-b';
 import { GameDetailCPage } from '../game-detail-c/game-detail-c';
 import { GameDetailDPage } from '../game-detail-d/game-detail-d';
 import { HomePage } from '../home/home';
+import { Home2Page } from '../home2/home2';
 
 import { User } from '../../models/user';
  
@@ -59,6 +60,6 @@ export class MembershipPage {
     this.navCtrl.push(GameDetailDPage);
   }
   backpage(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(Home2Page);
   }
 }

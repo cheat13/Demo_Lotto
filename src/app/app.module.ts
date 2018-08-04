@@ -47,6 +47,10 @@ import { StartPage } from '../pages/start/start'
 import { IonicStorageModule } from '@ionic/storage';
 import { GameresultslotPage } from '../pages/gameresultslot/gameresultslot';
 import { ConfmslotmodalPage } from '../pages/confmslotmodal/confmslotmodal';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Camera } from '@ionic-native/camera';
+import{MoneyPage} from'../pages/money/money';
+import { Home2Page } from '../pages/home2/home2';
 
 
 @NgModule({
@@ -97,7 +101,8 @@ import { ConfmslotmodalPage } from '../pages/confmslotmodal/confmslotmodal';
     GameresultslotPage,
     ConfmslotmodalPage,
     LosegamePage,
-
+    MoneyPage,
+    Home2Page
   ],
   imports: [
     BrowserModule,
@@ -155,12 +160,15 @@ import { ConfmslotmodalPage } from '../pages/confmslotmodal/confmslotmodal';
     GameresultslotPage,
     ConfmslotmodalPage,
     LosegamePage,
-
+    MoneyPage,
+    Home2Page
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,24 +1,24 @@
+
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { Web1Page } from '../web1/web1';
 import { Web2Page } from '../web2/web2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MoneyPage } from '../money/money';
 
-
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-home2',
+  templateUrl: 'home2.html',
 })
-export class HomePage {
+export class Home2Page {
 
-  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner,private navParams: NavParams) {
+  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner) {
 
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage,{'user':this.navParams.get('user')});
+    this.navCtrl.push(MembershipPage);
   }
 
   gopage1(){

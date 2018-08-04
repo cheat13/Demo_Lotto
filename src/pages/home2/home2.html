@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="pink">
+      <ion-buttons right>
+        <button ion-button>
+          <ion-icon name="bookmark"></ion-icon>
+        </button>
+        <button ion-button>
+          <ion-icon name="cart"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-list>
+      <ion-item no-padding>
+        <ion-grid (click)="Membership()">
+          <ion-row>
+            <ion-col col-2>
+              <div style="padding-top: 30px">
+                <img src="../../assets/imgs/logo1.PNG" />
+              </div>
+            </ion-col>
+            <ion-col col-7>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <b>คุณได้เป็นสมาชิก</b>
+                  </ion-col>
+                  <ion-col col-12>
+                    <h6>Title text xxxxxxxxxxxx</h6>
+                  </ion-col>
+                  <ion-col col-12>
+                    <h6>xxxxxxxxxxxxxxxxxxxxx</h6>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+            <ion-col col-3 style="padding-top: 15px;text-align: right">
+              <ion-icon name="time"> 00.00</ion-icon>
+            </ion-col> 
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    
+    <ion-footer>
+          
+           <div><img src="../../assets/imgs/foot.PNG" (click)="ScanQR()" /></div>
+           
+    </ion-footer> 
+  </ion-content>
