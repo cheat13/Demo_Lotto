@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
-/**
- * Generated class for the SlotgamePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HomePage } from '../home/home';
+import { GameresultslotPage } from '../gameresultslot/gameresultslot';
 
 @IonicPage()
 @Component({
@@ -14,21 +10,27 @@ import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
   templateUrl: 'slotgame.html',
 })
 export class SlotgamePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams , public alertCtrl: AlertController) {
+  img = '../../assets/imgs/cirpink.png';
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlotgamePage');
-  } 
-  Done(){
+  }
+  Gameresultslot() {
+    this.navCtrl.push(GameresultslotPage);
+  }
+  gotoHome() {
+    this.navCtrl.setRoot(HomePage);
+  }
+  Done() {
     this.navCtrl.push(PrePlaySlotPage);
   }
   al() {
     let alert = this.alertCtrl.create({
       title: 'Convert Success!',
       subTitle: "test",
-       buttons: [
+      buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
@@ -45,5 +47,11 @@ export class SlotgamePage {
       ]
     });
     alert.present();
-}
+  }
+  addEvent(e){
+    if(this.img=='../../assets/imgs/cirpink.png')
+    {
+      this.img = '../../assets/imgs/phodrum.png'
+    }
+  }
 }

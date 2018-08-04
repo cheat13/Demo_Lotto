@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="pink">
+      <ion-title>Convert Reward</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding text-center>  
+      <ion-label>convert 100 ETH to</ion-label>
+    <ion-item center text-center>
+      <ion-label>13,500,000</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="bth">BTH</ion-option>
+        <ion-option value="bt">BTC</ion-option>
+        <ion-option value="e">Eteraum</ion-option>
+      </ion-select>
+    </ion-item>
+    <button style="margin-top: 20px" ion-button color="secondary" (click)="go()">ยืนยัน</button>
+    <button style="margin-top: 20px" ion-button color="danger" (click)="closeModal()">ยกเลิก</button>
+  </ion-content>
