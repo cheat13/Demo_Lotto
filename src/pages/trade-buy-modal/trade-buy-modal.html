@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>trade-buy-modal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <ion-label>convert 100 bath to 1000 coin</ion-label>
+  <ion-label>convert 1000 bath to 10000 coin</ion-label>
+  <ion-label>convert 10000 bath to 100000 coin</ion-label>
+  <ion-item>
+    <ion-label fixed>convert</ion-label>
+    <ion-input type="text" style="border: 1px solid black"></ion-input>
+  </ion-item>
+  <ion-label>to</ion-label>
+  <ion-label>xxxxx coin</ion-label>
+  <button style="margin-top: 20px" ion-button color="secondary" (click)="go()">convert</button>
+  <button style="margin-top: 20px" ion-button color="danger" (click)="closeModal()">cancel</button>
+</ion-content>

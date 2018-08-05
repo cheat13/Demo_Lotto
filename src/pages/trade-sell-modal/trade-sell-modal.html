@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>trade-sell-modal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <ion-item>
+    <ion-label>sell amount</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>prize / unit</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-label>total sell :</ion-label>
+  <button style="margin-top: 20px" ion-button color="secondary" (click)="go()">sell</button>
+  <button style="margin-top: 20px" ion-button color="danger" (click)="closeModal()">cancel</button>
+</ion-content>
