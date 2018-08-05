@@ -13,11 +13,20 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
 })
 export class TradePage {
   Trade: string = "buy";
-  user: any
+
+  user:any
+  num:number
   page: number
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private modal: ModalController) {
+  sellAmount:number
+  sellPrice:number
+  date:Date 
+  dateNow:string  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,private modal: ModalController) {
     this.user = this.navParams.get('user');
     this.page = this.navParams.get('page');
+    this.date = new Date();
+    this.dateNow = this.date.getDate()+"/"+this.date.getMonth()+"/"+this.date.getFullYear();
+
   }
   stpSelect() {
     console.log('STP selected');

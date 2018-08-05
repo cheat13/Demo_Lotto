@@ -49,7 +49,6 @@ export class ConvertclickPage {
           handler: () => {
             this.buyTicket();
             console.log('Confirm clicked');
-            this.storage.set('a',this.num)
             
           }
         }

@@ -9,16 +9,20 @@ import { HomePage } from '../home/home';
   templateUrl: 'gameresult.html',
 })
 export class GameresultPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private modal: ModalController) {
+    user:any
+    index:number
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,private modal: ModalController ) {
+    this.user = this.navParams.get('user');
+    this.index = this.navParams.get('index');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameresultPage');
   }
 
-  Done() {
-    this.navCtrl.push(PrePlaygamePage);
+  Done(){
+    
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
   gotoHome() {
     this.navCtrl.setRoot(HomePage);

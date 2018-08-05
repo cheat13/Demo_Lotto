@@ -18,8 +18,9 @@ import { MembershipPage } from '../membership/membership';
   templateUrl: 'mycollect.html',
 })
 export class MycollectPage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -27,14 +28,14 @@ export class MycollectPage {
 
   }
 
-  detail(){
-    this.navCtrl.push(DetailcollectionPage);
+  detail(index:number){
+    this.navCtrl.push(DetailcollectionPage,{'user':this.user,'index':index});
   }
   his(){
     this.navCtrl.push(TradehistoryPage);
   }
   backpage(){
-    this.navCtrl.push(CollectionPage);
+    this.navCtrl.push(CollectionPage,{'user':this.user});
   }
 
   Membership(){

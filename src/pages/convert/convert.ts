@@ -42,7 +42,7 @@ user:any
     this.navCtrl.push(ConvertclickDPage);
   }
   backpage(){
-    this.navCtrl.push(TicketPage);
+    this.navCtrl.push(TicketPage,{'user':this.user});
   }
   gotoHomepage(){
     this.navCtrl.setRoot(HomePage);

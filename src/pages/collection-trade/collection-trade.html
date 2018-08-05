@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="pink">
+      <button ion-button clear small (click)="backpage()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    <ion-title>Trade</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="Trade" >
+      <ion-segment-button value="buy">
+        Buy
+      </ion-segment-button>
+      <ion-segment-button value="sell">
+        Sell
+      </ion-segment-button>
+    </ion-segment>
+
+  <div [ngSwitch]="Trade">
+    <ion-list *ngSwitchCase="'buy'" ngSelected="selected">
+      <ion-grid>
+        <ion-row style="padding-top: 10px"></ion-row>
+        <ion-row padding style="background-color: lightgrey;height: 120px">
+          <ion-col col-12>
+            Buy amount
+          </ion-col>
+          <ion-col col-10>
+            <ion-list>
+              <ion-item>
+                <ion-input type="number" [(ngModel)]="num"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col col-2 style="padding-top: 30px">
+            Card
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid class="page-footer" no-padding>
+        <ion-row>
+          <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirm()">
+            <button ion-button clear block style="color : white">
+              <b>Confirm</b>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+    
+    <ion-list *ngSwitchCase="'sell'">
+      <ion-grid>
+        <ion-row style="padding-top: 10px"></ion-row>
+        <ion-row style="background-color: lightgrey;height: 90px">
+          <ion-col col-12>
+            Sell amount
+          </ion-col>
+          <ion-col col-10>
+            <ion-list>
+              <ion-item>
+                <ion-input type="number" [(ngModel)]="sellAmount"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col col-2 style="padding-top: 30px">
+            Card
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row style="padding-top: 0px"></ion-row>
+        <ion-row style="background-color: lightgrey;height: 90px">
+          <ion-col col-12>
+            Price / Unit
+          </ion-col>
+          <ion-col col-10>
+            <ion-list>
+              <ion-item>
+                <ion-input type="number" [(ngModel)]="sellPrice"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col col-2 style="padding-top: 30px">
+            THB
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid class="page-footer" no-padding>
+        <ion-row>
+          <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirmSell()">
+            <button ion-button color="dark" clear block style="color: white">
+              <B>Confirm</B>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+  </div>
+
+</ion-content>

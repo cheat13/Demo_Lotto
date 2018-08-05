@@ -27,7 +27,7 @@ export class CollectionPage {
   }
 
   Marketplace(){
-    this.navCtrl.push(MarketplacePage);
+    this.navCtrl.push(MarketplacePage,{'user':this.user});
   }
 
   DetailCollectionA(){
@@ -40,7 +40,7 @@ export class CollectionPage {
     this.navCtrl.push(CollectionDetailCPage);
   }
   mycollection(){
-    this.navCtrl.push(MycollectPage);
+    this.navCtrl.push(MycollectPage,{'user':this.user});
   }
   backpage(){
     this.navCtrl.push(MembershipPage,{'user':this.user});

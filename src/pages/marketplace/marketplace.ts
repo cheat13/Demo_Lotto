@@ -17,8 +17,9 @@ import { HomePage } from '../home/home';
   templateUrl: 'marketplace.html',
 })
 export class MarketplacePage {
-
+  user:any
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -29,13 +30,13 @@ export class MarketplacePage {
     this.navCtrl.push(MembershipPage);  
   }
   backpage(){
-    this.navCtrl.push(CollectionPage);
+    this.navCtrl.push(CollectionPage,{'user':this.user});
   }
 
   ConfirmBuy() {
     let alert = this.alertCtrl.create({
       title: 'Your want buy ???',
-      subTitle: "Item A : 5,000 Baht",
+      subTitle: "Heart : 5,000 Baht",
 
       buttons: [
         {
@@ -48,9 +49,8 @@ export class MarketplacePage {
         {
           text: 'Confirm',
           handler: () => {
-            let alert1 = this.alertCtrl.create({
-              title: 'Success!!!'
-            });alert1.present();
+           this.user.collection[3].amount+=1;
+           this.navCtrl.push(CollectionPage,{'user':this.user});
           }
         }
       ]
@@ -62,7 +62,7 @@ export class MarketplacePage {
   ConfirmBuy1() {
     let alert = this.alertCtrl.create({
       title: 'Your want buy ???',
-      subTitle: "Item C : 1,000 Baht",
+      subTitle: "Club : 1,000 Baht",
 
       buttons: [
         {
@@ -75,9 +75,8 @@ export class MarketplacePage {
         {
           text: 'Confirm',
           handler: () => {
-            let alert1 = this.alertCtrl.create({
-              title: 'Success!!!'
-            });alert1.present();
+            this.user.collection[1].amount+=1;
+            this.navCtrl.push(CollectionPage,{'user':this.user});
           }
         }
       ]
@@ -86,59 +85,6 @@ export class MarketplacePage {
     alert.present();
   }
 
-  ConfirmBuy2() {
-    let alert = this.alertCtrl.create({
-      title: 'Your want buy ???',
-      subTitle: "Item D : 15,000 Baht",
-
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Confirm',
-          handler: () => {
-            let alert1 = this.alertCtrl.create({
-              title: 'Success!!!'
-            });alert1.present();
-          }
-        }
-      ]
-
-    });
-    alert.present();
-  }
-
-  ConfirmBuy3() {
-    let alert = this.alertCtrl.create({
-      title: 'Your want buy ???',
-      subTitle: "Item A : 20,000 Baht",
-
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Confirm',
-          role: 'cancel',
-          handler: () => {
-            let alert1 = this.alertCtrl.create({
-              title: 'Success!!!'
-            });alert1.present();
-          }
-        }
-      ]
-
-    });
-    alert.present();
-  }
+  
 
 }

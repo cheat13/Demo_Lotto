@@ -36,7 +36,7 @@ page:number
     this.navCtrl.push(GameresultPage);
   }
   backpage(){
-    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage,{'user':this.user});
+    this.navCtrl.push(this.page==2 ? GameDetailPage : TicketPage,{'user':this.user});
   }
   howtoplay(){
     this.navCtrl.push(GameDetailBPage);

@@ -41,7 +41,6 @@ export class ConvertclickBPage {
         {
           text: 'Confirm',
           handler: () => {
-            this.navCtrl.push(TicketPage,{coinM:this.num});
             console.log('Confirm clicked');
             this.buyTicket();
           }

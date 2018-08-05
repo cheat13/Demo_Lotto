@@ -23,8 +23,8 @@ export class PrePlaygamePage {
     console.log('ionViewDidLoad PrePlaygamePage');
   }
 
-  goPlay(){
-    this.navCtrl.push(LottogamePage);
+  goPlay(index:number){
+    this.navCtrl.push(LottogamePage,{'user':this.user,'index':index});
   }
 
   Membership(){
@@ -35,7 +35,7 @@ export class PrePlaygamePage {
     this.navCtrl.push(GameresultPage);
   }
   backpage(){
-    this.navCtrl.push(this.page==1 ? TicketPage : GameDetailPage,{'user':this.user});
+    this.navCtrl.push(this.page==2 ? GameDetailPage : TicketPage,{'user':this.user});
   }
   howtoplay(){
     this.navCtrl.push(GameDetailPage);

@@ -12,10 +12,10 @@
         Buy coin amount
       </ion-col>
       <ion-col col-12 style="font-size: 24px;padding-bottom: 15px">
-        <b>100 coin</b>
+        <b>{{user.buyHistory[user.buyHistory.length-1].coin}} coin</b>
       </ion-col>
       <ion-col col-12 style="font-size: 20px;padding-bottom: 15px">
-        10,000 THB
+        {{user.buyHistory[user.buyHistory.length-1].amount}} THB
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -24,14 +24,9 @@
       <ion-col col-12 style="font-size: 20px;padding-bottom: 15px">
         <b>Successful !</b>
       </ion-col>
-      <ion-col col-12 style="font-size: 16px;padding-bottom: 15px">
-        Ref. id
-      </ion-col>
+      
       <ion-col col-12 style="font-size: 16px">
-        452487
-      </ion-col>
-      <ion-col col-12 style="font-size: 16px">
-        10/07/2018
+        {{user.buyHistory[user.buyHistory.length-1].date}}
       </ion-col>
     </ion-row>
   </ion-grid>

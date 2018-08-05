@@ -15,6 +15,7 @@ import 'rxjs/add/observable/interval';
 })
 export class LottogamePage {
 
+
   img1 = '../../assets/imgs/frame.png';
   img2 = '../../assets/imgs/frame.png';
   img3 = '../../assets/imgs/frame.png';
@@ -26,21 +27,26 @@ export class LottogamePage {
   img9 = '../../assets/imgs/frame.png';
   count: number = 0;
   show:any=false;
+  user:any
+  index:number
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    this.user = this.navParams.get('user');
+    this.index = this.navParams.get('index');
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LottogamePage');
   }
-  Gameresult() {
-    this.navCtrl.push(GameresultPage);
+  Gameresult(){
+    this.navCtrl.push(GameresultPage,{'user':this.user,'index':this.index});
   }
   gotoHome() {
     this.navCtrl.setRoot(HomePage);
   }
-  backpage() {
-    this.navCtrl.push(PrePlaygamePage);
+  backpage(){
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
   al() {
     let alert = this.alertCtrl.create({

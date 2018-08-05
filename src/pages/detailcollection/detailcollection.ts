@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TradedetailPage } from '../tradedetail/tradedetail';
 import { MycollectPage } from '../mycollect/mycollect';
 import { MembershipPage } from '../membership/membership';
+import { CollectionTradePage } from '../collection-trade/collection-trade'
 /**
  * Generated class for the DetailcollectionPage page.
  *
@@ -16,8 +16,11 @@ import { MembershipPage } from '../membership/membership';
   templateUrl: 'detailcollection.html',
 })
 export class DetailcollectionPage {
-
+  user:any
+  index:number
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
+    this.index = this.navParams.get('index');
   }
 
   ionViewDidLoad() {
@@ -25,10 +28,10 @@ export class DetailcollectionPage {
   }
   
   tr(){
-    this.navCtrl.push(TradedetailPage);
+    this.navCtrl.push(CollectionTradePage,{'user':this.user,'index':this.index});
   }
   backpage(){
-    this.navCtrl.push(MycollectPage);
+    this.navCtrl.push(MycollectPage,{'user':this.user});
   }
 
   Membership(){
