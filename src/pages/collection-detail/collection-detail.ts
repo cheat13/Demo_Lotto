@@ -4,6 +4,8 @@ import { BuyCollectionPage } from '../buy-collection/buy-collection';
 import { MembershipPage } from '../membership/membership';
 import { MycollectPage } from '../mycollect/mycollect';
 import { CollectionPage } from '../collection/collection';
+import { TradePage } from '../trade/trade';
+import { User } from '../../models/user';
 
 @IonicPage()
 @Component({
@@ -11,8 +13,9 @@ import { CollectionPage } from '../collection/collection';
   templateUrl: 'collection-detail.html',
 })
 export class CollectionDetailPage {
-
+  user:User
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user');
   }
 
   ionViewDidLoad() {
@@ -20,7 +23,7 @@ export class CollectionDetailPage {
   }
 
   BuyItem(){
-    this.navCtrl.push(BuyCollectionPage);
+    this.navCtrl.push(TradePage,{'user':this.user,'page':2});
   }
 
   Membership(){

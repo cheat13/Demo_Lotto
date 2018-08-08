@@ -10,7 +10,8 @@ import { GameresultslotPage } from '../gameresultslot/gameresultslot';
   templateUrl: 'slotgame.html',
 })
 export class SlotgamePage {
-  img = '../../assets/imgs/cirpink.png';
+  img = '../../assets/imgs/Slot_Animation_Before.png';
+  hideME=false;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
@@ -48,10 +49,18 @@ export class SlotgamePage {
     });
     alert.present();
   }
-  addEvent(e){
-    if(this.img=='../../assets/imgs/cirpink.png')
+  addEvent(){
+    if(this.img=='../../assets/imgs/Slot_Animation_Before.png')
     {
-      this.img = '../../assets/imgs/phodrum.png'
+      this.img = '../../assets/imgs/Slot_Animation_Spin.gif'
     }
+  }
+  stopEvent(){
+    if(this.img=='../../assets/imgs/Slot_Animation_Spin.gif')
+    {
+      this.img = '../../assets/imgs/Slot_Animation_Result.png'
+    }
+    this.hideME = true;
+    console.log('hello');
   }
 }

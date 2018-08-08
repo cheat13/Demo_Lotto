@@ -8,7 +8,7 @@ import { TradePage } from '../trade/trade';
   templateUrl: 'trade-buy-modal.html',
 })
 export class TradeBuyModalPage {
-
+  gender:string = "thb";
   constructor(public navCtrl: NavController, public navParams: NavParams, public view:ViewController) {
   }
 

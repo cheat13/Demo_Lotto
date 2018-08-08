@@ -1,0 +1,100 @@
+<ion-header>
+
+  <ion-toolbar color="pink">
+    <button ion-button clear small (click)="backpage()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title center text-center>Collection C</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="Membership()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-grid style="background-color: lightgray">
+    <ion-row>
+
+      <ion-col style="background-color: lightgray">
+        <h5>Collection C</h5>
+        <b>50,000 THB</b>
+        <div class="col">
+          <div>
+            <img class="alpha" src="../../assets/imgs/Asset 214.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+          </div>
+
+          <div>
+            <img class="alpha" src="../../assets/imgs/Asset 204.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+          </div>
+
+          <div>
+            <img class="alpha" src="../../assets/imgs/Asset 209.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+          </div>
+
+          <div>
+            <img class="alpha" src="../../assets/imgs/Asset 211.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-buttons right>
+      <button style="color: lightgrey" color="light" default ion-button>Prize : 10 ETH</button>
+    </ion-buttons>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h4>Title text</h4>
+        <h5>Description</h5>
+        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          <br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item style="background-color: lightgrey">
+        <div>
+          <img class="alpha" src="../../assets/imgs/Asset 214.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+        </div>Blue Berry
+        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item style="background-color: lightgrey">
+        <div>
+          <img class="alpha" src="../../assets/imgs/Asset 204.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+        </div>Cerry
+        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item style="background-color: lightgrey">
+        <div>
+          <img class="alpha" src="../../assets/imgs/Asset 209.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+        </div>Pineapple
+        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item style="background-color: lightgrey">
+        <div>
+          <img class="alpha" src="../../assets/imgs/Asset 211.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+        </div>Strawberry
+        <button color="pink" ion-button default item-end>Trade</button>
+      </ion-item>
+    </ion-list>
+
+
+  </ion-grid>
+</ion-content>
