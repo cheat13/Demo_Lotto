@@ -25,25 +25,11 @@
   <img src="../../assets/imgs/banana.png">
   <ion-grid class="page-footer" no-padding>
     <ion-row>
-      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="gotoPrePlaySlotPage()">
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="Done()">
         <button ion-button style="color:white;" clear block>
           <b>Done</b>
         </button>
-      </ion-buttons>
-    </ion-toolbar>
-  
-  </ion-header>
-  <ion-content padding text-center>
-    <h2>Lotto Slot</h2>
-    <img src="{{user.collection[3].src}}" style="weight:25%;height:25%">
-    <h5>You lose</h5>
-    <ion-grid class="page-footer" no-padding>
-      <ion-row>
-        <ion-col col-12 style="text-align: center;font-size: 16px" (click)="Done()">
-          <button ion-button style="color:white;" clear block>
-            <b>Done</b>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

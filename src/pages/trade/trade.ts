@@ -53,6 +53,6 @@ export class TradePage {
     myModal.present();
   }
   backpage() {
-    this.navCtrl.push(this.page == 1 ? MembershipPage : CollectionDetailPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }
