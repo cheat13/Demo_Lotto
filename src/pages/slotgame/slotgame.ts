@@ -12,14 +12,18 @@ import { GameresultslotPage } from '../gameresultslot/gameresultslot';
 export class SlotgamePage {
   img = '../../assets/imgs/Slot_Animation_Before.png';
   hideME=false;
+  user:any
+  index:number
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+    this.user = this.navParams.get('user'); 
+    this.index = this.navParams.get('index');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlotgamePage');
   }
   Gameresultslot() {
-    this.navCtrl.push(GameresultslotPage);
+    this.navCtrl.push(GameresultslotPage,{'user':this.user,'index':this.index});
   }
   gotoHome() {
     this.navCtrl.setRoot(HomePage);

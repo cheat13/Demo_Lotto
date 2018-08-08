@@ -18,7 +18,7 @@
       <ion-segment-button value="buy">
         Buy
       </ion-segment-button>
-      <ion-segment-button value="sell">
+      <ion-segment-button value="sell" [disabled]="user.collection[index].amount==0 ? true : false">
         Sell
       </ion-segment-button>
     </ion-segment>

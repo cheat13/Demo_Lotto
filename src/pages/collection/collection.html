@@ -30,88 +30,17 @@
   </ion-grid>
 
   <h5 center text-center>Collection Rewards</h5>
-  <ion-card (click)="DetailCollectionA()" style="background-color: lightgray">
+  <ion-card *ngFor="let col of user.collections;let j = index" (click)="DetailCollectionA(j)" style="background-color: lightgray">
     <ion-card-header>
-      <b>Collection A</b>
-      <br>50,000 THB
+      <b>Collection {{col.title}}</b>
+      <br>{{col.prize}} ETH
     </ion-card-header>
     <ion-card-content>
-      <div>
-        <img src="../../assets/imgs/Asset 198.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
+      <div *ngFor="let colReq of col.collection; let i = index">
+        <img src="{{user.collection[i].src}}" style="float:left; margin-right: 5px; height: 30px; width: 30px;" [ngClass]="{alpha:user.collection[i].amount==0}">
       </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 164.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img src="../../assets/imgs/Asset 207.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 210.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
       <br>
 
-      <div text-right>
-        <b>Detail ></b>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card (click)="DetailCollectionB()" style="background-color: lightgray">
-    <ion-card-header>
-      <b>Collection B</b>
-      <br>30,000 THB
-    </ion-card-header>
-    <ion-card-content>
-      <div>
-        <img src="../../assets/imgs/Asset 198.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 159.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 172.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 185.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <br>
-      <div text-right>
-        <b>Detail ></b>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card (click)="DetailCollectionC()" style="background-color: lightgray">
-    <ion-card-header>
-      <b>Collection C</b>
-      <br>50,000 THB
-    </ion-card-header>
-    <ion-card-content>
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 214.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 204.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 209.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 30x; width: 30px;">
-      </div>
-
-      <div>
-        <img class="alpha" src="../../assets/imgs/Asset 211.png" style="float:left; margin-right: 5px;  margin-bottom: 5px; height: 50px; width: 50px;">
-      </div>
-
-      <br>
       <div text-right>
         <b>Detail ></b>
       </div>

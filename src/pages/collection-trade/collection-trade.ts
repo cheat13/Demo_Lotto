@@ -3,8 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
-import { SuccessPage } from '../success/success';
 import { MycollectPage } from '../mycollect/mycollect';
+import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 /**
  * Generated class for the CollectionTradePage page.
@@ -22,16 +22,22 @@ export class CollectionTradePage {
   Trade:string = "buy";
   user:any
   index:number
+  collectNum:number
+  fromDetail:any
   num:number
   sellAmount:number
   sellPrice:number
   date:Date 
   dateNow:string  
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.user = this.navParams.get('user');
     this.index = this.navParams.get('index');
+    this.collectNum = this.navParams.get('collectNum');
+    this.fromDetail = this.navParams.get('from');
     this.date = new Date();
     this.dateNow = this.date.getDate()+"/"+this.date.getMonth()+"/"+this.date.getFullYear();
+    console.log(this.fromDetail);
 
   }
   stpSelect() {
@@ -98,18 +104,18 @@ export class CollectionTradePage {
   }
 
   buyCollection(){
-    this.user.collection[this.index].amount = this.num;
+    this.user.collection[this.index].amount = Number(this.user.collection[this.index].amount) + Number(this.num);
     this.user.money = Number(this.user.money) - Number(this.num*100);
-    this.navCtrl.push(MycollectPage,{'user':this.user});
+    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
   }
 
   sellCollection(){
     this.user.collection[this.index].amount -= this.sellAmount ;
-    this.navCtrl.push(MycollectPage,{'user':this.user});
+    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
 
   }
 
   backpage(){
-    this.navCtrl.push(MycollectPage,{'user':this.user});
+    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user});
   }
 }

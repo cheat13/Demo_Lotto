@@ -4,7 +4,7 @@
     <button ion-button clear small (click)="backpage()">
       <ion-icon name="arrow-back"></ion-icon>
     </button>
-    <ion-title center text-center>Collection A</ion-title>
+    <ion-title center text-center>Collection {{user.collections[index].title}}</ion-title>
     <ion-buttons right>
       <button ion-button (click)="Membership()">
         <ion-icon ios="ios-home" md="md-home"></ion-icon>
@@ -21,80 +21,38 @@
     <ion-row>
 
       <ion-col style="background-color: lightgray">
-        <h5>Collection A</h5>
-        <b>50,000 THB</b>
+        <h5>Collection {{user.collections[index].title}}</h5>
+        <b>{{user.collections[index].prize}} ETH</b>
         <div class="col">
-          <div>
-            <img src="../../assets/imgs/Asset 198.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-          </div>
-
-          <div>
-            <img class="alpha" src="../../assets/imgs/Asset 164.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-          </div>
-
-          <div>
-            <img src="../../assets/imgs/Asset 207.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-          </div>
-
-          <div>
-            <img class="alpha" src="../../assets/imgs/Asset 210.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
+          <div *ngFor="let colReq of user.collections[index].collection;let i = index">
+            <img src="{{user.collection[i].src}}" style="float:left; margin-right: 5px; height: 30px; width: 30px;" [ngClass]="{alpha:user.collection[i].amount==0}">
           </div>
         </div>
       </ion-col>
     </ion-row>
     <ion-buttons right>
-      <button style="color: lightgrey" color="light" default ion-button>Prize : 10 ETH</button>
+      <button  color="primary" default ion-button [disabled]="!user.collections[index].canTrade">{{user.collections[index].prize}} ETH</button>
     </ion-buttons>
   </ion-grid>
 
   <ion-grid>
     <ion-row>
       <ion-col>
-        <h4>Title text</h4>
+        <h4>Collection {{user.collections[index].title}}</h4>
         <h5>Description</h5>
-        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-          <br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        </p>
+        <p>{{user.collections[index].description}}</p>
 
       </ion-col>
     </ion-row>
 
-    <ion-list>
+    <ion-list *ngFor="let colReq of user.collections[index].collection;let i = index">
       <ion-item style="background-color: lightgrey">
         <div>
-          <img src="../../assets/imgs/Asset 198.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-        </div>King of Heart
-        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
+          <img src="{{user.collection[i].src}}" style="float:left; margin-right: 5px; height: 30px; width: 30px;" [ngClass]="{alpha:user.collection[i].amount==0}">
+        </div>
+        {{user.collection[i].name}} x{{user.collection[i].amount}}
+        <button  color="pink" ion-button default item-end (click)="goToCollectionTrade(i)">Trade</button>
       </ion-item>
     </ion-list>
-
-    <ion-list>
-      <ion-item style="background-color: lightgrey">
-        <div>
-          <img class="alpha" src="../../assets/imgs/Asset 164.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-        </div>Five of Spade
-        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-item style="background-color: lightgrey">
-        <div>
-          <img src="../../assets/imgs/Asset 207.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-        </div>Banana
-        <button color="pink" ion-button default item-end (click)="BuyItem()">Trade</button>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-item style="background-color: lightgrey">
-        <div>
-          <img class="alpha" src="../../assets/imgs/Asset 210.png" style="float:left; margin-right: 5px; height: 40px; width: 40px;">
-        </div>Water Melon
-        <button color="pink" ion-button default item-end>Trade</button>
-      </ion-item>
-    </ion-list>
-
-
   </ion-grid>
 </ion-content>

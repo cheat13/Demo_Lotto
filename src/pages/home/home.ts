@@ -12,13 +12,13 @@ import { MoneyPage } from '../money/money';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  user:any
   constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner,private navParams: NavParams) {
-
+    this.user = this.navParams.get('user');
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage,{'user':this.navParams.get('user')});
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   gopage1(){

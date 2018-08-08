@@ -7,7 +7,7 @@ export class ScratchLotto {
 
     constructor() {
         this.name = 'ScratchLotto';
-        this.prize = 30000;
+        this.prize = 100;
         this.tickets = 0;
         this.ticketsPrice = 1;
         this.ticket = [];

@@ -110,6 +110,7 @@ import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-d
     Home2Page,
     CollectionDetailBPage,
     CollectionDetailCPage,
+    CollectionTradePage,
   ],
   imports: [
     BrowserModule,

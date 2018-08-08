@@ -13,7 +13,6 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
 })
 export class TradePage {
   Trade: string = "buy";
-
   user:any
   num:number
   page: number

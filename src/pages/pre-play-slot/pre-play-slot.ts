@@ -24,8 +24,8 @@ page:number
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrePlaySlotPage');
   }
-  goPlay(){
-    this.navCtrl.push(SlotgamePage);
+  goPlay(index:number){
+    this.navCtrl.push(SlotgamePage,{'user':this.user,'index':index});
   }
 
   Membership(){

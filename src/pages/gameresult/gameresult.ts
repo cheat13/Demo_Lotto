@@ -22,7 +22,7 @@ export class GameresultPage {
 
   Done(){
     
-    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
+    this.navCtrl.push(PrePlaygamePage);
   }
   gotoHome() {
     this.navCtrl.setRoot(HomePage);
@@ -31,7 +31,8 @@ export class GameresultPage {
     this.navCtrl.push(PrePlaygamePage);
   }
   openModal() {
-    const myModal = this.modal.create('ConfmodalPage');
+    this.user.collection[2].amount+=1;
+    const myModal = this.modal.create('ConfmodalPage',{'user':this.user,'index':this.index});
     myModal.present();
   }
 }

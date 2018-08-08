@@ -16,6 +16,7 @@ export class CollectionPage {
   user:any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = this.navParams.get('user');
+    console.log(this.user);
   }
 
   ionViewDidLoad() {
@@ -30,8 +31,8 @@ export class CollectionPage {
     this.navCtrl.push(MarketplacePage,{'user':this.user});
   }
 
-  DetailCollectionA(){
-    this.navCtrl.push(CollectionDetailPage);
+  DetailCollectionA(index:number){
+    this.navCtrl.push(CollectionDetailPage,{'user':this.user,'index':index});
   }
   DetailCollectionB(){
     this.navCtrl.push(CollectionDetailBPage);

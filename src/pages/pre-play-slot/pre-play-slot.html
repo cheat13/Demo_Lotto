@@ -35,23 +35,46 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngFor="let ticket of user.slotGame.ticket" [ngClass]="{neverPlayed:ticket.status=='neverPlayed'}" (click)="goPlay()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 class="ticket-title">
-            Ticket {{ticket.no}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-9 class="game-title">
-            Slot Game
-          </ion-col>
-          <ion-col col-3 class="play-title">
-            Play >
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-row>
+    
+      <ion-row *ngFor="let ticket of user.slotGame.ticket; let i = index"  (click)="goPlay(i)">
+        <ion-grid *ngIf="ticket.status=='neverPlayed'" [ngClass]="{neverPlayed:ticket.status=='neverPlayed',played:ticket.status=='played'}">
+          <ion-row>
+            <ion-col col-12 class="ticket-title">
+              Ticket {{ticket.no}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-9 class="game-title">
+              Slot Game
+            </ion-col>
+            <ion-col col-3 class="play-title">
+              Play >
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-row>
+      <ion-row *ngFor="let ticket of user.slotGame.ticket; let i = index">
+        <ion-grid *ngIf="ticket.status=='played'" [ngClass]="{neverPlayed:ticket.status=='neverPlayed',played:ticket.status=='played'}">
+          <ion-row>
+            <ion-col col-12 class="ticket-title">
+              Ticket {{ticket.no}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-9 class="game-title">
+              Slot Game
+            </ion-col>
+            <ion-col col-3 class="play-title">
+              {{ticket.isWin ? "Win" : "Lose"}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-row>
+    
+
+
 
 
     <ion-row>

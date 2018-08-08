@@ -28,7 +28,7 @@ export class DetailcollectionPage {
   }
   
   tr(){
-    this.navCtrl.push(CollectionTradePage,{'user':this.user,'index':this.index});
+    this.navCtrl.push(CollectionTradePage,{'user':this.user,'index':this.index,'from':true});
   }
   backpage(){
     this.navCtrl.push(MycollectPage,{'user':this.user});
