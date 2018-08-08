@@ -61,7 +61,7 @@
             <ion-item *ngFor="let buy of user.buyHistory" no-padding>
               <ion-row style="font-size: 10px">
                 <ion-col col-12>
-                  DD/MM/YY
+                  {{buy.date}}
                 </ion-col>
                 <ion-col col-4>
                   Amount
@@ -73,13 +73,13 @@
                   Total prize
                 </ion-col>
                 <ion-col col-4 style="font-size: 14px">
-                  <b>100 coin</b>
+                  <b>{{buy.num}} coin</b>
                 </ion-col>
                 <ion-col col-4 style="font-size: 14px">
-                  <b>100 BTH</b>
+                  <b>{{buy.unit}}</b>
                 </ion-col>
                 <ion-col col-4 style="font-size: 14px">
-                  <b>10,000 BTH</b>
+                  <b>{{buy.total}} </b>
                 </ion-col>
               </ion-row>
             </ion-item>

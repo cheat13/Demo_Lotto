@@ -30,7 +30,7 @@ export class TradePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TradePage');
+    console.log('ionViewDidLoad TradePage');  
   }
 
   Sell() {
@@ -42,7 +42,7 @@ export class TradePage {
   }
 
   showConfirm() {
-    const myModal = this.modal.create('TradeBuyModalPage');
+    const myModal = this.modal.create('TradeBuyModalPage',{'user':this.user,'num':this.num,'date':this.dateNow});
     myModal.present();
   }
 

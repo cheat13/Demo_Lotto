@@ -116,7 +116,7 @@ export class CollectionTradePage {
   }
 
   backpage(){
-    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user});
+    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
   }
   openModal() {
     const myModal = this.modal.create('TradeCollectBuyModalPage');
