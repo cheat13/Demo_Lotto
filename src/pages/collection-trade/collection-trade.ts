@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
@@ -30,7 +30,7 @@ export class CollectionTradePage {
   date:Date 
   dateNow:string  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private modal: ModalController) {
     this.user = this.navParams.get('user');
     this.index = this.navParams.get('index');
     this.collectNum = this.navParams.get('collectNum');
@@ -117,5 +117,13 @@ export class CollectionTradePage {
 
   backpage(){
     this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user});
+  }
+  openModal() {
+    const myModal = this.modal.create('TradeCollectBuyModalPage');
+    myModal.present();
+  }
+  openModalSell(){
+    const myModal = this.modal.create('TradeCollectSellModalPage');
+    myModal.present();
   }
 }

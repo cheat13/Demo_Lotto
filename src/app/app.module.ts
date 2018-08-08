@@ -45,8 +45,6 @@ import { PrePlaySlotPage } from '../pages/pre-play-slot/pre-play-slot';
 import { SlotgamePage } from '../pages/slotgame/slotgame';
 import { StartPage } from '../pages/start/start';
 import { CollectionTradePage } from '../pages/collection-trade/collection-trade';
-
-
 import { IonicStorageModule } from '@ionic/storage';
 import { GameresultslotPage } from '../pages/gameresultslot/gameresultslot';
 import { ConfmslotmodalPage } from '../pages/confmslotmodal/confmslotmodal';

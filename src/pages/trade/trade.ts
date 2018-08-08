@@ -3,8 +3,6 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
-import { SuccessPage } from '../success/success';
-import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 @IonicPage()
 @Component({
