@@ -51,6 +51,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Camera } from '@ionic-native/camera';
 import{MoneyPage} from'../pages/money/money';
 import { Home2Page } from '../pages/home2/home2';
+import { CollectionDetailBPage } from '../pages/collection-detail-b/collection-detail-b';
+import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-detail-c';
 
 
 @NgModule({
@@ -102,7 +104,9 @@ import { Home2Page } from '../pages/home2/home2';
     ConfmslotmodalPage,
     LosegamePage,
     MoneyPage,
-    Home2Page
+    Home2Page,
+    CollectionDetailBPage,
+    CollectionDetailCPage,
   ],
   imports: [
     BrowserModule,
@@ -161,7 +165,9 @@ import { Home2Page } from '../pages/home2/home2';
     ConfmslotmodalPage,
     LosegamePage,
     MoneyPage,
-    Home2Page
+    Home2Page,
+    CollectionDetailBPage,
+    CollectionDetailCPage,
 
   ],
   providers: [

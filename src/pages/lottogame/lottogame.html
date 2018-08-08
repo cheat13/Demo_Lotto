@@ -1,4 +1,4 @@
-  <ion-header>
+<ion-header>
   <ion-toolbar color="pink">
     <button ion-button clear small (click)="backpage()">
       <ion-icon name="arrow-back"></ion-icon>
@@ -17,39 +17,40 @@
   <h2 style="margin-top: 20px;margin-bottom: 20px;">Poker Scratch</h2>
   <ion-grid>
     <ion-row>
-      <ion-col >
-        <img src="{{img1}}" (click)="addEvent1();">
+      <ion-col> 
+        <img src="{{img1}}" (click)="addEvent1();" *ngIf="img1">
       </ion-col>
-      <ion-col >
-        <img src="{{img2}}" (click)="addEvent2();">
+      <ion-col>
+        <img src="{{img2}}" (click)="addEvent2();" *ngIf="img2">
       </ion-col>
-      <ion-col >
-        <img src="{{img3}}" (click)="addEvent3();">
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col >
-        <img src="{{img4}}" (click)="addEvent4();">
-      </ion-col>
-      <ion-col >
-        <img src="{{img5}}" (click)="addEvent5();">
-      </ion-col>
-      <ion-col >
-        <img src="{{img6}}" (click)="addEvent6();">
+      <ion-col>
+        <img src="{{img3}}" (click)="addEvent3(); " *ngIf="img3">
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col >
-        <img src="{{img7}}" (click)="addEvent7();">
+      <ion-col>
+        <img src="{{img4}}"  *ngIf="img4">
       </ion-col>
-      <ion-col >
-        <img src="{{img8}}" (click)="addEvent8();">
+      <ion-col>
+        <img src="{{img5}}" (click)="addEvent5();" *ngIf="img5">
       </ion-col>
-      <ion-col >
-        <img src="{{img9}}" (click)="addEvent9();">
+      <ion-col>
+        <img src="{{img6}}"  *ngIf="img6">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="{{img7}}" *ngIf="img7">
+      </ion-col>
+      <ion-col>
+        <img src="{{img8}}" (click)="addEvent8();" *ngIf="img8">
+      </ion-col>
+      <ion-col>
+        <img src="{{img9}}"  *ngIf="img9">
       </ion-col>
     </ion-row>
   </ion-grid>
+  <h1 *ngIf="show"> !! Full House !! </h1>
   <ion-grid class="page-footer" no-padding>
     <ion-row>
       <ion-col col-12 style="text-align: center;font-size: 16px" (click)="Gameresult()">

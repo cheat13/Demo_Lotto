@@ -15,4 +15,31 @@ page-slotgame {
         background-color: black;
 
     }
+    .zzz{
+        position:absolute;
+        z-index:-2;
+        width: 100px;
+        height: 100px;
+    }
+    // img{
+    //     width:100%;
+    //     height:100%;
+    //   }
+      
+      .myCard{
+        position:relative;
+      
+      }
+      
+      .myOverlay{
+          width: 100%;
+          height: 60px;
+          position: absolute;
+          z-index: 99;
+          bottom: 0px;
+          opacity: 0.5;
+          background: #000;
+          color: #fff;
+      
+      }
 }

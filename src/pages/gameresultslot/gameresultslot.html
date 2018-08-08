@@ -1,28 +1,35 @@
 <ion-header>
-    <ion-toolbar color="pink">
-      <button ion-button clear small (click)="gotoPrePlaySlotPage()">
-        <ion-icon name="arrow-back"></ion-icon>
+  <ion-toolbar color="pink">
+    <button ion-button clear small (click)="gotoPrePlaySlotPage()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>Result</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="gotoHome()">
+        <ion-icon ios="ios-home" md="md-home"></ion-icon>
       </button>
-      <ion-title>Result</ion-title>
-      <ion-buttons right>
-        <button ion-button (click)="gotoHome()">
-          <ion-icon ios="ios-home" md="md-home"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content padding text-center>
+  <ion-toolbar color="pink">
+    <ion-title>Lotto Slot</ion-title>
+  </ion-toolbar>
+  <div>
+    <img src="../../assets/imgs/Slot_Animation_Result.png">
+    <ion-title>Lose the game</ion-title>
+  </div>
+
+  <ion-label style="font-size: 20px">you got collection</ion-label>
+  <img src="../../assets/imgs/banana.png">
+  <ion-grid class="page-footer" no-padding>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;font-size: 16px" (click)="gotoPrePlaySlotPage()">
+        <button ion-button style="color:white;" clear block>
+          <b>Done</b>
         </button>
-      </ion-buttons>
-    </ion-toolbar>
-  
-  </ion-header>
-  <ion-content padding text-center>
-    <h2>Lotto Slot</h2>
-    <img src="../../assets/imgs/Reward.png">
-    <h5>Lost the game</h5>
-    <ion-grid class="page-footer" no-padding>
-      <ion-row>
-        <ion-col col-12 style="text-align: center;font-size: 16px" (click)="gotoPrePlaySlotPage()">
-          <button ion-button style="color:white;" clear block>
-            <b>Done</b>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

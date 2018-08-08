@@ -4,6 +4,8 @@ import { MembershipPage } from '../membership/membership';
 import { MarketplacePage } from '../marketplace/marketplace';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
 import { MycollectPage } from '../mycollect/mycollect';
+import { CollectionDetailBPage } from '../collection-detail-b/collection-detail-b';
+import { CollectionDetailCPage } from '../collection-detail-c/collection-detail-c';
 
 @IonicPage()
 @Component({
@@ -29,6 +31,12 @@ export class CollectionPage {
 
   DetailCollectionA(){
     this.navCtrl.push(CollectionDetailPage);
+  }
+  DetailCollectionB(){
+    this.navCtrl.push(CollectionDetailBPage);
+  }
+  DetailCollectionC(){
+    this.navCtrl.push(CollectionDetailCPage);
   }
   mycollection(){
     this.navCtrl.push(MycollectPage);

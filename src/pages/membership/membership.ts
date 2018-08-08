@@ -36,7 +36,7 @@ export class MembershipPage {
   }
 
   Trade(){
-    this.navCtrl.push(TradePage);
+    this.navCtrl.push(TradePage,{'user':this.user,'page':1});
   }
 
   Collection(){

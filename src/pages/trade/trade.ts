@@ -4,6 +4,7 @@ import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
 import { SuccessPage } from '../success/success';
+import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 @IonicPage()
 @Component({
@@ -12,8 +13,11 @@ import { SuccessPage } from '../success/success';
 })
 export class TradePage {
   Trade: string = "buy";
-
+  user: any
+  page: number
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private modal: ModalController) {
+    this.user = this.navParams.get('user');
+    this.page = this.navParams.get('page');
   }
   stpSelect() {
     console.log('STP selected');
@@ -32,55 +36,15 @@ export class TradePage {
   }
 
   showConfirm() {
-    // const confirm = this.alertCtrl.create({
-    //   title: 'Buy coin amount',
-    //   subTitle: "<h5>100 coin</h5> 10,000 THB",
-    //   buttons: [
-    //     {
-    //       text: 'Cancel',
-    //       handler: () => {
-    //         console.log('Disagree clicked');
-    //       }
-    //     },
-    //     {
-    //       text: 'Confirm',
-    //       handler: () => {
-    //         console.log('Agree clicked');
-    //         this.navCtrl.push(SuccessPage);
-    //       }
-    //     }
-    //   ]
-    // });
-    // confirm.present();
-    
     const myModal = this.modal.create('TradeBuyModalPage');
     myModal.present();
   }
 
   showConfirmSell() {
-    // const confirm = this.alertCtrl.create({
-    //   title: 'Sell',
-    //   subTitle: "Amount 100 coin <br> Prise/Unit 100 THB <br> Total 10,000 THB",
-    //   buttons: [
-    //     {
-    //       text: 'Cancel',
-    //       handler: () => {
-    //         console.log('Disagree clicked');
-    //       }
-    //     },
-    //     {
-    //       text: 'Confirm',
-    //       handler: () => {
-    //         console.log('Agree clicked');
-    //       }
-    //     }
-    //   ]
-    // });
-    // confirm.present();
     const myModal = this.modal.create('TradeSellModalPage');
     myModal.present();
   }
   backpage() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(this.page == 1 ? MembershipPage : CollectionDetailPage);
   }
 }
