@@ -52,7 +52,7 @@
 
           <ion-row *ngIf="user.buyHistory.length==0">
             <ion-col col-12 style="text-align: center">
-              <h5>ไม่มีข้อมูลการซื้อ</h5>
+              <h5>No Data</h5>
             </ion-col>
           </ion-row>
 
@@ -130,9 +130,9 @@
                 <ion-item>
                   <ion-input type="number" [(ngModel)]="sellPrice"></ion-input>
                   <ion-select [(ngModel)]="gender">
-                    <ion-option value="thb">THB</ion-option>
-                    <ion-option value="usd">USD</ion-option>
-                    <ion-option value="eth">ETH</ion-option>
+                    <ion-option value="THB">THB</ion-option>
+                    <ion-option value="USD">USD</ion-option>
+                    <ion-option value="ETH">ETH</ion-option>
                   </ion-select>
                 </ion-item>
               </ion-list>
@@ -152,7 +152,7 @@
 
           <ion-row *ngIf="user.sellHistory.length==0">
             <ion-col col-12 style="text-align: center">
-              <h5>ไม่มีข้อมูลการขาย</h5>
+              <h5>No Data</h5>
             </ion-col>
           </ion-row>
 

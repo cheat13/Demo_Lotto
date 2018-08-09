@@ -11,7 +11,7 @@ export class TradeBuyModalPage {
   user:any
   num:number
   date:string
-  gender:string = "thb";
+  gender:string = "THB";
   amount:number
   thbCurrency:number=100
   usdCurrency:number=2
@@ -30,29 +30,29 @@ export class TradeBuyModalPage {
     console.log('ionViewDidLoad TradeBuyModalPage');
   }
   go(){
-    if (this.gender == 'thb') {
+    if (this.gender == 'THB') {
       this.user.money -= this.amount;
-    } else if (this.gender == 'usd') {
+    } else if (this.gender == 'USD') {
       this.user.moneyUSD -= this.amount;
-    } else if(this.gender == 'eth'){
+    } else if(this.gender == 'ETH'){
       this.user.ethereum -= this.amount;
     }
     this.user.buyHistory.push({
       'date':this.date,
       'num':this.num,
       'total':this.amount+" "+this.gender,
-      'unit': this.gender=='thb' ? this.thbCurrency+" "+this.gender : this.gender=='usd' ? this.usdCurrency+" "+this.gender : this.ethCurrency+" "+this.gender})
+      'unit': this.gender=='THB' ? this.thbCurrency+" "+this.gender : this.gender=='usd' ? this.usdCurrency+" "+this.gender : this.ethCurrency+" "+this.gender})
     this.user.coins = Number(this.user.coins) +Number(this.num);
     this.navCtrl.push(TradePage,{'user':this.user});
   }
 
   calAmount() {
     
-    if (this.gender == 'thb') {
+    if (this.gender == 'THB') {
       this.amount = this.num * this.thbCurrency;
-    } else if(this.gender =='usd') {
+    } else if(this.gender =='USD') {
       this.amount = this.num * this.usdCurrency;
-    } else if(this.gender == 'eth'){
+    } else if(this.gender == 'ETH'){
       this.amount = this.num * this.ethCurrency;
     } 
   }

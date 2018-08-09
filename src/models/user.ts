@@ -73,8 +73,8 @@ export class User {
             { 'name': '47', 'amount': 0, 'src': '../../assets/imgs/Asset 184.png' },
             { 'name': '48', 'amount': 0, 'src': '../../assets/imgs/Asset 158.png' },
             { 'name': '49', 'amount': 0, 'src': '../../assets/imgs/Asset 172.png' },
-            { 'name': '50', 'amount': 0, 'src': '../../assets/imgs/Asset 185.png' },
-            { 'name': '51', 'amount': 0, 'src': '../../assets/imgs/Asset 198.png' },
+            { 'name': '50', 'amount': 0, 'src': '../../assets/imgs/Asset 198.png' },
+            { 'name': '51', 'amount': 0, 'src': '../../assets/imgs/Asset 185.png' },
             { 'name': '52', 'amount': 0, 'src': '../../assets/imgs/Asset 159.png' },
 
         ]},
@@ -98,7 +98,9 @@ export class User {
            
         ];
         this.collections = [
-            {'title':'A', 'description':'Collection A ','prize':100,'collection':[{'game':0,'col':0},{'game':0,'col':1},{'game':0,'col':2},{'game':1,'col':0}],canTrade:false}
+            {'title':'A', 'description':'Collection A ','prize':100,'collection':[{'game':0,'col':49},{'game':0,'col':48},{'game':1,'col':7},{'game':1,'col':10}],canTrade:false},
+            {'title':'B', 'description':'Collection B ','prize':100,'collection':[{'game':0,'col':49},{'game':0,'col':50},{'game':0,'col':51},{'game':0,'col':48}],canTrade:false},
+            {'title':'C', 'description':'Collection C ','prize':100,'collection':[{'game':1,'col':0},{'game':1,'col':1},{'game':1,'col':2},{'game':1,'col':3}],canTrade:false},
         ];
         this.notice = [];
     }

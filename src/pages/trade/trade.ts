@@ -14,7 +14,7 @@ export class TradePage {
   user:any
   num:number
   page: number
-  gender:string ='thb'
+  gender:string ='THB'
   sellAmount:number
   sellPrice:number
   date:Date 
@@ -57,11 +57,11 @@ export class TradePage {
 
   calAmount() {
     
-    if (this.gender == 'thb') {
+    if (this.gender == 'THB') {
       this.sellPrice = this.sellPrice * this.thbCurrency;
-    } else if(this.gender =='usd') {
+    } else if(this.gender =='USD') {
       this.sellPrice = this.sellPrice * this.usdCurrency;
-    } else if(this.gender == 'eth'){
+    } else if(this.gender == 'ETH'){
       this.sellPrice = this.sellPrice * this.ethCurrency;
     } 
   }

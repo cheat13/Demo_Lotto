@@ -75,7 +75,7 @@ export class MarketplacePage {
         {
           text: 'Confirm',
           handler: () => {
-            this.user.collection[0].collection[1].amount+=1;
+            this.user.collection[1].collection[3].amount+=1;
             this.navCtrl.push(CollectionPage,{'user':this.user});
           }
         }

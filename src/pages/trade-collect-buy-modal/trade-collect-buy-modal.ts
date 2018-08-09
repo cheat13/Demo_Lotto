@@ -16,7 +16,7 @@ import { CollectionDetailPage } from  '../collection-detail/collection-detail';
   templateUrl: 'trade-collect-buy-modal.html',
 })
 export class TradeCollectBuyModalPage {
-  gender:any='thb';
+  gender:any='THB';
   user:any
   indexGame:number
   indexCol:number
@@ -50,11 +50,11 @@ export class TradeCollectBuyModalPage {
 
   calAmount() {
     
-    if (this.gender == 'thb') {
+    if (this.gender == 'THB') {
       this.amount = this.num * this.thbCurrency;
-    } else if(this.gender =='usd') {
+    } else if(this.gender =='USD') {
       this.amount = this.num * this.usdCurrency;
-    } else if(this.gender == 'eth'){
+    } else if(this.gender == 'ETH'){
       this.amount = this.num * this.ethCurrency;
     } 
   }
