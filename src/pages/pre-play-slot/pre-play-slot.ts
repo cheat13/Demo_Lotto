@@ -29,7 +29,7 @@ page:number
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   goResult(){
@@ -39,7 +39,7 @@ page:number
     this.navCtrl.push(this.page==2 ? GameDetailPage : TicketPage,{'user':this.user});
   }
   howtoplay(){
-    this.navCtrl.push(GameDetailBPage);
+    this.navCtrl.push(GameDetailBPage,{'user':this.user});
   }
 
 }

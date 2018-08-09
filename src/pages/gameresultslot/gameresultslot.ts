@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 import { HomePage } from '../home/home';
+import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
@@ -27,7 +28,7 @@ export class GameresultslotPage {
     this.navCtrl.push(PrePlaySlotPage,{'user':this.user});
   }
   gotoHome() {
-    this.navCtrl.setRoot(HomePage,{'user':this.user});
+    this.navCtrl.setRoot(MembershipPage,{'user':this.user});
   }
   gotoPrePlaySlotPage() {
     this.navCtrl.push(PrePlaySlotPage,{'user':this.user});

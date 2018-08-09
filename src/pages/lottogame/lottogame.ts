@@ -6,6 +6,7 @@ import { TicketPage } from '../ticket/ticket';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 import { Observable } from 'rxjs/observable';
 import 'rxjs/add/observable/interval';
+import { MembershipPage } from '../membership/membership';
 
 
 @IonicPage()
@@ -43,7 +44,7 @@ export class LottogamePage {
     this.navCtrl.push(GameresultPage,{'user':this.user,'index':this.index});
   }
   gotoHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(MembershipPage,{'user':this.user});
   }
   backpage(){
     this.navCtrl.push(PrePlaygamePage,{'user':this.user});

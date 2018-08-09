@@ -21,11 +21,11 @@ export class GameDetailPage {
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   goToHowToPlay(){
-    this.navCtrl.push(HowToPlayPage);
+    this.navCtrl.push(HowToPlayPage,{'user':this.user});
   }
 
   goToConvertClick(){
@@ -37,6 +37,6 @@ export class GameDetailPage {
   }
 
   gotoPrePlaygamePage(){
-    this.navCtrl.push(MembershipPage,{'user':this.user});
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
 }

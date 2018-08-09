@@ -32,7 +32,7 @@ export class CollectionDetailPage {
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
   backpage() {
     this.navCtrl.push(CollectionPage, { 'user': this.user });

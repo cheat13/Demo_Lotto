@@ -42,7 +42,7 @@ export class TradePage {
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   showConfirm() {

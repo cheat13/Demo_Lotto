@@ -68,6 +68,6 @@ export class ConvertclickBPage {
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

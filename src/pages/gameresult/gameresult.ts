@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 import { HomePage } from '../home/home';
+import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
@@ -25,10 +26,10 @@ export class GameresultPage {
     this.navCtrl.push(PrePlaygamePage);
   }
   gotoHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(MembershipPage,{'user':this.user});
   }
   gotoPrePlaygamePage() {
-    this.navCtrl.push(PrePlaygamePage);
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
   openModal() {
     this.user.collection[0].collection[2].amount+=1;

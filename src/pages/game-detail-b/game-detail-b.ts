@@ -28,11 +28,11 @@ export class GameDetailBPage {
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   goToHowToPlay(){
-    this.navCtrl.push(HowToPlayPage);
+    this.navCtrl.push(HowToPlayPage,{'user':this.user});
   }
 
   goToConvertClick(){
@@ -40,9 +40,9 @@ export class GameDetailBPage {
   }
 
   goToPrePlay(){
-    this.navCtrl.push(PrePlaySlotPage,{'user':this.user,'page':2});
+    this.navCtrl.push(PrePlaySlotPage,{'user':this.user,});
   }
   backpage(){
-    this.navCtrl.push(MembershipPage,{'user':this.user});
+    this.navCtrl.push(PrePlaySlotPage,{'user':this.user});
   }
 }

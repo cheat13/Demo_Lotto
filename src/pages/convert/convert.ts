@@ -6,6 +6,7 @@ import { ConvertclickCPage } from '../convertclick-c/convertclick-c';
 import { ConvertclickDPage } from '../convertclick-d/convertclick-d';
 import { TicketPage } from '../ticket/ticket';
 import { HomePage } from '../home/home';
+import { MembershipPage } from '../membership/membership';
 
 /**
  * Generated class for the ConvertPage page.
@@ -45,6 +46,6 @@ user:any
     this.navCtrl.push(TicketPage,{'user':this.user});
   }
   gotoHomepage(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(MembershipPage,{'user':this.user});
   }
 }

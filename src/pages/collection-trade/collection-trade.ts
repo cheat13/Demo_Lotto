@@ -56,7 +56,7 @@ export class CollectionTradePage {
   }
 
   Membership() {
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   backpage(){

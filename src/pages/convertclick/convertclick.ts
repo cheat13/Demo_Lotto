@@ -88,6 +88,6 @@ export class ConvertclickPage {
     this.navCtrl.push(ConvertPage);
   }
   gotoHomepage() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

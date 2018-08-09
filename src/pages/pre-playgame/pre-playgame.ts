@@ -28,7 +28,7 @@ export class PrePlaygamePage {
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
   goResult(){
@@ -38,6 +38,6 @@ export class PrePlaygamePage {
     this.navCtrl.push(this.page==2 ? GameDetailPage : TicketPage,{'user':this.user});
   }
   howtoplay(){
-    this.navCtrl.push(GameDetailPage);
+    this.navCtrl.push(GameDetailPage,{'user':this.user});
   }
 }

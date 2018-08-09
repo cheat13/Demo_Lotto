@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GameDetailPage } from '../game-detail/game-detail';
 
 /**
  * Generated class for the HowToPlayPage page.
@@ -14,12 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'how-to-play.html',
 })
 export class HowToPlayPage {
+  user:any
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.navParams.get('user')
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HowToPlayPage');
   }
+  
+  backpage(){
+    this.navCtrl.push(GameDetailPage,{'user':this.user});
+  }
+  
 
 }

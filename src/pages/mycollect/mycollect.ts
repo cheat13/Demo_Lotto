@@ -39,6 +39,6 @@ export class MycollectPage {
   }
 
   Membership(){
-    this.navCtrl.push(MembershipPage);
+    this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 }

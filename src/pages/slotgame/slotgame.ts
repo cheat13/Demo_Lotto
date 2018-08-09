@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 import { HomePage } from '../home/home';
 import { GameresultslotPage } from '../gameresultslot/gameresultslot';
+import { MembershipPage } from '../membership/membership';
 
 @IonicPage()
 @Component({
@@ -18,6 +19,9 @@ export class SlotgamePage {
     this.user = this.navParams.get('user'); 
     this.index = this.navParams.get('index');
   }
+  backpage(){
+    this.navCtrl.push(PrePlaySlotPage,{'user':this.user});
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlotgamePage');
@@ -26,7 +30,7 @@ export class SlotgamePage {
     this.navCtrl.push(GameresultslotPage,{'user':this.user,'index':this.index});
   }
   gotoHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(MembershipPage,{'user':this.user});
   }
   Done() {
     this.navCtrl.push(PrePlaySlotPage);
