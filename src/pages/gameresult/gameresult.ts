@@ -32,7 +32,7 @@ export class GameresultPage {
     this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
   openModal() {
-    this.user.collection[0].collection[2].amount+=1;
+    this.user.collection[0].collection[49].amount+=1;
     const myModal = this.modal.create('ConfmodalPage',{'user':this.user,'index':this.index});
     myModal.present();
   }

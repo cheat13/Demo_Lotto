@@ -10,7 +10,7 @@ import { CollectionDetailPage } from  '../collection-detail/collection-detail';
   templateUrl: 'trade-collect-sell-modal.html',
 })
 export class TradeCollectSellModalPage {
-  gender:any='thb';
+  gender:any='THB';
   user:any
   indexGame:number
   indexCol:number
