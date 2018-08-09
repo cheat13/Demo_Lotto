@@ -5,34 +5,48 @@ import { Web1Page } from '../web1/web1';
 import { Web2Page } from '../web2/web2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MoneyPage } from '../money/money';
-
+import { User } from '../../models/user';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  user:any
+  user:User
   constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner,private navParams: NavParams) {
+    
     this.user = this.navParams.get('user');
+    if(typeof this.user=== 'undefined'){
+      this.user = new User();
+    }
   }
 
-  Membership() {
+  goMembership() {
     this.navCtrl.push(MembershipPage,{'user':this.user});
   }
 
-  gopage1(){
-    this.navCtrl.push(Web1Page)
+  goBuyCoin(){
+    this.navCtrl.push(MoneyPage,{'user':this.user})
   }
+
+  goSubscribe(){
+    this.user.notice.push(
+      {'title':'คุณได้สมัครสมาชิก',
+      'detail':'กดเพื่อเข้าสู่หน้า Membership',
+      'clickAble':true,
+      })
+    this.navCtrl.push(HomePage,{'user':this.user})
+  }
+
 
   ScanQR(){
     this.barcodeScanner.scan().then(qrData => {
       if(qrData.text == 'money')
       {
-        this.navCtrl.push(MoneyPage)
+        this.goBuyCoin();
       }
       else if(qrData.text == 'game'){
-        this.navCtrl.push(MembershipPage)
+        this.goSubscribe();
       }
 
      }).catch(err => {

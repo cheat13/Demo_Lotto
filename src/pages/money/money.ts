@@ -16,15 +16,18 @@ import { HomePage } from '../home/home';
   templateUrl: 'money.html',
 })
 export class MoneyPage {
-
+  user:any
+  num:number
   constructor(private modal: ModalController,public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController, public actionSheetCtrl: ActionSheetController) {
+  this.user = this.navParams.get('user');
+  console.log(this.user);
   }
 
   gohome() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(HomePage,{'user':this.user});
   }
   confirm() {
-    const myModal = this.modal.create('ConfirmmodalPage');
+    const myModal = this.modal.create('ConfirmmodalPage',{'user':this.user,'num':this.num,'eth':this.num*0.005});
     myModal.present();
   }
 

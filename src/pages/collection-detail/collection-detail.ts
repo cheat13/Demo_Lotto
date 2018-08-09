@@ -38,15 +38,15 @@ export class CollectionDetailPage {
     this.navCtrl.push(CollectionPage, { 'user': this.user });
   }
 
-  goToCollectionTrade(idx: number) {
-    this.navCtrl.push(CollectionTradePage, { 'user': this.user, 'index': idx, 'collectNum': this.index });
+  goToCollectionTrade(idxGame: number,idxCol:number) {
+    this.navCtrl.push(CollectionTradePage, { 'user': this.user, 'indexGame': idxGame,'indexCol': idxCol, 'collectNum': this.index });
   }
 
   checkCanTrade() {
     let col = this.user.collections[this.index].collection
 
     for (let i = 0; i < col.length; i++) {
-      if (this.user.collection[col[i]].amount > 0) {
+      if (this.user.collection[col[i].game].collection[col[i].col].amount > 0) {
         this.amountCheck += 1;
       }
     }

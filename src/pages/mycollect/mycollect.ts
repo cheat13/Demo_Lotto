@@ -28,8 +28,8 @@ export class MycollectPage {
 
   }
 
-  detail(index:number){
-    this.navCtrl.push(DetailcollectionPage,{'user':this.user,'index':index});
+  detail(idxGame:number,idxCol:number){
+    this.navCtrl.push(DetailcollectionPage,{'user':this.user,'indexGame':idxGame,'indexCol':idxCol});
   }
   his(){
     this.navCtrl.push(TradehistoryPage);

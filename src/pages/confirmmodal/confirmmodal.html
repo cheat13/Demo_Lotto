@@ -9,14 +9,13 @@
 
 <ion-content padding>
   <ion-title>
-      1,000 C = 5 ETH 
+      {{num}} Coin = {{eth}} ETH 
   </ion-title>
-  <ion-item>
-    <ion-label>5 ETH</ion-label>
-    <ion-select [(ngModel)]="money">
-      <ion-option value="thb">67,500 THB</ion-option>
+  <ion-item center text-center>
+    <ion-label>{{amount}}</ion-label>
+    <ion-select [(ngModel)]="gender"  (ionChange)="calAmount()">
+      <ion-option value="thb">THB</ion-option>
       <ion-option value="usd">USD</ion-option>
-      <ion-option value="etc">ETC</ion-option>
     </ion-select>
   </ion-item>
   <br>

@@ -17,10 +17,17 @@
 
 <ion-content padding text-center>
   <button ion-button style="margin-top: 20px;margin-bottom: 20px;" align='center' (click)="his()" color="pink">Trade History</button>
-  <ion-title>Poker Collection</ion-title>
+  
   <ion-grid text-center>
-    <ion-row>
-      <ion-col col-3 *ngFor="let collection of user.collection; let i=index " class="b" (click)="detail(i)">
+    <ion-row *ngFor="let game of user.collection; let i=index ">
+        <ion-grid text-center>
+      <ion-row no-padding>
+      <ion-col>
+          <ion-title>{{game.gameName}}</ion-title>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+      <ion-col *ngFor="let collection of game.collection; let j=index "col-3  class="b" (click)="detail(i,j)">
         <img src="{{collection.src}}" style="height: 40px; width: 40px;" [ngClass]="{alpha:collection.amount==0}" />
         <div text-right>
           x{{collection.amount}}
@@ -29,110 +36,5 @@
     </ion-row>
   </ion-grid>
 
-  <ion-title style="margin-top: 20px;">Slot Collection</ion-title>
-  <ion-grid>
-    <ion-row id="01">
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 199.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 200.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 201.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row id="02">
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 202.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 203.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 204.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row id="03">
-      <ion-col class="b" (click)="detail()">
-        <img src="../../assets/imgs/Asset 207.png" style="height: 50px;width: 70px;" />
-        <div text-right>
-          x1
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 206.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 208.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row id="04">
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 209.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 210.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 211.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row id="05">
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 212.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 213.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-      <ion-col class="b">
-        <img class="alpha" src="../../assets/imgs/Asset 214.png" style="height: 50px;" />
-        <div text-right>
-          x0
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+ 
 </ion-content>

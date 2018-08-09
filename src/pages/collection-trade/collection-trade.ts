@@ -21,18 +21,21 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
 export class CollectionTradePage {
   Trade:string = "buy";
   user:any
-  index:number
+  indexGame:number
+  indexCol:number
   collectNum:number
   fromDetail:any
   num:number
   sellAmount:number
   sellPrice:number
   date:Date 
-  dateNow:string  
+  dateNow:string 
+  gender:string ='thb' 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private modal: ModalController) {
     this.user = this.navParams.get('user');
-    this.index = this.navParams.get('index');
+    this.indexGame = this.navParams.get('indexGame');
+    this.indexCol = this.navParams.get('indexCol');
     this.collectNum = this.navParams.get('collectNum');
     this.fromDetail = this.navParams.get('from');
     this.date = new Date();
@@ -56,74 +59,15 @@ export class CollectionTradePage {
     this.navCtrl.push(MembershipPage);
   }
 
-  showConfirm() {
-    const confirm = this.alertCtrl.create({
-      title: 'Buy coin amount',
-      subTitle: "<h5>"+ this.num +" coin</h5>"+ this.num* 100 +" THB",
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Confirm',
-          handler: () => {
-            this.buyCollection();
-            console.log('Agree clicked');
-            
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
-  
-  showConfirmSell() {
-    const confirm = this.alertCtrl.create({
-      title: 'Sell',
-      subTitle: "Amount " + this.sellAmount + " coin <br> Price/Unit " +this.sellPrice+ " THB <br> Total " + this.sellAmount*this.sellPrice + " THB",
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Confirm',
-          handler: () => {
-            this.sellCollection();
-            console.log('Agree clicked');
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
-
-  buyCollection(){
-    this.user.collection[this.index].amount = Number(this.user.collection[this.index].amount) + Number(this.num);
-    this.user.money = Number(this.user.money) - Number(this.num*100);
-    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
-  }
-
-  sellCollection(){
-    this.user.collection[this.index].amount -= this.sellAmount ;
-    this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
-
-  }
-
   backpage(){
     this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
   }
   openModal() {
-    const myModal = this.modal.create('TradeCollectBuyModalPage');
+    const myModal = this.modal.create('TradeCollectBuyModalPage',{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'num':this.num,'date':this.dateNow,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
     myModal.present();
   }
   openModalSell(){
-    const myModal = this.modal.create('TradeCollectSellModalPage');
+    const myModal = this.modal.create('TradeCollectSellModalPage',{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'sellAmount':this.sellAmount,'sellPrice':this.sellPrice,'date':this.dateNow,'gender':this.gender,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
     myModal.present();
   }
 }

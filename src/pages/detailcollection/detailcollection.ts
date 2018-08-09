@@ -17,10 +17,12 @@ import { CollectionTradePage } from '../collection-trade/collection-trade'
 })
 export class DetailcollectionPage {
   user:any
-  index:number
+  indexGame:number
+  indexCol:number
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user = this.navParams.get('user');
-    this.index = this.navParams.get('index');
+    this.indexGame = this.navParams.get('indexGame');
+    this.indexCol = this.navParams.get('indexCol');
   }
 
   ionViewDidLoad() {
@@ -28,7 +30,7 @@ export class DetailcollectionPage {
   }
   
   tr(){
-    this.navCtrl.push(CollectionTradePage,{'user':this.user,'index':this.index,'from':true});
+    this.navCtrl.push(CollectionTradePage,{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'from':true});
   }
   backpage(){
     this.navCtrl.push(MycollectPage,{'user':this.user});

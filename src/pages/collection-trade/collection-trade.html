@@ -18,7 +18,7 @@
       <ion-segment-button value="buy">
         Buy
       </ion-segment-button>
-      <ion-segment-button value="sell" [disabled]="user.collection[index].amount==0 ? true : false">
+      <ion-segment-button value="sell" [disabled]="user.collection[indexGame].collection[indexCol].amount==0 ? true : false">
         Sell
       </ion-segment-button>
     </ion-segment>
@@ -87,18 +87,23 @@
             <ion-list>
               <ion-item>
                 <ion-input type="number" [(ngModel)]="sellPrice"></ion-input>
+                <ion-select [(ngModel)]="gender">
+                  <ion-option value="thb">THB</ion-option>
+                  <ion-option value="usd">USD</ion-option>
+                  <ion-option value="eth">ETH</ion-option>
+                </ion-select>
               </ion-item>
             </ion-list>
           </ion-col>
           <ion-col col-2 style="padding-top: 30px">
-            THB
+            
           </ion-col>
         </ion-row>
       </ion-grid>
 
       <ion-grid class="page-footer" no-padding>
         <ion-row>
-          <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirmSell()">
+          <ion-col col-12 style="text-align: center;font-size: 16px" (click)="openModalSell()">
             <button ion-button color="dark" clear block style="color: white">
               <B>Confirm</B>
             </button>

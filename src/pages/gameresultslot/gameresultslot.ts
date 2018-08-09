@@ -23,7 +23,7 @@ export class GameresultslotPage {
   Done() {
     this.user.slotGame.ticket[this.index].status ='played';
     this.user.slotGame.ticket[this.index].isWin =false;
-    this.user.collection[3].amount+=1;
+    this.user.collection[1].collection[3].amount+=1;
     this.navCtrl.push(PrePlaySlotPage,{'user':this.user});
   }
   gotoHome() {

@@ -14,36 +14,35 @@
 <ion-content>
 
   <ion-list>
-    <ion-item no-padding>
-      <ion-grid (click)="Membership()">
+    <ion-item  *ngFor="let noti of user.notice.slice().reverse()" no-padding>
+      <ion-grid (click)="noti.clickAble ? goMembership(): null">
         <ion-row>
-          <!-- <ion-col col-2>
+          <ion-col col-2>
             <div style="padding-top: 30px">
               <img src="../../assets/imgs/logo1.PNG" />
             </div>
-          </ion-col> -->
-          <!-- <ion-col col-7>
+          </ion-col>
+         <ion-col col-7>
             <ion-grid>
               <ion-row>
                 <ion-col col-12>
-                  <b>คุณได้เป็นสมาชิก</b>
+                  <b>{{noti.title}}</b>
                 </ion-col>
                 <ion-col col-12>
-                  <h6>Title text xxxxxxxxxxxx</h6>
-                </ion-col>
-                <ion-col col-12>
-                  <h6>xxxxxxxxxxxxxxxxxxxxx</h6>
+                  <h6>{{noti.detail}}</h6>
                 </ion-col>
               </ion-row>
             </ion-grid>
           </ion-col>
           <ion-col col-3 style="padding-top: 15px;text-align: right">
             <ion-icon name="time"> 00.00</ion-icon>
-          </ion-col> -->
+          </ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
   </ion-list>
+  <button ion-button (click)="goBuyCoin()">เข้าหน้าซื้อ Coin</button>
+  <button ion-button (click)="goSubscribe()">เข้าหน้าสมัคร</button>
   
   <ion-footer>
         

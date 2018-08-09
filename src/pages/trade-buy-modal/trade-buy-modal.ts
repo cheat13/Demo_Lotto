@@ -16,10 +16,13 @@ export class TradeBuyModalPage {
   thbCurrency:number=100
   usdCurrency:number=2
   ethCurrency:number=1
+
+  fromDetail:boolean
   constructor(public navCtrl: NavController, public navParams: NavParams, public view:ViewController) {
     this.user = this.navParams.get('user');
     this.num = this.navParams.get('num');
     this.date = this.navParams.get('date');
+    this.fromDetail = this.navParams.get('fromDetail');
     this.calAmount();
   }
  
@@ -53,6 +56,8 @@ export class TradeBuyModalPage {
       this.amount = this.num * this.ethCurrency;
     } 
   }
+
+ 
 
   closeModal(){
     this.view.dismiss();

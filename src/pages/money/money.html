@@ -16,7 +16,7 @@
   <p style="font-size: 18px; color: #000000">Round : 2 (1/07/2018-30/07/2018) </p>
   <ion-grid>
     <ion-row>
-      <ion-input style="background:gainsboro " class="played" type="number" placeholder="  Amount"></ion-input>
+      <ion-input style="background:gainsboro; padding-left:20px" class="played" type="number" placeholder=" Amount" [(ngModel)]="num"></ion-input>
       <p> &nbsp; Coin</p>
     </ion-row>
   </ion-grid>
@@ -24,7 +24,7 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-          <button item-right ion-button (click)="gohome()" style="width: 100%">Cancle</button>
+          <button item-right ion-button (click)="gohome()" style="width: 100%">Cancel</button>
       </ion-col>
       <ion-col>
           <button item-right ion-button (click)="confirm()"style="width: 100%">Confirm</button>

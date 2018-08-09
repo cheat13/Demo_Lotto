@@ -37,7 +37,7 @@
     </ion-card-header>
     <ion-card-content>
       <div *ngFor="let colReq of col.collection; let i = index">
-        <img src="{{user.collection[i].src}}" style="float:left; margin-right: 5px; height: 30px; width: 30px;" [ngClass]="{alpha:user.collection[i].amount==0}">
+        <img src="{{user.collection[colReq.game].collection[colReq.col].src}}" style="float:left; margin-right: 5px; height: 30px; width: 30px;" [ngClass]="{alpha:user.collection[colReq.game].collection[colReq.col].amount==0}">
       </div>
       <br>
 

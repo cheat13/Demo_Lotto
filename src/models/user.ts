@@ -12,6 +12,7 @@ export class User {
     sellHistory: any[]
     collection: any[]
     collections: any[]
+    notice:any[]
 
     constructor() {
         this.coins = 0;
@@ -22,7 +23,7 @@ export class User {
         this.slotGame = new SlotMachine();
         this.buyHistory = [];
         this.sellHistory = [];
-        this.collection = [
+        this.collection = [{'gameName':'Scratch Lotto','collection':[
             { 'name': 'poe', 'amount': 0, 'src': '../../assets/imgs/Asset 160.png' },
             { 'name': 'club', 'amount': 0, 'src': '../../assets/imgs/Asset 186.png' },
             { 'name': 'phodrum', 'amount': 0, 'src': '../../assets/imgs/Asset 173.png' },
@@ -75,9 +76,30 @@ export class User {
             { 'name': '50', 'amount': 0, 'src': '../../assets/imgs/Asset 185.png' },
             { 'name': '51', 'amount': 0, 'src': '../../assets/imgs/Asset 198.png' },
             { 'name': '52', 'amount': 0, 'src': '../../assets/imgs/Asset 159.png' },
+
+        ]},
+        {'gameName':'Slot Machine','collection':[
+            { 'name': '199', 'amount': 0, 'src': '../../assets/imgs/Asset 199.png' },
+            { 'name': '200', 'amount': 0, 'src': '../../assets/imgs/Asset 200.png' },
+            { 'name': '201', 'amount': 0, 'src': '../../assets/imgs/Asset 201.png' },
+            { 'name': '202', 'amount': 0, 'src': '../../assets/imgs/Asset 202.png' },
+            { 'name': '203', 'amount': 0, 'src': '../../assets/imgs/Asset 203.png' },
+            { 'name': '204', 'amount': 0, 'src': '../../assets/imgs/Asset 204.png' },
+            { 'name': '206', 'amount': 0, 'src': '../../assets/imgs/Asset 206.png' },
+            { 'name': '207', 'amount': 0, 'src': '../../assets/imgs/Asset 207.png' },
+            { 'name': '208', 'amount': 0, 'src': '../../assets/imgs/Asset 208.png' },
+            { 'name': '209', 'amount': 0, 'src': '../../assets/imgs/Asset 209.png' },
+            { 'name': '210', 'amount': 0, 'src': '../../assets/imgs/Asset 210.png' },
+            { 'name': '211', 'amount': 0, 'src': '../../assets/imgs/Asset 211.png' },
+            { 'name': '212', 'amount': 0, 'src': '../../assets/imgs/Asset 212.png' },
+            { 'name': '213', 'amount': 0, 'src': '../../assets/imgs/Asset 213.png' },
+            { 'name': '214', 'amount': 0, 'src': '../../assets/imgs/Asset 214.png' },
+        ]},
+           
         ];
         this.collections = [
-            {'title':'A', 'description':'Collection A ','prize':100,'collection':[0,1,2,3],canTrade:false}
+            {'title':'A', 'description':'Collection A ','prize':100,'collection':[{'game':0,'col':0},{'game':0,'col':1},{'game':0,'col':2},{'game':1,'col':0}],canTrade:false}
         ];
+        this.notice = [];
     }
 }

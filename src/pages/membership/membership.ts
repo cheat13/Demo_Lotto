@@ -60,6 +60,6 @@ export class MembershipPage {
     this.navCtrl.push(GameDetailDPage);
   }
   backpage(){
-    this.navCtrl.setRoot(Home2Page,{'user':this.user});
+    this.navCtrl.setRoot(HomePage,{'user':this.user});
   }
 }

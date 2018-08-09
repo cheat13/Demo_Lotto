@@ -109,7 +109,7 @@
             <ion-col col-10>
               <ion-list>
                 <ion-item>
-                  <ion-input type="text" value=""></ion-input>
+                  <ion-input type="number" [(ngModel)]="sellAmount"></ion-input>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -128,12 +128,17 @@
             <ion-col col-10>
               <ion-list>
                 <ion-item>
-                  <ion-input type="text" value=""></ion-input>
+                  <ion-input type="number" [(ngModel)]="sellPrice"></ion-input>
+                  <ion-select [(ngModel)]="gender">
+                    <ion-option value="thb">THB</ion-option>
+                    <ion-option value="usd">USD</ion-option>
+                    <ion-option value="eth">ETH</ion-option>
+                  </ion-select>
                 </ion-item>
               </ion-list>
             </ion-col>
             <ion-col col-2 style="padding-top: 30px">
-              THB
+              
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -155,31 +160,25 @@
             <ion-item *ngFor="let sell of user.sellHistory" no-padding>
               <ion-row style="font-size: 10px">
                 <ion-col col-12>
-                  DD/MM/YY
+                  {{sell.date}}
                 </ion-col>
-                <ion-col col-3>
+                <ion-col col-4>
                   Amount
                 </ion-col>
-                <ion-col col-3>
+                <ion-col col-4>
                   Prize/Unit
                 </ion-col>
-                <ion-col col-3>
-                  Sell (Unit)
-                </ion-col>
-                <ion-col col-3>
+                <ion-col col-4>
                   Total sell
                 </ion-col>
-                <ion-col col-3 style="font-size: 14px">
-                  <b>100 coin</b>
+                <ion-col col-4 style="font-size: 14px">
+                  <b>{{sell.sellAmount}} coin</b>
                 </ion-col>
-                <ion-col col-3 style="font-size: 14px">
-                  <b>100 BTH</b>
+                <ion-col col-4 style="font-size: 14px">
+                  <b>{{sell.sellPrice}} </b>
                 </ion-col>
-                <ion-col col-3 style="font-size: 14px">
-                  <b>90 coin</b>
-                </ion-col>
-                <ion-col col-3 style="font-size: 14px">
-                  <b>9,000 BTH</b>
+                <ion-col col-4 style="font-size: 14px">
+                  <b>{{sell.total}}</b>
                 </ion-col>
               </ion-row>
             </ion-item>
