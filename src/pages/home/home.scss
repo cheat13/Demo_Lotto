@@ -7,4 +7,43 @@ page-home {
         bottom: 0px;
         right: 0px;
     }
+    .img-white{
+        border-radius: 50%;
+        height: 80px;
+        width: 80px; 
+        position: absolute;
+        right:0px;
+        bottom: -5px;
+        left: 20px;
+        z-index: 1;
+    }
+    .money{
+        text-align: right;
+        margin-right: 30px;
+        color:white;
+        padding-top: 10px;
+    }
+    .img-qr{
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        right:0px;
+        bottom: 0px;
+        left: 25px;
+        z-index: 1;
+    }
+    .img-red{
+        width: 100px; 
+        position: absolute;
+        right:0px;
+        bottom: -15px;
+        left: 10.5px;
+    }
+    .img-user{
+        width: 40px; 
+        position: absolute;
+        right:0px;
+        bottom: 2px;
+        left: 40px;
+    }
 }

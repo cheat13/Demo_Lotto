@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar hideBackButton color="pink">
+  <ion-navbar hideBackButton color="mana">
     <ion-buttons right>
       <button ion-button>
         <ion-icon name="bookmark"></ion-icon>
@@ -44,9 +44,37 @@
   <button ion-button (click)="goBuyCoin()">เข้าหน้าซื้อ Coin</button>
   <button ion-button (click)="goSubscribe()">เข้าหน้าสมัคร</button>
   
-  <ion-footer>
-        
+  <!-- <ion-footer>
+        <div style="text-align: right;margin-right: 30px">{{user.money}}</div>
          <div><img src="../../assets/imgs/foot.PNG" (click)="ScanQR()" /></div>
          
-  </ion-footer> 
+  </ion-footer>  -->
+
+  <!-- <ion-footer style="background-color: #EB2026;height: 8%;">
+    
+         <div><img style="width: 20px" src="../../assets/imgs/circle.png" (click)="ScanQR()" /></div>
+</ion-footer> -->
 </ion-content>
+
+<ion-footer>
+  <div style="background-color: #A81C07">
+  <ion-grid>
+    <ion-row text-center style="height: 45px;">
+      <ion-col col-4 >
+        <img class="img-user" src="../../assets/imgs/user.png" />
+      </ion-col>
+      <ion-col col-4>
+        
+        <img class="img-red" src="../../assets/imgs/circle.png" />
+        <div (click)="ScanQR()">
+        <img  class="img-white" src="../../assets/imgs/circleW.png"  />
+        <img  class="img-qr" src="../../assets/imgs/qr.png" />
+      </div>
+      </ion-col>
+      <ion-col col-4>
+        <div class="money">{{user.money}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-footer>
