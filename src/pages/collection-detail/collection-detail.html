@@ -31,7 +31,7 @@
       </ion-col>
     </ion-row>
     <ion-buttons right>
-      <button  color="primary" default ion-button [disabled]="!user.collections[index].canTrade">{{user.collections[index].prize}} ETH</button>
+      <button  color="primary" default ion-button (click)="goExChange()" [disabled]="!user.collections[index].canTrade">{{user.collections[index].prize}} ETH</button>
     </ion-buttons>
   </ion-grid>
 

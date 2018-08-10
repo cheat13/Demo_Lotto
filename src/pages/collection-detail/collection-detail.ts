@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BuyCollectionPage } from '../buy-collection/buy-collection';
+import { IonicPage, NavController, NavParams,ModalController} from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { CollectionPage } from '../collection/collection';
 import { TradePage } from '../trade/trade';
-import { User } from '../../models/user';
 import { CollectionTradePage } from '../collection-trade/collection-trade';
+import { ReceiveCollectionRewardModalPage } from '../receive-collection-reward-modal/receive-collection-reward-modal';
 
 @IonicPage()
 @Component({
@@ -17,7 +16,7 @@ export class CollectionDetailPage {
   index: number
   amountCheck: number = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private modal: ModalController) {
     this.user = this.navParams.get('user');
     this.index = this.navParams.get('index');
     this.checkCanTrade();
@@ -41,7 +40,11 @@ export class CollectionDetailPage {
   goToCollectionTrade(idxGame: number,idxCol:number) {
     this.navCtrl.push(CollectionTradePage, { 'user': this.user, 'indexGame': idxGame,'indexCol': idxCol, 'collectNum': this.index });
   }
-
+  goExChange(){
+    const myModal = this.modal.create('ReceiveCollectionRewardModalPage',{'user':this.user,'index':this.index});
+    myModal.present();
+  }
+  
   checkCanTrade() {
     let col = this.user.collections[this.index].collection
 
