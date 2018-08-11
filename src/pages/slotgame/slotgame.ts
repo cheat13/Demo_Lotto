@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
-import { HomePage } from '../home/home';
 import { GameresultslotPage } from '../gameresultslot/gameresultslot';
 import { MembershipPage } from '../membership/membership';
 
@@ -58,17 +57,12 @@ export class SlotgamePage {
     alert.present();
   }
   addEvent(){
-    if(this.img=='../../assets/imgs/Slot_Animation_Before.png')
-    {
-      this.img = '../../assets/imgs/Slot_Animation_Spin.gif'
+      if (this.img == '../../assets/imgs/Slot_Animation_Before.png') {
+        this.img = '../../assets/imgs/Slot_Animation_Spin.gif'
+        setTimeout(() => {
+          this.img = '../../assets/imgs/Slot_Animation_Result.png'
+          this.hideME = true;
+        }, 2000); 
     }
-  }
-  stopEvent(){
-    if(this.img=='../../assets/imgs/Slot_Animation_Spin.gif')
-    {
-      this.img = '../../assets/imgs/Slot_Animation_Result.png'
-    }
-    this.hideME = true;
-    console.log('hello');
   }
 }
