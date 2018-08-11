@@ -12,25 +12,16 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content padding text-center>
   <ion-toolbar color="pink">
     <ion-title>Lotto Slot</ion-title>
   </ion-toolbar>
-  <!-- <h2 style="margin-top: 20px;margin-bottom: 20px;">Slot Game</h2> -->
   <div style="margin: 10px">
-    <!-- <img src="../../assets/imgs/framez.png" style="z-index: -1;position:relative"> -->
     <img src="{{img}}" style="z-index: 1;position: absolute;top: 115px;left: 45px;height: 280px; width: 290px;">
     <img src="../../assets/imgs/framez.png" style="z-index: -1;display: block;margin-left: auto;margin-right: auto">
-    <!-- <img src="{{img}}" style="z-index: 1;position: absolute;display: unset;margin-left: auto;margin-right: auto"> -->
   </div>
   <button ion-button color="pink" (click)="addEvent();">
-    Spin
-    <!-- <img src="../../assets/imgs/font.png" style="height: 30px;"> -->
-  </button>
-  <button ion-button color="pink" (click)="stopEvent();">
-    Stop
-    <!-- <img src="../../assets/imgs/font.png" style="height: 30px;"> -->
+    <img src="../../assets/imgs/font.png" style="height: 30px;">
   </button>
   <h1 *ngIf="hideME"> Lose The Game </h1>
   <ion-grid class="page-footer" no-padding style="z-index: 5;">
