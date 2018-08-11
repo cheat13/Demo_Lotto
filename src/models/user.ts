@@ -6,6 +6,7 @@ export class User {
     ethereum: number;
     money: number;
     moneyUSD: number;
+    moneyBTC: number
     scratchGame: ScratchLotto;
     slotGame: SlotMachine;
     buyHistory: any[]
@@ -19,6 +20,7 @@ export class User {
         this.ethereum = 0;
         this.money = 50000;
         this.moneyUSD = 500;
+        this.moneyBTC = 1;
         this.scratchGame = new ScratchLotto();
         this.slotGame = new SlotMachine();
         this.buyHistory = [];

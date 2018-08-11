@@ -23,9 +23,10 @@ export class TradeCollectBuyModalPage {
   num:number
   date:string
   amount:number
-  thbCurrency:number=100
-  usdCurrency:number=2
-  ethCurrency:number=1
+  thbCurrency:number=60
+  usdCurrency:number=1.8
+  ethCurrency:number=0.005
+  btcCurrency:number=0.00025
   collectNum:number 
   fromDetail:boolean
   constructor(public navCtrl: NavController, public navParams: NavParams, public view:ViewController) {
@@ -43,8 +44,16 @@ export class TradeCollectBuyModalPage {
     console.log('ionViewDidLoad TradeCollectBuyModalPage');
   }
   go(){
+    if (this.gender == 'THB') {
+      this.user.money -= this.amount;
+    } else if (this.gender == 'USD') {
+      this.user.moneyUSD -= this.amount;
+    } else if(this.gender == 'ETH'){
+      this.user.ethereum -= this.amount;
+    }else {
+      this.user.moneyBTC -= this.amount;
+    }
     this.user.collection[this.indexGame].collection[this.indexCol].amount = Number(this.user.collection[this.indexGame].collection[this.indexCol].amount) + Number(this.num);
-    this.user.money = Number(this.user.money) - Number(this.amount);
     this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
   }
 
@@ -56,7 +65,9 @@ export class TradeCollectBuyModalPage {
       this.amount = this.num * this.usdCurrency;
     } else if(this.gender == 'ETH'){
       this.amount = this.num * this.ethCurrency;
-    } 
+    } else{
+      this.amount = this.num * this.btcCurrency;
+    }
   }
   buyCollection(){
     

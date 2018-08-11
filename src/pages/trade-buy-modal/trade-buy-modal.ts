@@ -13,9 +13,10 @@ export class TradeBuyModalPage {
   date:string
   gender:string = "THB";
   amount:number
-  thbCurrency:number=100
-  usdCurrency:number=2
-  ethCurrency:number=1
+  thbCurrency:number=60
+  usdCurrency:number=1.8
+  ethCurrency:number=0.005
+  btcCurrency:number=0.00025
 
   fromDetail:boolean
   constructor(public navCtrl: NavController, public navParams: NavParams, public view:ViewController) {
@@ -36,12 +37,14 @@ export class TradeBuyModalPage {
       this.user.moneyUSD -= this.amount;
     } else if(this.gender == 'ETH'){
       this.user.ethereum -= this.amount;
+    }else {
+      this.user.moneyBTC -= this.amount;
     }
     this.user.buyHistory.push({
       'date':this.date,
       'num':this.num,
       'total':this.amount+" "+this.gender,
-      'unit': this.gender=='THB' ? this.thbCurrency+" "+this.gender : this.gender=='usd' ? this.usdCurrency+" "+this.gender : this.ethCurrency+" "+this.gender})
+      'unit': this.gender=='THB' ? this.thbCurrency+" "+this.gender : this.gender=='USD' ? this.usdCurrency+" "+this.gender : this.gender=='ETH' ? this.ethCurrency+" "+this.gender : this.btcCurrency+" "+this.gender })
     this.user.coins = Number(this.user.coins) +Number(this.num);
     this.navCtrl.push(TradePage,{'user':this.user});
   }
@@ -54,7 +57,9 @@ export class TradeBuyModalPage {
       this.amount = this.num * this.usdCurrency;
     } else if(this.gender == 'ETH'){
       this.amount = this.num * this.ethCurrency;
-    } 
+    } else{
+      this.amount = this.num * this.btcCurrency;
+    }
   }
 
  

@@ -17,9 +17,10 @@ export class TradeCollectSellModalPage {
   sellAmount:number
   sellPrice:number
   date:string
-  thbCurrency:number=100
-  usdCurrency:number=2
-  ethCurrency:number=1
+  thbCurrency:number=60
+  usdCurrency:number=1.8
+  ethCurrency:number=0.005
+  btcCuurency:number = 0.00025
   collectNum:number 
   fromDetail:boolean
   total:number

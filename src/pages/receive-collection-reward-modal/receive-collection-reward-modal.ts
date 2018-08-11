@@ -19,9 +19,10 @@ export class ReceiveCollectionRewardModalPage {
   index: number
   amount: number
   gender: string = "ETH"
-  thbCurrency: number = 100
-  usdCurrency: number = 2
+  thbCurrency: number = 12000
+  usdCurrency: number = 360
   ethCurrency: number = 1
+  btcCurrency: number = 0.05
   constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController) {
     this.user = this.navParams.get('user');
     this.index = this.navParams.get('index');
@@ -43,20 +44,22 @@ export class ReceiveCollectionRewardModalPage {
     }
   }
 
-  go(){
-    let col =   this.user.collections[this.index].collection;
-    for(let i =0;i<col.length;i++){
-      this.user.collection[col[i].game].collection[col[i].col].amount-=1;
+  go() {
+    let col = this.user.collections[this.index].collection;
+    for (let i = 0; i < col.length; i++) {
+      this.user.collection[col[i].game].collection[col[i].col].amount -= 1;
     }
 
     if (this.gender == 'THB') {
       this.user.money += this.amount;
     } else if (this.gender == 'USD') {
       this.user.moneyUSD += this.amount;
-    } else if(this.gender == 'ETH'){
+    } else if (this.gender == 'ETH') {
       this.user.ethereum += this.amount;
+    } else {
+      this.user.moneyBTC += this.amount;
     }
-    this.navCtrl.push(CollectionDetailPage,{'user':this.user,'index':this.index});
+    this.navCtrl.push(CollectionDetailPage, { 'user': this.user, 'index': this.index });
   }
 
   closeModal() {

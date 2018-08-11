@@ -19,9 +19,11 @@ export class TradePage {
   sellPrice:number
   date:Date 
   dateNow:string  
-  thbCurrency:number=100
-  usdCurrency:number=2
+  thbCurrency:number=12000
+  usdCurrency:number=360
   ethCurrency:number=1
+  btcCurrency:number=0.05
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,private modal: ModalController) {
     this.user = this.navParams.get('user');
     this.page = this.navParams.get('page');
@@ -63,7 +65,9 @@ export class TradePage {
       this.sellPrice = this.sellPrice * this.usdCurrency;
     } else if(this.gender == 'ETH'){
       this.sellPrice = this.sellPrice * this.ethCurrency;
-    } 
+    } else{
+      this.sellPrice = this.sellPrice * this.btcCurrency;
+    }
   }
   backpage() {
     this.navCtrl.push(MembershipPage,{'user':this.user});

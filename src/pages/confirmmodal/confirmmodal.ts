@@ -42,6 +42,8 @@ export class ConfirmmodalPage {
         this.user.money -= this.amount;
       } else if (this.gender == 'usd') {
         this.user.moneyUSD -= this.amount
+      }else{
+        this.user.moneyBTC -= this.amount;
       }
     this.user.coins= Number(this.user.coins)+Number(this.num);
     this.navCtrl.push(HomePage,{'user':this.user});
@@ -49,9 +51,11 @@ export class ConfirmmodalPage {
 
   calAmount() {
     if (this.gender == 'thb') {
-      this.amount = this.eth*200;
-    } else {
-      this.amount = this.eth*6;
+      this.amount = this.num*60;
+    } else if(this.gender == 'usd'){
+      this.amount = this.num*1.8;
+    }else{
+      this.amount = this.num*0.00025;
     }
   }
 
