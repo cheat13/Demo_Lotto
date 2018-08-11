@@ -9,8 +9,10 @@
   <ion-item center text-center>
     <ion-label>{{amount}}</ion-label>
     <ion-select [(ngModel)]="gender"  (ionChange)="calAmount()">
-      <ion-option value="thb">THB</ion-option>
+      <ion-option value="eth">ETH</ion-option>
       <ion-option value="usd">USD</ion-option>
+      <ion-option value="thb">THB</ion-option>
+      <ion-option value="btc">BTC</ion-option>
     </ion-select>
   </ion-item>
   <button style="margin-top: 20px" ion-button color="secondary" (click)="go()">Done</button>

@@ -8,7 +8,7 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
   templateUrl: 'confmodal.html',
 })
 export class ConfmodalPage {
-  gender: string = "thb";
+  gender: string = "eth";
   user: any;
   index: number
   amount: number
@@ -26,9 +26,12 @@ export class ConfmodalPage {
     if (this.gender == 'thb') {
       this.user.money += this.amount;
     } else if (this.gender == 'usd') {
-      this.user.moneyUSD += this.amount
+      this.user.moneyUSD += this.amount;
+    } else if(this.gender == 'eth'){
+      this.user.ethereum += this.amount;
+    }else {
+      this.user.moneyBTC += this.amount;
     }
-    
     this.user.scratchGame.ticket[this.index].status = 'played';
     this.user.scratchGame.ticket[this.index].isWin = true;
     this.navCtrl.push(PrePlaygamePage, { 'user': this.user });
@@ -39,9 +42,13 @@ export class ConfmodalPage {
 
   calAmount() {
     if (this.gender == 'thb') {
-      this.amount = this.user.scratchGame.prize * 2;
-    } else {
-      this.amount = this.user.scratchGame.prize * 10;
+      this.amount = this.user.scratchGame.prize * 12000;
+    } else if(this.gender == 'usd'){
+      this.amount = this.user.scratchGame.prize * 360;
+    } else if (this.gender == 'btc'){
+      this.amount = this.user.scratchGame.prize * 0.05;
+    } else{
+      this. amount = this.user.scratchGame.prize;
     }
   }
 
