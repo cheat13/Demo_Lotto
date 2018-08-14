@@ -13,24 +13,27 @@
 </ion-header>
 
 <ion-content padding text-center>
-  <ion-toolbar color="pink">
+  <ion-toolbar >
     <ion-title>Lotto Slot</ion-title>
   </ion-toolbar>
   <div style="margin: 10px">
     <img src="{{img}}" style="z-index: 1;position: absolute;top: 115px;left: 45px;height: 280px; width: 290px;">
     <img src="../../assets/imgs/framez.png" style="z-index: -1;display: block;margin-left: auto;margin-right: auto">
   </div>
-  <button ion-button color="pink" (click)="addEvent();">
+  <button ion-button color="mana" (click)="addEvent();">
     <img src="../../assets/imgs/font.png" style="height: 30px;">
   </button>
   <h1 *ngIf="hideME"> Lose The Game </h1>
-  <ion-grid class="page-footer" no-padding style="z-index: 5;">
+
+</ion-content>
+<ion-footer>
+    <ion-grid class="page-footer" no-padding style="z-index: 5;">
     <ion-row>
       <ion-col col-12 style="text-align: center;font-size: 16px" (click)="Gameresultslot()">
-        <button ion-button color="dark" style="color: white" clear block>
+        <button ion-button style="color: white" clear block>
           <b>Result</b>
         </button>
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-content>
+</ion-footer>
