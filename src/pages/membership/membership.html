@@ -5,36 +5,36 @@
     </button>
     <ion-title>Membership</ion-title>
   </ion-toolbar>
+  <ion-grid no-padding>
+      <ion-row style="align-self: center;">
+      
+          <img src="../../assets/imgs/Logo Lotto.png" style="height: 140px;width: 400px" />
+       
+      </ion-row>
+  
+      <div style="background-color:#222; ;height: 35%;vertical-align: middle;">
+        <ion-grid>
+          <ion-row text-center style="vertical-align: middle;">
+            <ion-col style="padding: 1%">
+              <button ion-button block style="background-color: rgb(70, 70, 70);height: 43px;margin-top:-4.5px;margin-bottom:-4.5px" (click)="Trade()">Trade</button>
+            </ion-col>
+            <ion-col style="padding: 1%">
+              <button ion-button block style="background-color: rgb(70, 70, 70) ;height: 43px;margin-top:-4.5px;margin-bottom:-4.5px" (click)="Collection()">Collection</button>
+            </ion-col>
+            <ion-col style="padding: 1%">
+              <button ion-button block style="background-color: rgb(70, 70, 70) ;height: 43px;margin-top:-4.5px;margin-bottom:-4.5px" (click)="Ticket()">Ticket</button>
+            </ion-col>
+          </ion-row>
+  
+        </ion-grid>
+      </div>
+    </ion-grid>
 </ion-header>
 
 <ion-content>
-  <ion-grid class="page-header" no-padding>
-    <ion-row style="align-self: center;padding-bottom: 70px">
-      <div>
-        <img src="../../assets/imgs/Logo Lotto.png" style="height: 140px;width: 400px" />
-      </div>
-    </ion-row>
-
-    <div style="background-color:#222; margin-top:60px;height: 35%;">
-      <ion-grid>
-        <ion-row text-center>
-          <ion-col style="padding: 1%">
-            <button ion-button block style="background-color: rgb(70, 70, 70);height: 43px;margin-top:-4.5px;" (click)="Trade()">Trade</button>
-          </ion-col>
-          <ion-col style="padding: 1%">
-            <button ion-button block style="background-color: rgb(70, 70, 70) ;height: 43px;margin-top:-4.5px" (click)="Collection()">Collection</button>
-          </ion-col>
-          <ion-col style="padding: 1%">
-            <button ion-button block style="background-color: rgb(70, 70, 70) ;height: 43px;margin-top:-4.5px" (click)="Ticket()">Ticket</button>
-          </ion-col>
-        </ion-row>
-
-      </ion-grid>
-    </div>
-  </ion-grid>
+  
 
   <ion-grid>
-    <ion-row style="padding-top: 180px"></ion-row>
     <ion-row padding style="color: red">
       <ion-col col-4>
         <b>
