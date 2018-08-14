@@ -35,4 +35,17 @@ page-slotgame {
           color: #fff;
       
       }
+      .frame{
+        position: relative;
+        width: 95%;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+      .game{
+        overflow: auto;
+        position: absolute;
+        top: 14%; left: 6%; bottom: 10%; right: 0;
+        width: 88%;
+      }
+      .cc{
+      }
 }
