@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickDPage } from '../convertclick-d/convertclick-d';
@@ -12,7 +12,7 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-game-detail-d',
   templateUrl: 'game-detail-d.html',

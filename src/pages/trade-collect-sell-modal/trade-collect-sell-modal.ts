@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { CollectionTradePage } from '../collection-trade/collection-trade';
+import {   NavController, NavParams, ViewController } from 'ionic-angular';
 import { MycollectPage } from '../mycollect/mycollect';
 import { CollectionDetailPage } from  '../collection-detail/collection-detail';
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-trade-collect-sell-modal',
   templateUrl: 'trade-collect-sell-modal.html',

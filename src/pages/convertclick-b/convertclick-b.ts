@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import {   NavController, NavParams, AlertController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { TicketPage } from '../ticket/ticket';
 /**
@@ -9,7 +9,7 @@ import { TicketPage } from '../ticket/ticket';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-convertclick-b',
   templateUrl: 'convertclick-b.html',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import {   NavController, NavParams, ViewController } from 'ionic-angular';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
 
 /**
@@ -9,7 +9,7 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-receive-collection-reward-modal',
   templateUrl: 'receive-collection-reward-modal.html',

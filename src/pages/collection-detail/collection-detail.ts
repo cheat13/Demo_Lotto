@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ModalController} from 'ionic-angular';
+import {   NavController, NavParams,ModalController} from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { CollectionPage } from '../collection/collection';
 import { TradePage } from '../trade/trade';
 import { CollectionTradePage } from '../collection-trade/collection-trade';
-import { ReceiveCollectionRewardModalPage } from '../receive-collection-reward-modal/receive-collection-reward-modal';
 
-@IonicPage()
+
+
 @Component({
   selector: 'page-collection-detail',
   templateUrl: 'collection-detail.html',

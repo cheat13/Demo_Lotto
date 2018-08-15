@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import {   NavController, NavParams, ViewController } from 'ionic-angular';
 import { TradePage } from '../trade/trade';
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-trade-sell-modal',
   templateUrl: 'trade-sell-modal.html',

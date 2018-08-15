@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
+import {   NavController, NavParams , AlertController} from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { CollectionPage } from '../collection/collection';
-import { HomePage } from '../home/home';
 
 /**
  * Generated class for the MarketplacePage page.
@@ -11,7 +10,7 @@ import { HomePage } from '../home/home';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-marketplace',
   templateUrl: 'marketplace.html',

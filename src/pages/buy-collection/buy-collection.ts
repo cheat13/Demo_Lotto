@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { ConfPage } from '../conf/conf';
+import {   NavController, NavParams, AlertController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { ConfbPage } from '../confb/confb';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
@@ -11,7 +10,7 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-buy-collection',
   templateUrl: 'buy-collection.html',

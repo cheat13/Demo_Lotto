@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { ConvertclickPage } from '../convertclick/convertclick';
 import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
 import { ConvertclickCPage } from '../convertclick-c/convertclick-c';
 import { ConvertclickDPage } from '../convertclick-d/convertclick-d';
 import { TicketPage } from '../ticket/ticket';
-import { HomePage } from '../home/home';
 import { MembershipPage } from '../membership/membership';
 
 /**
@@ -15,7 +14,7 @@ import { MembershipPage } from '../membership/membership';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-convert',
   templateUrl: 'convert.html',

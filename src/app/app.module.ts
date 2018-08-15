@@ -20,7 +20,6 @@ import { ConvertclickPage } from '../pages/convertclick/convertclick';
 import { LottogamePage } from '../pages/lottogame/lottogame';
 import { WingamePage } from '../pages/wingame/wingame';
 import { GameresultPage } from '../pages/gameresult/gameresult';
-import { BlankPage } from '../pages/blank/blank';
 import { LosegamePage } from '../pages/losegame/losegame';
 import { Web3Page } from '../pages/web3/web3';
 import { MycollectPage } from '../pages/mycollect/mycollect';
@@ -54,6 +53,14 @@ import{MoneyPage} from'../pages/money/money';
 import { Home2Page } from '../pages/home2/home2';
 import { CollectionDetailBPage } from '../pages/collection-detail-b/collection-detail-b';
 import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-detail-c';
+import {  ConfirmmodalPage } from '../pages/confirmmodal/confirmmodal';
+import {  TradeCollectBuyModalPage } from '../pages/trade-collect-buy-modal/trade-collect-buy-modal';
+import { TradeCollectSellModalPage } from '../pages/trade-collect-sell-modal/trade-collect-sell-modal';
+import { TradeSellModalPage } from '../pages/trade-sell-modal/trade-sell-modal';
+import { ConfmodalPage } from '../pages/confmodal/confmodal';
+import { ReceiveCollectionRewardModalPage } from '../pages/receive-collection-reward-modal/receive-collection-reward-modal';
+import { TradeBuyModalPage } from '../pages/trade-buy-modal/trade-buy-modal';
+
 
 
 @NgModule({
@@ -75,7 +82,6 @@ import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-d
     LottogamePage,
     WingamePage,
     GameresultPage,
-    BlankPage,
     LosegamePage,
     Web3Page,
     MycollectPage,
@@ -109,6 +115,13 @@ import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-d
     CollectionDetailBPage,
     CollectionDetailCPage,
     CollectionTradePage,
+    ConfirmmodalPage,
+    TradeCollectBuyModalPage,
+    TradeCollectSellModalPage,
+    TradeSellModalPage,
+    ConfmodalPage,
+    ReceiveCollectionRewardModalPage,
+    TradeBuyModalPage,
   ],
   imports: [
     BrowserModule,
@@ -137,7 +150,6 @@ import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-d
     LottogamePage,
     WingamePage,
     GameresultPage,
-    BlankPage,
     LosegamePage,
     Web3Page,
     MycollectPage,
@@ -171,6 +183,13 @@ import { CollectionDetailCPage } from '../pages/collection-detail-c/collection-d
     CollectionDetailBPage,
     CollectionDetailCPage,
     CollectionTradePage,
+    ConfirmmodalPage,
+    TradeCollectBuyModalPage,
+    TradeCollectSellModalPage,
+    TradeSellModalPage,
+    ConfmodalPage,
+    ReceiveCollectionRewardModalPage,
+    TradeBuyModalPage,
 
 
   ],

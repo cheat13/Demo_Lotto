@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
-import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 /**
  * Generated class for the GameDetailBPage page.
@@ -12,7 +11,7 @@ import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-game-detail-b',
   templateUrl: 'game-detail-b.html',

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import {   NavController, NavParams, AlertController } from 'ionic-angular';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 import { GameresultslotPage } from '../gameresultslot/gameresultslot';
 import { MembershipPage } from '../membership/membership';
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-slotgame',
   templateUrl: 'slotgame.html',

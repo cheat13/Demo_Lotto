@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { TradePage } from '../trade/trade';
-import { MembershipPage } from '../membership/membership';
+
 
 /**
  * Generated class for the SuccessPage page.
@@ -10,7 +10,7 @@ import { MembershipPage } from '../membership/membership';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-success',
   templateUrl: 'success.html',

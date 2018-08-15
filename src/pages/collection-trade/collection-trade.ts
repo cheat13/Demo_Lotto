@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import {   NavController, NavParams, ModalController } from 'ionic-angular';
 import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
@@ -13,7 +13,7 @@ import { CollectionDetailPage } from '../collection-detail/collection-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-collection-trade',
   templateUrl: 'collection-trade.html',

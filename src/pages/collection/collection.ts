@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { MarketplacePage } from '../marketplace/marketplace';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
@@ -7,7 +7,7 @@ import { MycollectPage } from '../mycollect/mycollect';
 import { CollectionDetailBPage } from '../collection-detail-b/collection-detail-b';
 import { CollectionDetailCPage } from '../collection-detail-c/collection-detail-c';
 
-@IonicPage()
+
 @Component({
   selector: 'page-collection',
   templateUrl: 'collection.html',

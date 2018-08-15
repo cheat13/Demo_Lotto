@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import {   NavController, NavParams, AlertController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { ConvertPage } from '../convert/convert';
-import { HomePage } from '../home/home';
 import { TicketPage } from '../ticket/ticket'
-import { Storage } from '@ionic/storage';
+
 /**
  * Generated class for the ConvertclickPage page.
  *
@@ -12,7 +11,7 @@ import { Storage } from '@ionic/storage';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-convertclick',
   templateUrl: 'convertclick.html',

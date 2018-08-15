@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ActionSheetController, ModalController } from 'ionic-angular';
-import { Web1Page } from '../web1/web1';
+import {   NavController, NavParams, AlertController, ActionSheetController, ModalController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 /**
@@ -10,7 +9,7 @@ import { HomePage } from '../home/home';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-money',
   templateUrl: 'money.html',

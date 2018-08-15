@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import {   NavController, NavParams, ViewController } from 'ionic-angular';
 import { PrePlaySlotPage } from '../../pages/pre-play-slot/pre-play-slot';
-@IonicPage()
+ 
 @Component({
   selector: 'page-confmslotmodal',
   templateUrl: 'confmslotmodal.html',

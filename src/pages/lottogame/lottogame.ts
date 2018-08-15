@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Loading } from 'ionic-angular';
+import {   NavController, NavParams, AlertController} from 'ionic-angular';
 import { GameresultPage } from '../gameresult/gameresult';
-import { HomePage } from '../home/home';
-import { TicketPage } from '../ticket/ticket';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
-import { Observable } from 'rxjs/observable';
 import 'rxjs/add/observable/interval';
 import { MembershipPage } from '../membership/membership';
 
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-lottogame',
   templateUrl: 'lottogame.html',

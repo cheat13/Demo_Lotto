@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { User } from '../../models/user';
 /**
@@ -9,7 +9,7 @@ import { User } from '../../models/user';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-start',
   templateUrl: 'start.html',

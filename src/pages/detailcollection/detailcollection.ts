@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MycollectPage } from '../mycollect/mycollect';
 import { MembershipPage } from '../membership/membership';
 import { CollectionTradePage } from '../collection-trade/collection-trade'
@@ -10,7 +10,7 @@ import { CollectionTradePage } from '../collection-trade/collection-trade'
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-detailcollection',
   templateUrl: 'detailcollection.html',

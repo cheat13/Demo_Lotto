@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import {BuyCollectionPage} from '../buy-collection/buy-collection';
 /**
  * Generated class for the ConfbPage page.
@@ -8,7 +8,7 @@ import {BuyCollectionPage} from '../buy-collection/buy-collection';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-confb',
   templateUrl: 'confb.html',

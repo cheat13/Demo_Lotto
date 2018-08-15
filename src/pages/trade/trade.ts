@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import {   NavController, NavParams, ModalController } from 'ionic-angular';
 import { SellPage } from '../sell/sell';
 import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
-
-@IonicPage()
+import { TradeSellModalPage } from '../../pages/trade-sell-modal/trade-sell-modal'
+import { TradeBuyModalPage } from '../../pages/trade-buy-modal/trade-buy-modal';
+ 
 @Component({
   selector: 'page-trade',
   templateUrl: 'trade.html',
@@ -48,12 +49,12 @@ export class TradePage {
   }
 
   showConfirm() {
-    const myModal = this.modal.create('TradeBuyModalPage',{'user':this.user,'num':this.num,'date':this.dateNow});
+    const myModal = this.modal.create(TradeBuyModalPage,{'user':this.user,'num':this.num,'date':this.dateNow});
     myModal.present();
   }
 
   showConfirmSell() {
-    const myModal = this.modal.create('TradeSellModalPage',{'user':this.user,'sellAmount':this.sellAmount,'sellPrice':this.sellPrice,'date':this.dateNow,'gender':this.gender});
+    const myModal = this.modal.create(TradeSellModalPage,{'user':this.user,'sellAmount':this.sellAmount,'sellPrice':this.sellPrice,'date':this.dateNow,'gender':this.gender});
     myModal.present();
   }
 

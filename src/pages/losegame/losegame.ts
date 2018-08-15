@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { BlankPage } from '../blank/blank';
 import { HomePage } from '../home/home';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
@@ -11,7 +11,7 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-losegame',
   templateUrl: 'losegame.html',

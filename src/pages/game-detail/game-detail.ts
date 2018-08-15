@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickPage } from '../convertclick/convertclick';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-game-detail',
   templateUrl: 'game-detail.html',

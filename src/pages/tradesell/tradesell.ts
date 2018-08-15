@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
-import {ConfsPage } from '../confs/confs';
+import {   NavController, NavParams,AlertController } from 'ionic-angular';
 import {TradedetailPage} from '../tradedetail/tradedetail';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
-import { DetailcollectionPage } from '../detailcollection/detailcollection';
 
-@IonicPage()
+
+ 
 @Component({
   selector: 'page-tradesell',
   templateUrl: 'tradesell.html',

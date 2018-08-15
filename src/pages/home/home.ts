@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ModalController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
-import { Web1Page } from '../web1/web1';
-import { Web2Page } from '../web2/web2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MoneyPage } from '../money/money';
 import { User } from '../../models/user';
+import { ConfmodalPage } from '../confmodal/confmodal';
 
 @Component({
   selector: 'page-home',
@@ -39,7 +38,7 @@ export class HomePage {
   }
 
   openModal(idx:number) {
-    const myModal = this.modal.create('ConfmodalPage',{'user':this.user,'index':idx});
+    const myModal = this.modal.create(ConfmodalPage,{'user':this.user,'index':idx});
     myModal.present();
   }
 

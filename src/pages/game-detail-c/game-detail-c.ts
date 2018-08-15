@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { HowToPlayPage } from '../how-to-play/how-to-play';
 import { ConvertclickCPage } from '../convertclick-c/convertclick-c';
@@ -11,7 +11,7 @@ import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-game-detail-c',
   templateUrl: 'game-detail-c.html',

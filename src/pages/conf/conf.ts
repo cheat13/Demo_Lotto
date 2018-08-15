@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { TradedetailPage } from '../tradedetail/tradedetail';
 /**
  * Generated class for the ConfPage page.
@@ -8,7 +8,7 @@ import { TradedetailPage } from '../tradedetail/tradedetail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-conf',
   templateUrl: 'conf.html',

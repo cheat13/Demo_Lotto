@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import {   NavController, NavParams, AlertController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 
 /**
@@ -10,7 +9,7 @@ import { MembershipPage } from '../membership/membership';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-web3',
   templateUrl: 'web3.html',

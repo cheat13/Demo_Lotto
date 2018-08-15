@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {   NavController, NavParams } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
 import { ConvertPage } from '../convert/convert';
 import { PrePlaySlotPage } from '../pre-play-slot/pre-play-slot';
 
-import { Storage } from '@ionic/storage';
 /**
  * Generated class for the TicketPage page.
  *
@@ -13,7 +12,7 @@ import { Storage } from '@ionic/storage';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-ticket',
   templateUrl: 'ticket.html',

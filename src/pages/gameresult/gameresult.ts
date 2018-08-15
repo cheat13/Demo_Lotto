@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
+import {   NavController, NavParams, ModalController } from 'ionic-angular';
 import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
-import { HomePage } from '../home/home';
 import { MembershipPage } from '../membership/membership';
 
-@IonicPage()
+ 
 @Component({
   selector: 'page-gameresult',
   templateUrl: 'gameresult.html',
@@ -12,7 +11,7 @@ import { MembershipPage } from '../membership/membership';
 export class GameresultPage {
     user:any
     index:number
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,private modal: ModalController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private modal: ModalController ) {
     this.user = this.navParams.get('user');
     this.index = this.navParams.get('index');
   }

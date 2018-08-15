@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { Web1Page } from '../web1/web1';
-import { Web2Page } from '../web2/web2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { MoneyPage } from '../money/money';
 

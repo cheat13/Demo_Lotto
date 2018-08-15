@@ -2,21 +2,8 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Web1Page } from '../pages/web1/web1';
-import { TradePage } from '../pages/trade/trade';
-import { MembershipPage } from '../pages/membership/membership';
-import { GameresultPage } from '../pages/gameresult/gameresult';
-import { ConvertclickPage } from '../pages/convertclick/convertclick';
-import { WingamePage } from '../pages/wingame/wingame';
-import { GameDetailPage } from '../pages/game-detail/game-detail';
-import { HowToPlayPage } from '../pages/how-to-play/how-to-play';
-import { TicketPage } from '../pages/ticket/ticket';
 import { HomePage } from '../pages/home/home';
-import { StartPage } from '../pages/start/start'
-import { LottogamePage } from '../pages/lottogame/lottogame';
-import { SlotgamePage } from '../pages/slotgame/slotgame';
-import { MycollectPage } from '../pages/mycollect/mycollect';
-import { CollectionPage } from '../pages/collection/collection';
+
 
 @Component({
   templateUrl: 'app.html'

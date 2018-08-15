@@ -184,7 +184,7 @@
   
 
 </ion-content>
-<ion-footer *ngIf="Trade=='buy'">
+<ion-footer *ngIf="Trade=='sell'">
     <ion-grid class="page-footer" no-padding>
         <ion-row>
           <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirmSell()">
@@ -196,7 +196,7 @@
       </ion-grid>
 </ion-footer>
 
-<ion-footer *ngIf="Trade=='sell'">
+<ion-footer *ngIf="Trade=='buy'">
     <ion-grid class="page-footer" no-padding>
         <ion-row>
           <ion-col col-12 style="text-align: center;font-size: 16px" (click)="showConfirm()">
