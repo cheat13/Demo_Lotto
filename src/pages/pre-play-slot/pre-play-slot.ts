@@ -6,6 +6,7 @@ import { TicketPage } from '../ticket/ticket';
 import { GameDetailPage } from '../game-detail/game-detail';
 import { GameDetailBPage } from '../game-detail-b/game-detail-b';
 import { SlotgamePage } from '../slotgame/slotgame';
+import { ConvertclickBPage } from '../convertclick-b/convertclick-b';
 
  
 @Component({
@@ -41,4 +42,7 @@ page:number
     this.navCtrl.push(GameDetailBPage,{'user':this.user});
   }
 
+  buyTicket(){
+    this.navCtrl.push(ConvertclickBPage,{'user':this.user})
+  }
 }

@@ -5,6 +5,7 @@ import { MembershipPage } from '../membership/membership';
 import { GameresultPage } from '../gameresult/gameresult';
 import { TicketPage } from '../ticket/ticket';
 import { GameDetailPage } from '../game-detail/game-detail';
+import { ConvertclickPage } from '../convertclick/convertclick';
 
  
 @Component({
@@ -39,5 +40,8 @@ export class PrePlaygamePage {
   }
   howtoplay(){
     this.navCtrl.push(GameDetailPage,{'user':this.user});
+  }
+  buyTicket(){
+    this.navCtrl.push(ConvertclickPage,{'user':this.user})
   }
 }

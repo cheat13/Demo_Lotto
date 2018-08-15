@@ -5,7 +5,8 @@ import { MembershipPage } from '../membership/membership';
 import { AlertController } from 'ionic-angular';
 import { MycollectPage } from '../mycollect/mycollect';
 import { CollectionDetailPage } from '../collection-detail/collection-detail';
-
+import { TradeCollectBuyModalPage } from '../trade-collect-buy-modal/trade-collect-buy-modal';
+import { TradeCollectSellModalPage } from '../trade-collect-sell-modal/trade-collect-sell-modal';
 /**
  * Generated class for the CollectionTradePage page.
  *
@@ -63,11 +64,11 @@ export class CollectionTradePage {
     this.navCtrl.push((this.fromDetail ? MycollectPage : CollectionDetailPage),{'user':this.user,'index':this.collectNum});
   }
   openModal() {
-    const myModal = this.modal.create('TradeCollectBuyModalPage',{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'num':this.num,'date':this.dateNow,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
+    const myModal = this.modal.create(TradeCollectBuyModalPage,{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'num':this.num,'date':this.dateNow,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
     myModal.present();
   }
   openModalSell(){
-    const myModal = this.modal.create('TradeCollectSellModalPage',{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'sellAmount':this.sellAmount,'sellPrice':this.sellPrice,'date':this.dateNow,'gender':this.gender,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
+    const myModal = this.modal.create(TradeCollectSellModalPage,{'user':this.user,'indexGame':this.indexGame,'indexCol':this.indexCol,'sellAmount':this.sellAmount,'sellPrice':this.sellPrice,'date':this.dateNow,'gender':this.gender,'collectNum':this.collectNum,'fromDetail':this.fromDetail});
     myModal.present();
   }
 }

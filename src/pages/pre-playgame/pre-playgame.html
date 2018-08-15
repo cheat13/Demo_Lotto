@@ -78,11 +78,15 @@
 
 
     <ion-row>
+       
       <ion-col col-4></ion-col>
       <ion-col col-4>
+          
+      
         <button ion-button (click)="howtoplay()">
           <ion-icon>How To Play</ion-icon>
         </button>
+       
       </ion-col>
       <ion-col col-4></ion-col>
     </ion-row>
@@ -90,3 +94,16 @@
   </ion-grid>
 
 </ion-content>
+
+<ion-footer>
+    <ion-grid class="page-footer" no-padding>
+        <ion-row>
+          <ion-col col-12 style="text-align: center;font-size: 16px" (click)="buyTicket()">
+            <button ion-button clear block style="color : white">
+              <b>Buy Ticket</b>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-footer>
