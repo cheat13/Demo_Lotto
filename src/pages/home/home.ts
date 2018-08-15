@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,ModalController } from 'ionic-angular';
 import { MembershipPage } from '../membership/membership';
 import { Web1Page } from '../web1/web1';
 import { Web2Page } from '../web2/web2';
@@ -13,7 +13,7 @@ import { User } from '../../models/user';
 })
 export class HomePage {
   user:User
-  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner,private navParams: NavParams) {
+  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner,private navParams: NavParams,private modal: ModalController) {
     
     this.user = this.navParams.get('user');
     if(typeof this.user=== 'undefined'){
@@ -38,6 +38,10 @@ export class HomePage {
     this.navCtrl.push(HomePage,{'user':this.user})
   }
 
+  openModal(idx:number) {
+    const myModal = this.modal.create('ConfmodalPage',{'user':this.user,'index':idx});
+    myModal.present();
+  }
 
   ScanQR(){
     this.barcodeScanner.scan().then(qrData => {

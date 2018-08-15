@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { PrePlaygamePage } from '../pre-playgame/pre-playgame';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -32,9 +32,9 @@ export class ConfmodalPage {
     }else {
       this.user.moneyBTC += this.amount;
     }
-    this.user.scratchGame.ticket[this.index].status = 'played';
-    this.user.scratchGame.ticket[this.index].isWin = true;
-    this.navCtrl.push(PrePlaygamePage, { 'user': this.user });
+    this.user.notice[this.index].isExchanged= true;
+    this.user.notice.splice(this.index+1, 1)
+    this.navCtrl.push(HomePage, { 'user': this.user });
   }
   closeModal() {
     this.view.dismiss();

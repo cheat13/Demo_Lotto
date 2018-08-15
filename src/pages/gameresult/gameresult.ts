@@ -22,8 +22,18 @@ export class GameresultPage {
   }
 
   Done(){
-    
-    this.navCtrl.push(PrePlaygamePage);
+    this.user.notice.push(
+      {'title':'คุณได้รับเงินรางวัล '+ this.user.scratchGame.prize+' ETH',
+      'detail':'กดเพื่อเข้าสู่หน้าแลกเปลี่ยนค่าเงิน',
+      'index':this.index,
+      'clickAble':true,
+      'isExchanged':false,
+      })
+      this.user.scratchGame.ticket[this.index].status = 'played';
+      this.user.scratchGame.ticket[this.index].isWin = true;
+      this.user.collection[0].collection[49].amount+=1;
+      this. user.scratchGame.tickets = Number(this.user.scratchGame.tickets) -1;
+    this.navCtrl.push(PrePlaygamePage,{'user':this.user});
   }
   gotoHome() {
     this.navCtrl.setRoot(MembershipPage,{'user':this.user});

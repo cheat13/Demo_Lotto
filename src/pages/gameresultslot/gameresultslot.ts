@@ -25,7 +25,9 @@ export class GameresultslotPage {
     this.user.slotGame.ticket[this.index].status ='played';
     this.user.slotGame.ticket[this.index].isWin =false;
     this.user.collection[1].collection[7].amount+=1;
+    this. user.slotGame.tickets = Number(this.user.slotGame.tickets) -1;
     this.navCtrl.push(PrePlaySlotPage,{'user':this.user});
+    
   }
   gotoHome() {
     this.navCtrl.setRoot(MembershipPage,{'user':this.user});
